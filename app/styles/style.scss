@@ -1,0 +1,553 @@
+$icon-font-path: "fonts/"; // Change the path to the fonts
+$fa-font-path: "fonts";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
+@import "font-awesome/scss/font-awesome";
+@import "fonts";
+@import "treeview";
+@import "variables";
+
+html, body {
+    margin: 30px 0;
+}
+
+#main {
+	/* background-image: url("../images/gui/tiny_grid/tiny_grid.png"); */
+}
+
+.spacer {
+  margin-top: 15px;
+}
+
+.navbar-default {
+	background-image: url("../images/gui/grey/grey.png");
+}
+
+.plotted {
+	background-image: url("../images/gui/tiny_grid/tiny_grid.png");
+  overflow: auto;
+}
+
+.control-ui-picker {
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+}
+
+.control-ui-picker:hover {
+  transform: scale(1.2) rotate(10deg);
+  transition: transform 0.1s;
+  -webkit-transform: scale(1.2) rotate(10deg);
+  -webkit-transition: transform 0.1s;
+}
+
+
+/****** Device views ******/
+.device-view {
+  margin-left: auto;
+  margin-right: auto;
+  -moz-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transition: transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+}
+
+.device-view.ios.iPhone5s {
+  background-image: url("../images/devices/ios/iPhone_5s.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  width: 370px;
+  height: 777px;
+  padding: 114px 27px 107px 31px;
+}
+
+.device-view.android.Nexus5 {
+  background-image: url("../images/devices/android/nexus_5.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  width: 395px;
+  height: 780px;
+  padding: 67px 21px 89px 21px;
+}
+
+.device-view .device-screen-view {
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.device-view .device-screen-view .expanded-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Menus */
+
+
+/* Controls */
+
+.ui-control {
+  position: absolute;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.ui-control:hover {
+  cursor: pointer;
+}
+
+.ui-control.is-moving {
+  z-index: 999;
+  cursor: move;
+}
+
+.inner-control {
+  position: absolute;
+  /*top: -10%;
+  right: -10%;
+  width: 120%;
+  height: 120%;*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.expanded {
+  width: 100%;
+  height: 100%;
+}
+
+.inner-control.active {
+  border: dashed 1px #007aff;
+  border-radius: 3px;
+}
+
+.control-audio-player-view .control-content {
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.control-button, .control-label, .control-web-view, .control-image-view, .control-video-view {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-label.right {
+  justify-content: flex-end;
+}
+
+.control-label.center {
+  justify-content: center;
+}
+
+.control-label.left {
+  justify-content: flex-start;
+}
+
+.control-list-view {
+  background-color: #fff;
+}
+
+.control-list-view:hover, .control-grid-view:hover {
+  box-shadow: 0 0 0 1px #ccc;
+  border-radius: 5px; 
+}
+
+.control-list-view-cell {
+  position: relative;
+}
+
+.control-list-view-cell .control-content {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.control-grid-view-cell {
+  position: relative;
+  display: inline-block;
+}
+
+.control-grid-view-cell .control-content {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.control-button .control-content {
+
+}
+
+/********************************** iOS **********************************/
+
+.ios .control-button {
+  color: $ios-primary-color;
+  font-weight: bold;
+}
+
+.ios .control-button a {
+  text-decoration: none;
+}
+
+.control-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  border: dashed 1px #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.ios .control-edit-text {
+  border: solid 1px $ios-border-color;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.ios .control-edit-text .control-content {
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ios .control-edit-text .control-content .placeholder {
+  color: $ios-placeholder-color;
+}
+
+.ios .control-web-view, .ios .control-image-view, .ios .control-video-view {
+  background-color: rgba($ios-web-view-background-color, $control-view-background-opacity);
+  border: solid 1px $ios-web-view-border-color;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+.ios .control-web-view .control-content:after {
+  content: "UIWebView";
+  color: #fff;
+  margin: auto;
+}
+
+
+.ios .control-image-view .control-content:after {
+  content: "UIImageView";
+  color: #fff;
+  margin: auto;
+}
+
+.ios .control-video-view .control-content:after {
+  font-size: $control-icon-font-size;
+  font-family: FontAwesome;
+  content: $fa-var-video-camera;
+  color: #fff;
+  margin: auto;
+}
+
+.ios .control-list-view-cell {
+  height: 44px;
+  padding: 5px 0;
+  font-size: 20px;
+  line-height: 30px;
+  margin-left: 14px;
+  left: 0;
+  right: 0;
+  width: auto;
+  border-bottom: solid 1px $ios-list-view-cell-border-color;
+  font-size: $ios-list-view-cell-font-size;
+  color: #000;
+  line-height: 34px;
+}
+
+.ios .control-grid-view-cell {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 4px 2px #bbb;
+}
+
+/*** Menus -> iOS ***/
+.app-menu.ios {
+  position: absolute;
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: flex-end;
+  background-color: #dddddd;
+  width: 100%;
+  height: 48px;
+  border-top: solid 1px #b2b2b2;
+  bottom: 0;
+}
+
+.app-menu-item.ios {
+  position: relative;
+  color: $ios-primary-color;
+  flex: 0 1 auto;
+  align-self: auto;
+  min-width: 0;
+  min-height: auto;
+  font-size: 11px;
+}
+
+.app-menu-item.ios .control-content {
+  /*position: relative;
+  font-size: 11px;
+  top: 14px;*/
+}
+
+
+/*** Ui Controls -> iOS ***/
+/*** ScreenView -> iOS ***/
+.ios .device-screen-view {
+  font: 14px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+}
+
+.ios .device-screen-view .action-bar {
+  display: none;
+}
+.ios .device-screen-view .status-bar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 62px;
+  border-bottom: solid 1px #b2b2b2;
+  background-image: url("../images/ui_controls/ios/status_bar.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.ios .device-screen-view .command-bar {
+  display: none;
+}
+
+/********************************** Android **********************************/
+/*** ScreenView -> Android ***/
+.android .device-screen-view {
+  font: 14px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+}
+
+.android .device-screen-view .action-bar {
+  position: absolute;
+  width: 100%;
+  top: 25px;
+  left: 0;
+  height: 41px;
+  line-height: 43px;
+  background-color: #dddddd;
+  border-bottom: solid 1px #b7b7b7;
+  background-repeat: no-repeat;
+  padding-left: 8px;
+}
+
+.android .device-screen-view .action-bar .bar-content {
+  margin-left: 10px;
+  padding-left: 60px;
+  background: url('../images/ui_controls/android/ic_launcher.png') no-repeat transparent;
+  background-size: auto 93%;
+}
+
+.android .device-screen-view .action-bar:before {
+  border-bottom: solid 1px #d2d2d2;
+  padding-bottom: 1px;
+}
+
+.android .device-screen-view .status-bar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 25px;
+  background-image: url("../images/ui_controls/android/status_bar.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.android .device-screen-view .command-bar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 47px;
+  background-image: url("../images/ui_controls/android/command_bar.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.android .control-web-view, .android .control-image-view, .android .control-video-view {
+  background-color: rgba($android-web-view-background-color, $control-view-background-opacity);
+  border: solid 1px $ios-web-view-border-color;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+.android .control-web-view .control-content:after {
+  font-size: $control-icon-font-size;
+  font-family: FontAwesome;
+  content: $fa-var-globe;
+  color: #fff;
+  margin: auto;
+}
+
+.android .control-image-view .control-content:after {
+  font-size: $control-icon-font-size;
+  font-family: FontAwesome;
+  content: $fa-var-picture-o;
+  color: #fff;
+  margin: auto;
+}
+
+.android .control-video-view .control-content:after {
+  font-size: $control-icon-font-size;
+  font-family: FontAwesome;
+  content: $fa-var-video-camera;
+  color: #fff;
+  margin: auto;
+}
+
+/*** Menus -> Android ***/
+.app-menu.android:before {
+  content: $fa-var-bars;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: block;
+  position: absolute;
+  top: -32px;
+  right: 0;
+  text-decoration: inherit;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 40px;
+  width: 40px;
+  text-align: right;
+}
+
+.app-menu.android {
+  display: block;
+  position: absolute;
+  top: 69px;
+  right: 5px;
+  width: auto;
+  height: auto;
+
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.app-menu-item.android {
+  display: none;
+  position: relative;
+  min-width: 100px;
+  min-height: auto;
+  padding: 7px;
+  background-color: #efefef;
+  border-bottom: solid 1px #e2e2e2;
+}
+
+.app-menu-item.android:last-child {
+  border-bottom: none;
+}
+
+.app-menu.android:hover .app-menu-item.android {
+  display: block;
+}
+
+.app-menu-item.android:hover {
+  display: block;
+}
+
+/*** Ui Controls -> Android ***/
+.ui-control .android {
+  font: 14px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+}
+
+.android .control-audio-player-view .control-content .control-button {
+  padding: 5px;
+}
+
+.android .control-button {
+  background-color: #cecece;
+  border-bottom: solid 1px #979797;
+  border-top: solid 1px #dfdfdf;
+  border-left: solid 1px #c8c8c8;
+  border-right: solid 1px #c8c8c8;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px 0 #c4c4c4;
+  text-align: center;
+  font-size: 18px;
+}
+
+.android .control-label {
+  font-size: 11px;
+}
+
+.android .control-edit-text {
+  border-bottom: solid 1px $android-normal-edit-text-color;
+  overflow: visible;
+  box-sizing: border-box;
+  display: flex;
+}
+
+  .android .control-edit-text .inner-control:after {
+    content: "";
+    position: absolute;
+    border-left: solid 1px $android-normal-edit-text-color;
+    border-right: solid 1px $android-normal-edit-text-color;
+    height: 4px;
+    width: 100%;
+    bottom: 0;
+  }
+
+.android .control-edit-text .control-content {
+  align-self: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.android .control-edit-text .control-content .placeholder {
+  color: $ios-placeholder-color;
+}
+
+.android .control-list-view-cell {
+  height: 44px;
+  padding: 7px 0 7px 5px;
+  line-height: 30px;
+  left: 0;
+  right: 0;
+  width: auto;
+  border-bottom: solid 1px $android-list-view-cell-border-color;
+  font-size: $android-list-view-cell-border-font-size;
+}
+
+.android .control-grid-view-cell {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 4px 2px #bbb;
+}
+
+/* Drag & Drop */
+.dragging-over {
+  box-shadow: 0 0 5px 5px #007aff;
+}
