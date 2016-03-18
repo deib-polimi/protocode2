@@ -42,7 +42,7 @@ App.GridView = App.UiControl.extend({
       elem.appendChild(item.toXml(xmlDoc));
     });
 
-    return promise;
+    return elem;
   }
 });
 /*
