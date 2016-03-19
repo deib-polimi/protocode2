@@ -4,7 +4,7 @@ App.Label = App.UiControl.extend({
 
   textAlign:        DS.attr('string', {defaultValue: 'left'}),
   textColor:        DS.attr('string', {defaultValue: ''}),
-  textSize:         DS.attr('number', {defaultValue: 8}),
+  textSize:         DS.attr('number', {defaultValue: 14}),
   textDecoration:   DS.attr('string', {defaultValue: 'font'}),
   
   width:      DS.attr('number', {defaultValue: 125}),

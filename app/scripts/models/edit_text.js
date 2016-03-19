@@ -1,9 +1,12 @@
 App.EditText = App.UiControl.extend({
   title:        DS.attr('string', {defaultValue: ''}),
-  placeholder:  DS.attr('string', {defaultValue: ''}),
+  placeholder:  DS.attr('string', {defaultValue: 'EditText'}),
 
   width:        DS.attr('number', {defaultValue: 125}),
   height:       DS.attr('number', {defaultValue: 30}),
+
+  textColor:        DS.attr('string', {defaultValue: '#333333'}),
+  textSize:         DS.attr('number', {defaultValue: 14}),
 
   xmlName:        'editTexts',
 
