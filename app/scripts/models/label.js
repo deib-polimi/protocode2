@@ -1,11 +1,12 @@
 App.Label = App.UiControl.extend({
-  name:     DS.attr('string', {defaultValue: 'DummyLabel'}),
-  title:    DS.attr('string', {defaultValue: 'Dummy Label'}),
+  name:       DS.attr('string', {defaultValue: 'DummyLabel'}),
+  title:      DS.attr('string', {defaultValue: 'Dummy Label'}),
 
-  textAlign: DS.attr('string', {defaultValue: 'left'}),
-
-  width:    DS.attr('number', {defaultValue: 125}),
-  height:   DS.attr('number', {defaultValue: 30}),
+  textAlign:  DS.attr('string', {defaultValue: 'left'}),
+  textColor:  DS.attr('string', {defaultValue: ''}),
+  
+  width:      DS.attr('number', {defaultValue: 125}),
+  height:     DS.attr('number', {defaultValue: 30}),
 
   xmlName:  'textViews',
 

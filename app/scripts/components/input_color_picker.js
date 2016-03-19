@@ -7,7 +7,7 @@ App.InputColorPickerComponent = Ember.Component.extend({
   	},
 
 	didInsertElement: function() {
-		$('.colorpicker').colorpicker({
+		this.$('.colorpicker').colorpicker({
 			format : 'hex'
 		});
 	}

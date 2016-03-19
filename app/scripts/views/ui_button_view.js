@@ -8,10 +8,12 @@ App.UiButtonView = Ember.View.extend({
 
   style: function () {
   	var style = ""
-  	style += 'background-color: ' + this.get('context.backgroundColor') + ";";
+  	style += 'color: ' + this.get('context.textColor') + ";";
+    style += 'background-color: ' + this.get('context.backgroundColor') + ";";
   	style += 'border-radius: ' + this.get('context.borderRadius') + "px;";
   	return style;
   }.property(
+    'context.textColor',
   	'context.backgroundColor',
   	'context.borderRadius'
   	)
