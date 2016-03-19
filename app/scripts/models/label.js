@@ -5,7 +5,7 @@ App.Label = App.UiControl.extend({
   textAlign:        DS.attr('string', {defaultValue: 'left'}),
   textColor:        DS.attr('string', {defaultValue: ''}),
   textSize:         DS.attr('number', {defaultValue: 14}),
-  textDecoration:   DS.attr('string', {defaultValue: 'font'}),
+  textDecoration:   DS.attr('string', {defaultValue: 'none'}),
   
   width:      DS.attr('number', {defaultValue: 125}),
   height:     DS.attr('number', {defaultValue: 30}),
@@ -25,6 +25,11 @@ App.Label = App.UiControl.extend({
     this.decorateXml(label);
     label.setAttribute('content', this.get('title'));
     label.setAttribute('textAlign', this.get('textAlign'));
+
+    label.setAttribute('textColor', this.get('textColor'));
+    label.setAttribute('textSize', this.get('textSize'));
+    label.setAttribute('textDecoration', this.get('textDecoration'));
+
     return label;
   }
 });

@@ -16,6 +16,9 @@ App.EditText = App.UiControl.extend({
     
     elem.setAttribute('initialContent', this.get('title'));
     elem.setAttribute('placeholder', this.get('placeholder'));
+
+    elem.setAttribute('textColor', this.get('textColor'));
+    elem.setAttribute('textSize', this.get('textSize'));
     
     return elem;
   }

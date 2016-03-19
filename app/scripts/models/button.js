@@ -27,6 +27,10 @@ App.Button = App.UiControl.extend({
     this.decorateXml(button);
     button.setAttribute('title', this.get('title'));
 
+    button.setAttribute('textColor', this.get('textColor'));
+    button.setAttribute('backgroundColor', this.get('backgroundColor'));
+    button.setAttribute('borderRadius', this.get('borderRadius'));
+
     var clickListener = this.get('clickListener');
 
     if (clickListener != null) {

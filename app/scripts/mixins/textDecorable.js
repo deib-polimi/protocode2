@@ -1,6 +1,6 @@
 App.TextDecorable = Ember.Mixin.create({
-  textFont: function(key, value) {
-    return this.textDecoration(key, value, 'font');
+  textNormal: function(key, value) {
+    return this.textDecoration(key, value, 'none');
   }.property('model.textDecoration'),
 
   textBold: function(key, value) {
