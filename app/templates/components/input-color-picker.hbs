@@ -1,0 +1,10 @@
+<div class="form-group">
+	<label {{bind-attr for="colorPicker.elementId"}}>{{label}}</label>
+	{{input
+		value=value
+		class="form-control colorpicker"
+		viewName="colorPicker"
+		focus-out="acceptChanges"
+		insert-newline="acceptChanges"
+	}}
+</div>

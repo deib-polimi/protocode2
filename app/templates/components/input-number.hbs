@@ -1,13 +1,13 @@
 <div class="form-group">
-	<label {{bind-attr for="textField.elementId"}}>{{label}}</label>
+	<label {{bind-attr for="numericField.elementId"}}>{{label}}</label>
 	{{input 
 		value=value
 		class="form-control"
 		placeholder=label
     type="number"
-    min="0"
-    max="20"
-		viewName="textField"
+    min=min
+    max=max
+		viewName="numericField"
 		focus-out="acceptChanges"
 		insert-newline="acceptChanges"}}
 </div>
