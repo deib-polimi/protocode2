@@ -1,9 +1,11 @@
 App.Button = App.UiControl.extend({
-  title:          DS.attr('string', {defaultValue: 'DummyButtonName'}),
-  clickListener:  DS.belongsTo('clickListener'),
+  title:            DS.attr('string', {defaultValue: 'DummyButtonName'}),
+  clickListener:    DS.belongsTo('clickListener'),
 
-  width:          DS.attr('number', {defaultValue: 125}),
-  height:         DS.attr('number', {defaultValue: 30}),
+  width:            DS.attr('number', {defaultValue: 125}),
+  height:           DS.attr('number', {defaultValue: 30}),
+
+  backgroundColor:  DS.attr('string', {defaultValue: '#CCCCCC'}),
 
   xmlName:        'buttons',
 
