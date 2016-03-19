@@ -2,14 +2,23 @@ App.Label = App.UiControl.extend({
   name:       DS.attr('string', {defaultValue: 'DummyLabel'}),
   title:      DS.attr('string', {defaultValue: 'Dummy Label'}),
 
-  textAlign:  DS.attr('string', {defaultValue: 'left'}),
-  textColor:  DS.attr('string', {defaultValue: ''}),
-  textSize:   DS.attr('number', {defaultValue: 8}),
+  textAlign:        DS.attr('string', {defaultValue: 'left'}),
+  textColor:        DS.attr('string', {defaultValue: ''}),
+  textSize:         DS.attr('number', {defaultValue: 8}),
+  textDecoration:   DS.attr('string', {defaultValue: 'font'}),
   
   width:      DS.attr('number', {defaultValue: 125}),
   height:     DS.attr('number', {defaultValue: 30}),
 
   xmlName:  'textViews',
+
+  isBold: function() {
+    return this.get('textDecoration') == 'bold';
+  }.property('textDecoration'),
+
+  isItalic: function() {
+    return this.get('textDecoration') == 'italic';
+  }.property('textDecoration'),
 
   toXml: function(xmlDoc) {
     var label = xmlDoc.createElement(this.get('xmlName'));

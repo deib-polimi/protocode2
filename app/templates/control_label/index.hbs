@@ -15,9 +15,24 @@
             {{input-text label="Name" value=name action='acceptChanges'}}
             {{input-text label="Title" value=title action='acceptChanges'}}
             {{input-color-picker label="Text Color" value=textColor action='acceptChanges'}}
-            {{input-number min="8" max="20" label="Text Size" value=textSize action='acceptChanges'}}
+            {{input-number min="8" max="24" label="Text Size" value=textSize action='acceptChanges'}}
             <div class="form-group">
-              <label>Text align</label>
+              <label>Text Decoration</label>
+              <br>
+              <div class="btn-group">
+                <label {{bind-attr class=":btn :btn-default textFont:active"}}>
+                  {{input type="checkbox" checked=textFont class="hidden"}} <i class="fa fa-font"></i>
+                </label>
+                <label {{bind-attr class=":btn :btn-default textBold:active"}}>
+                  {{input type="checkbox" checked=textBold class="hidden"}} <i class="fa fa-bold"></i>
+                </label>
+                <label {{bind-attr class=":btn :btn-default textItalic:active"}}>
+                  {{input type="checkbox" checked=textItalic class="hidden"}} <i class="fa fa-italic"></i>
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Text Align</label>
               <br>
               <div class="btn-group">
                 <label {{bind-attr class=":btn :btn-default textAlignLeft:active"}}>
