@@ -1,2 +1,21 @@
-<div class="control-content">{{title}}</div>
+<div class="control-content">
+	{{#if isWithImage}}
+		<img 	width="30" height="30"
+				src="images/ui_controls/android/imageview.png"
+				style="margin-right:10px"/>
+		{{title}}
+	{{else}}
+		{{#if isDetailed}}
+			<img 	width="30" height="30"
+					src="images/ui_controls/android/imageview.png"
+					style="margin-right:10px"/>
+			{{title}}
+			<img 	width="24" height="24"
+					src="images/ui_controls/android/listicon.png"
+					style="float:right;margin:4px 10px 0 0"/>
+		{{else}}
+			{{title}}
+		{{/if}}
+	{{/if}}
+</div>
 {{#link-to "controlListViewCell" this tagName="div" class="inner-control"}}{{/link-to}}

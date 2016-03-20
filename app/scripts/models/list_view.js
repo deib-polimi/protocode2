@@ -4,6 +4,8 @@ App.ListView = App.UiControl.extend({
 
   height:           DS.attr('number', {defaultValue: 200}),
 
+  listType:         DS.attr('string', {defaultValue: 'simple'}),
+
   xmlName:          'listViews',
 
   deleteRecord: function() {

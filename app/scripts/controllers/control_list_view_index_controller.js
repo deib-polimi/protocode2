@@ -4,6 +4,29 @@ App.ControlListViewIndexController = App.UiControlController.extend(App.ClickLis
   isCreating: false,
   newNameListViewCell: 'newMenuItem',
 
+  simpleList: function(key, value) {
+    return this.listType(key, value, 'simple');
+  }.property('model.listType'),
+
+  imageList: function(key, value) {
+    return this.listType(key, value, 'image');
+  }.property('model.listType'),
+
+  detailedList: function(key, value) {
+    return this.listType(key, value, 'detailed');
+  }.property('model.listType'),
+
+  listType: function(key, value, type) {
+    // setter
+    if (value != undefined) {
+      this.set('model.listType', type);
+      this.get('model').save();
+    }
+
+    // getter
+    return this.get('model.listType') == type;
+  },
+
    actions: {
     abortCreation: function() {
       this.set('isCreating', false);

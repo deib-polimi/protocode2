@@ -3,6 +3,14 @@ App.ListViewCell = DS.Model.extend({
   title:          DS.attr('string', {defaultValue: 'List View'}),
   parentListView: DS.belongsTo('listView', {inverse: 'listViewCells'}),
 
+  isWithImage: function() {
+    return this.get('parentListView.listType') == 'image';
+  }.property('parentListView.listType'),
+
+  isDetailed: function() {
+    return this.get('parentListView.listType') == 'detailed';
+  }.property('parentListView.listType'),
+
   // Used to reload menuItems
   didCreate: function() {
     this._super();
