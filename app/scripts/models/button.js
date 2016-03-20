@@ -31,6 +31,7 @@ App.Button = App.UiControl.extend({
     button.setAttribute('textColor', this.get('textColor'));
     button.setAttribute('backgroundColor', this.get('backgroundColor'));
     button.setAttribute('borderRadius', this.get('borderRadius'));
+    button.setAttribute('clickColor', this.get('clickColor'));
 
     var clickListener = this.get('clickListener');
 
