@@ -7,6 +7,7 @@ App.Button = App.UiControl.extend({
 
   textColor:        DS.attr('string', {defaultValue: ''}),
   backgroundColor:  DS.attr('string', {defaultValue: ''}),
+  clickColor:       DS.attr('string', {defaultValue: ''}),
   borderRadius:     DS.attr('number', {defaultValue: 0}),
 
   xmlName:        'buttons',

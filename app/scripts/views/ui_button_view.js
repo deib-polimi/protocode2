@@ -6,6 +6,14 @@ App.UiButtonView = Ember.View.extend({
 
   attributeBindings: ['style'],
 
+  mouseDown: function() {
+    this.$().css("backgroundColor", this.get('context.clickColor'));
+  },
+
+  mouseUp: function() {
+    this.$().css("backgroundColor", this.get('context.backgroundColor'));
+  },
+
   style: function () {
   	var style = ""
   	style += 'color: ' + this.get('context.textColor') + ";";
