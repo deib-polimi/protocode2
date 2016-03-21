@@ -3,7 +3,7 @@ App.Label = App.UiControl.extend({
   title:      DS.attr('string', {defaultValue: 'Dummy Label'}),
 
   textAlign:        DS.attr('string', {defaultValue: 'left'}),
-  textColor:        DS.attr('string', {defaultValue: ''}),
+  textColor:        DS.attr('string', {defaultValue: '#333333'}),
   textSize:         DS.attr('number', {defaultValue: 14}),
   textDecoration:   DS.attr('string', {defaultValue: 'none'}),
   
