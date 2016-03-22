@@ -34,6 +34,8 @@ App.GridView = App.UiControl.extend({
     var elem = xmlDoc.createElement(self.get('xmlName'));
     self.decorateXml(elem);
 
+    elem.setAttribute('gridType', this.get('gridType'));
+
     var clickListener = self.get('clickListener');
 
     if (clickListener != null) {
