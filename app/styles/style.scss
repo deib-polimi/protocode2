@@ -184,6 +184,7 @@ html, body {
 .control-grid-view-cell {
   position: relative;
   display: inline-block;
+  text-align: center;
 }
 
 .control-grid-view-cell .control-content {
@@ -277,9 +278,9 @@ html, body {
 }
 
 .ios .control-grid-view-cell {
-  height: 50px;
-  width: 50px;
-  margin: 5px;
+  height: 120px;
+  width: 95px;
+  margin: 6px 3px;
   border-radius: 2px;
   box-shadow: 0px 0px 4px 2px #bbb;
 }
@@ -540,9 +541,9 @@ html, body {
 }
 
 .android .control-grid-view-cell {
-  height: 50px;
-  width: 50px;
-  margin: 5px;
+  height: 136px;
+  width: 108px;
+  margin: 6px 3px;
   border-radius: 2px;
   box-shadow: 0px 0px 4px 2px #bbb;
 }

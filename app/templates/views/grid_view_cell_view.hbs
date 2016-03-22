@@ -1,2 +1,19 @@
-<div class="control-content">{{title}}</div>
+<div class="control-content">
+	{{#if isWithImage}}
+		<img 	width="95" height="100"
+			src="images/ui_controls/android/imageview.png"
+			style=""/>
+		<br>
+	{{else}}
+		{{#if isDetailed}}
+			<img 	width="95" height="100"
+					src="images/ui_controls/android/imageview.png"
+					style=""/>
+			<br>
+			{{title}}
+		{{else}}
+			{{title}}
+		{{/if}}
+	{{/if}}
+</div>
 {{#link-to "controlGridViewCell" this tagName="div" class="inner-control"}}{{/link-to}}

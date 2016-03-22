@@ -2,7 +2,9 @@ App.GridView = App.UiControl.extend({
   gridViewCells:    DS.hasMany('gridViewCell', {inverse: 'parentGridView'}),
   clickListener:    DS.belongsTo('clickListener'),
 
-  height:             DS.attr('number', {defaultValue: 200}), 
+  height:           DS.attr('number', {defaultValue: 200}),
+
+  gridType:         DS.attr('string', {defaultValue: 'simple'}),
 
   xmlName:        'gridViews',
 

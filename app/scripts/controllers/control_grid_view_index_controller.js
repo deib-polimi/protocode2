@@ -4,6 +4,29 @@ App.ControlGridViewIndexController = App.UiControlController.extend(App.ClickLis
   isCreating: false,
   newNameGridViewCell: 'newMenuItem',
 
+  simpleGrid: function(key, value) {
+    return this.gridType(key, value, 'simple');
+  }.property('model.gridType'),
+
+  imageGrid: function(key, value) {
+    return this.gridType(key, value, 'image');
+  }.property('model.gridType'),
+
+  detailedGrid: function(key, value) {
+    return this.gridType(key, value, 'detailed');
+  }.property('model.gridType'),
+
+  gridType: function(key, value, type) {
+    // setter
+    if (value != undefined) {
+      this.set('model.gridType', type);
+      this.get('model').save();
+    }
+
+    // getter
+    return this.get('model.gridType') == type;
+  },
+
    actions: {
     abortCreation: function() {
       this.set('isCreating', false);
