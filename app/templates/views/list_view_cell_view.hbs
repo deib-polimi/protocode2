@@ -1,18 +1,12 @@
 <div class="control-content">
 	{{#if isWithImage}}
-		<img 	width="30" height="30"
-				src="images/ui_controls/android/imageview.png"
-				style="margin-right:10px"/>
+		<img class="list-image" src="images/ui_controls/android/listimage.png" />
 		{{title}}
 	{{else}}
 		{{#if isDetailed}}
-			<img 	width="30" height="30"
-					src="images/ui_controls/android/imageview.png"
-					style="margin-right:10px"/>
+			<img class="list-image" src="images/ui_controls/android/listimage.png" />
 			{{title}}
-			<img 	width="24" height="24"
-					src="images/ui_controls/android/listicon.png"
-					style="float:right;margin:4px 10px 0 0"/>
+			<img class="list-icon" src="images/ui_controls/android/listicon.png" />
 		{{else}}
 			{{title}}
 		{{/if}}

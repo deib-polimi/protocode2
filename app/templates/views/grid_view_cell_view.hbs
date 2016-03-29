@@ -1,18 +1,13 @@
 <div class="control-content">
 	{{#if isWithImage}}
-		<img 	width="95" height="100"
-			src="images/ui_controls/android/imageview.png"
-			style=""/>
-		<br>
+		<img src="images/ui_controls/android/grid_image.jpg"/>
 	{{else}}
 		{{#if isDetailed}}
-			<img 	width="95" height="100"
-					src="images/ui_controls/android/imageview.png"
-					style=""/>
-			<br>
-			{{title}}
+			<img src="images/ui_controls/android/grid_image.jpg" />
+			<p>{{title}}</p>
 		{{else}}
-			{{title}}
+			<img src="images/ui_controls/android/grid_image_empty.jpg" />
+			<p>{{title}}</p>
 		{{/if}}
 	{{/if}}
 </div>

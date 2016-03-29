@@ -64,6 +64,22 @@ App.ApplicationRoute = Ember.Route.extend({
           });
       });
       this.store.createRecord('device', {
+        name: 'Nexus6P',
+        label: 'Nexus 6P',
+        platform: 'android',
+        //Aggancio top
+        viewTop: 74,
+        //Aggancio bottom
+        viewBottom: 577,
+        //Dimensioni in dp
+        screenWidth: 411,
+        screenHeight: 731,
+        //Dimensioni in protocode px
+        cssWidth: 350,
+        cssHeight: 731
+      }).save();
+      /*
+      this.store.createRecord('device', {
         name: 'Nexus5',
         label: 'Nexus 5',
         platform: 'android',
@@ -75,6 +91,7 @@ App.ApplicationRoute = Ember.Route.extend({
         cssWidth: 353,
         cssHeight: 624
       }).save();
+      */
 
 
       /*this.store.createRecord('uiControlTemplate', {
