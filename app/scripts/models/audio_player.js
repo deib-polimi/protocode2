@@ -4,7 +4,7 @@ App.AudioPlayer = App.UiControl.extend({
   width:              DS.attr('number', {defaultValue: 200}),
   height:             DS.attr('number', {defaultValue: 44}),
 
-  xmlName:  'audioPlayer',
+  xmlName:  'audioPlayers',
 
   didCreate: function() {
     this._super();
@@ -41,7 +41,7 @@ App.AudioPlayer = App.UiControl.extend({
   },
 
   toXml: function(xmlDoc) {
-    var elem = xmlDoc.createElement('audioPlayer');
+    var elem = xmlDoc.createElement(this.get('xmlName'));
     this.decorateXml(elem);
 
     var sourceType = this.get('sourceType');
@@ -58,6 +58,7 @@ App.AudioPlayer = App.UiControl.extend({
     return elem;
   },
 
+  /*
   // Override because there's only one AudioPlayer
   getRefPath: function(path) {
     var updatedPath = '/@' + this.get('xmlName');
@@ -71,6 +72,7 @@ App.AudioPlayer = App.UiControl.extend({
 
     return updatedPath;
   }
+  */
 });
 /*
 App.AudioPlayer.FIXTURES = [];
