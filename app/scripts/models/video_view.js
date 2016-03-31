@@ -4,7 +4,7 @@ App.VideoView = App.UiControl.extend({
   width:    DS.attr('number', {defaultValue: 300}),
   height:   DS.attr('number', {defaultValue: 200}),
 
-  xmlName:  'videoView',
+  xmlName:  'videoViews',
 
   didCreate: function() {
     this._super();
@@ -59,6 +59,7 @@ App.VideoView = App.UiControl.extend({
   },
 
   // Override because there's only one videoView
+  /*
   getRefPath: function(path) {
     var updatedPath = '/@' + this.get('xmlName');
 
@@ -71,6 +72,7 @@ App.VideoView = App.UiControl.extend({
 
     return updatedPath;
   }
+  */
 });
 
 /*

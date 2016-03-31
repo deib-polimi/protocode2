@@ -68,15 +68,15 @@ App.ApplicationRoute = Ember.Route.extend({
         label: 'Nexus 6P',
         platform: 'android',
         //Aggancio top
-        viewTop: 74,
+        viewTop: 89,
         //Aggancio bottom
-        viewBottom: 577,
+        viewBottom: 676,
         //Dimensioni in dp
         screenWidth: 411,
         screenHeight: 731,
-        //Dimensioni in protocode px
-        cssWidth: 350,
-        cssHeight: 731
+        //Dimensioni nel css - padding
+        cssWidth: 338,
+        cssHeight: 601
       }).save();
       /*
       this.store.createRecord('device', {

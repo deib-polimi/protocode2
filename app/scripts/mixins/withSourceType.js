@@ -1,8 +1,8 @@
 App.WithSourceType = Ember.Mixin.create({
   sourceTypeOptions: [
-    {label: 'hardwareFile', value: 'hardwareFile'}, 
-    {label: 'localFile', value: 'localFile'},
-    {label: 'remoteFile', value: 'remoteFile'}
+    {label: 'Hardware File (Preview)'            , value: 'hardwareFile'}, 
+    {label: 'Resource file'             , value: 'localFile'   },
+    {label: 'Remote source (http://...)', value: 'remoteFile'  }
     ],
 
   sourceTypeSelected: function(key, value) {

@@ -66,9 +66,11 @@ App.ViewController = DS.Model.extend({
         Promise.all(uiControls.map(function (uiControl) {
           return uiControl.toXml(xmlDoc);
         })).then(function (uiControlXmls) {
-          
+
           uiControlXmls.map(function (xml) {
+
             viewController.appendChild(xml);
+
           });
 
           resolve(viewController);

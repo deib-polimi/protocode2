@@ -69,16 +69,15 @@ html, body {
   background-image: url("../images/devices/android/nexus_6p.png");
   background-repeat: no-repeat;
   background-position: center center;
-  //background-size: 100%;
-  background-size: 96%;
-  //Area drop
-  width: 395px;
-  height: 780px;
-  //Padding rispetto al device
-  //padding: 67px 21px 89px 21px;
-  padding: 82px 24px 76px 21px;
+  background-size: 100%;
+  //Dimensione device nel riquadro
+  width: 370px;
+  height: 763px;
+  //Padding della view rispetto al device
+  padding: 83px 16px 79px 16px;
 }
 
+//Misure da prendere dal model, qui solo 100%
 .device-view .device-screen-view {
   overflow: hidden;
   position: relative;
@@ -382,7 +381,7 @@ html, body {
 .android .device-screen-view .action-bar {
   position: absolute;
   width: 100%;
-  top: 24px;
+  top: 23px;
   left: 0;
   height: 50px;
   line-height: 50px;
@@ -420,9 +419,9 @@ html, body {
 .android .device-screen-view .command-bar {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: -3px;
   left: 0;
-  height: 46px;
+  height: 48px;
   background-image: url("../images/ui_controls/android/command_bar.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -481,8 +480,8 @@ html, body {
 .app-menu.android {
   display: block;
   position: absolute;
-  top: 30px;
-  right: 8px;
+  top: 27px;
+  right: 3px;
   width: auto;
   height: auto;
 
@@ -566,8 +565,8 @@ html, body {
 }
 
 .android .control-list-view-cell {
-  height: 54px;
-  padding: 10px 0 7px 5px;
+  height: 53px;
+  padding: 6px 0 7px 5px;
   line-height: 30px;
   left: 0;
   right: 0;
@@ -577,21 +576,21 @@ html, body {
 }
 
 .android .control-list-view-cell img.list-image {
-  width : 35px;
-  height : 35px;
+  width : 40px;
+  height : 40px;
   margin : 0px 10px;
 }
 
 .android .control-list-view-cell img.list-icon {
-  width : 24px;
-  height : 24px;
+  width : 22px;
+  height : 22px;
   float: right;
-  margin: 4px 10px 0px 0px;
+  margin: 8px 10px 0px 0px;
 }
 
 .android .control-grid-view-cell img {
-  width : 100%;
-  height : 100%;
+  height: 182px;
+  width: 167px;
 }
 
 .android .control-grid-view-cell p {
@@ -607,8 +606,8 @@ html, body {
 }
 
 .android .control-grid-view-cell {
-  height: 173px;
-  width: 173px;
+  height: 182px;
+  width: 167px;
 }
 
 /* Drag & Drop */

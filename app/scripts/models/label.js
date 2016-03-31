@@ -1,6 +1,6 @@
 App.Label = App.UiControl.extend({
-  name:       DS.attr('string', {defaultValue: 'DummyLabel'}),
-  title:      DS.attr('string', {defaultValue: 'Dummy Label'}),
+  name:       DS.attr('string', {defaultValue: 'Label'}),
+  title:      DS.attr('string', {defaultValue: 'Label'}),
 
   textAlign:        DS.attr('string', {defaultValue: 'left'}),
   textColor:        DS.attr('string', {defaultValue: '#333333'}),

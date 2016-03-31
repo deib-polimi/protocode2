@@ -34,18 +34,17 @@ App.Application = DS.Model.extend({
       Promise.all(viewControllers.map(function(item) {
         return item.toXml(xmlDoc);
       })).then(function (values) {
-        
+
         values.map(function (value) {
           appModel.appendChild(value);
         })
-          
         
         appModel.appendChild(self.get('menu').toXml(xmlDoc));
 
         xmlDoc.appendChild(appModel);
+
         resolve(xmlDoc);
       });
-
       
     });
 
