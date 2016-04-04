@@ -12,26 +12,55 @@ App.ViewControllerRoute = Ember.Route.extend({
       console.log('Receiver of drop event: ' + receiver.get('context.name'));
       console.log('Type of receiver: ' + receiver.get('context').constructor.toString());
 
-      if(controlType == 'photocameraController') {
-        alert('If you add more than one Photocamera Controller\nIn the same ViewControl, they will all be ignored\nExcept for the very first Photocamera Controller\n')
-      } else if(controlType == 'videocameraController') {
-        alert('If you add more than one Videocamera Controller\nIn the same ViewControl, they will all be ignored\nExcept for the very first Videocamera Controller\n')
-      } else if(controlType == 'audioRecorder') {
-        alert('If you add more than one Audio Recorder\nIn the same ViewControl, they will all be ignored\nExcept for the very first Audio Recorder\n')
-      }
-
-      var uiControl = this.store.createRecord(controlType, {
-        viewController: this.get('controller.model')
+      /*
+        Multiple VideoViews or AudioPlayers
+        May not work for some devices
+      */
+      this.get('context').get('uiControls').forEach(function(item){
+        if(item.toString().indexOf('VideoView') > -1 && controlType == 'videoView') {
+          alert('Multiple VideoViews in the same ViewControl, may not work within your real device!');
+        } else if(item.toString().indexOf('AudioPlayer') > -1 && controlType == 'audioPlayer') {
+          alert('Multiple AudioPlayers in the same ViewControl, may not work within your real device!');
+        }
       });
 
-      this.get('controller.model').save();
+      var canInstantiate = true;
 
-      if (receiver.get('context').constructor.toString() == 'App.Container') {
-        uiControl.set('parentContainer', receiver.get('context'));
-        receiver.get('context').save();
+      /*
+        Photo/Videocamera Controller, Audio Recorder and Map
+        Must be instantiated at most once per ViewController
+      */
+      this.get('context').get('uiControls').forEach(function(item){
+        if(item.toString().indexOf('PhotocameraController') > -1 && controlType == 'photocameraController') {
+          alert('Only a single Photocamera Controller per each view is allowed!');
+          canInstantiate = false;
+        } else if(item.toString().indexOf('VideocameraController') > -1 && controlType == 'videocameraController') {
+          alert('Only a single Videocamera Controller per each view is allowed!');
+          canInstantiate = false;
+        } else if(item.toString().indexOf('AudioRecorder') > -1 && controlType == 'audioRecorder') {
+          alert('Only a single Audio Recorder per each view is allowed!');
+          canInstantiate = false;
+        } else if(item.toString().indexOf('Map') > -1 && controlType == 'map') {
+          alert('Only a single Map per each view is allowed!');
+          canInstantiate = false;
+        }
+      });
+      
+      if(canInstantiate) {
+        var uiControl = this.store.createRecord(controlType, {
+          viewController: this.get('controller.model')
+        });
+
+        this.get('controller.model').save();
+
+        if (receiver.get('context').constructor.toString() == 'App.Container') {
+          uiControl.set('parentContainer', receiver.get('context'));
+          receiver.get('context').save();
+        }
+
+        uiControl.save();
       }
-
-      uiControl.save();
+      
       
     }
   }

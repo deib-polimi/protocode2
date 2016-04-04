@@ -159,6 +159,11 @@ App.ApplicationRoute = Ember.Route.extend({
         nameImg: 'audiorecorder.png',
         type: 'audioRecorder'
       }).save();
+      this.store.createRecord('uiControlTemplate', {
+        label: 'Map',
+        nameImg: 'map.png',
+        type: 'map'
+      }).save();
 
 
     }

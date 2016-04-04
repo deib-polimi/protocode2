@@ -25,6 +25,7 @@ App.EditorRoute = Ember.Route.extend({
           imageViews:  this.store.find('imageView'),
           labels:  this.store.find('label'),
           listViews:  this.store.find('listView'),
+          maps:  this.store.find('map'),
           photocameraControllers:  this.store.find('photocameraController'),
           videoViews:  this.store.find('videoView'),
           videocameraControllers:  this.store.find('videocameraController'),

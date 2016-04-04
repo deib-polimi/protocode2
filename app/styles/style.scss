@@ -429,7 +429,7 @@ html, body {
 
 .android .control-web-view, .android .control-image-view, .android .control-video-view {
   background-color: rgba($android-web-view-background-color, $control-view-background-opacity);
-  border: solid 1px $ios-web-view-border-color;
+  border: solid 1px #000;
   box-shadow: 0 0 0 1px #fff;
 }
 
@@ -549,10 +549,12 @@ html, body {
   box-shadow: 0px 1px 1px 0 #c4c4c4;
   text-align: center;
   font-size: 12px;
+  font-weight:bold;
 }
 
+
 .android .control-label {
-  font-size: 11px;
+  
 }
 
 .android .control-edit-text {
@@ -588,6 +590,7 @@ html, body {
   height: 53px;
   padding: 6px 0 7px 5px;
   line-height: 30px;
+  color:#000;
   left: 0;
   right: 0;
   width: auto;
@@ -617,7 +620,7 @@ html, body {
   height:43px;
   line-height:43px;
   margin:0px 0px -43px 0px;
-  font-weight:bold;
+  //font-weight:bold;
   position:relative;
   top:-43px;
   color:#fff;
@@ -628,6 +631,18 @@ html, body {
 .android .control-grid-view-cell {
   height: 182px;
   width: 167px;
+}
+
+/*** Map -> Android ***/
+
+.android .control-map {
+  background: url('/images/ui_controls/android/google_map.png');
+  background-repeat: round;
+}
+
+.ios .control-map {
+  background: url('/images/ui_controls/ios/ios_map.png');
+  background-repeat: round;
 }
 
 /* Drag & Drop */

@@ -48,6 +48,10 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
         return App.UiListViewView;
         break;
 
+      case ('App.Map'):
+        return App.UiMapView;
+        break;
+
       case ('App.PhotocameraController'):
         return App.UiPhotocameraControllerView;
         break;

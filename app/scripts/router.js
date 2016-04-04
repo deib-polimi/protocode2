@@ -26,6 +26,8 @@ App.Router.map(function () {
         });
         this.resource('controlListViewCell', {path: '/listViewCell/:listViewCell_id'}, function () {
         });
+        this.resource('controlMap', {path: '/map/:map_id'}, function () {
+        });
         this.resource('controlPhotocameraController', {path: '/photocameraController/:photocameraController_id'}, function () {
         });
         this.resource('controlVideocameraController', {path: '/videocameraController/:videocameraController_id'}, function () {
