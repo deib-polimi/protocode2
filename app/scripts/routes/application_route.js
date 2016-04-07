@@ -38,14 +38,19 @@ App.ApplicationRoute = Ember.Route.extend({
     createApp: function () {
       var self = this;
 
+      /*
       this.store.createRecord('device', {
         name: 'iPhone5s',
         label: 'iPhone 5s',
         platform: 'ios',
+        //Aggancio top
         viewTop: 62,
+        //Aggancio bottom
         viewBottom: 568,
+        //Dimensioni in dp
         screenWidth: 320,
         screenHeight: 568,
+        //Dimensioni nel css - padding
         cssWidth: 312,
         cssHeight: 556
       }).save().then(function (device) {
@@ -63,6 +68,37 @@ App.ApplicationRoute = Ember.Route.extend({
 
           });
       });
+      */
+      this.store.createRecord('device', {
+        name: 'iPhone6Plus',
+        label: 'iPhone 6 Plus',
+        platform: 'ios',
+        //Aggancio top
+        viewTop: 81,
+        //Aggancio bottom
+        viewBottom: 736,
+        //Dimensioni in points
+        screenWidth: 414,
+        screenHeight: 736,
+        //Dimensioni nel css - padding
+        cssWidth: 318,
+        cssHeight: 567
+      }).save().then(function (device) {
+        self.store.createRecord('menu').save().then(
+          function (newMenu) {
+            self.store.createRecord('application', {
+              id: 'newAppId'
+            }).save().then(function (app) {
+              app.set('device', device);
+              app.set('menu', newMenu);
+              app.save();
+              newMenu.save();
+              device.save();
+            });
+
+          });
+      });
+      
       this.store.createRecord('device', {
         name: 'Nexus6P',
         label: 'Nexus 6P',
@@ -78,20 +114,6 @@ App.ApplicationRoute = Ember.Route.extend({
         cssWidth: 338,
         cssHeight: 601
       }).save();
-      /*
-      this.store.createRecord('device', {
-        name: 'Nexus5',
-        label: 'Nexus 5',
-        platform: 'android',
-        viewTop: 73,
-        viewBottom: 639,
-        screenWidth: 388.31460674,
-        screenHeight: 690.33707866,
-        minHeight: 50,
-        cssWidth: 353,
-        cssHeight: 624
-      }).save();
-      */
 
 
       /*this.store.createRecord('uiControlTemplate', {

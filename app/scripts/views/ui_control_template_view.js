@@ -9,7 +9,7 @@ App.UiControlTemplateView = Ember.View.extend({
   }.property('context.label'),
   
   style: function() {
-    return 'background-image: url("' + this.get('context.imageSource') + '");';
+    return 'background-image: url("' + this.get('context.imageSource') + '");cursor:pointer;';
   }.property('context.imageSource'),
 
   dataPlacement: 'bottom',
@@ -21,12 +21,13 @@ App.UiControlTemplateView = Ember.View.extend({
   },
 
   didInsertElement: function(event) {
-    $(this.get('element')).tooltip(
+    /*$(this.get('element')).tooltip(
       {delay: {
         show: 300,
         hide: 0
         }
       }
     );
+    */
   }
 });

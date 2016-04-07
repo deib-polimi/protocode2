@@ -1,8 +1,8 @@
 App.AudioPlayer = App.UiControl.extend({
   sourceType: DS.belongsTo('sourceType', {inverse: null}),
 
-  width:              DS.attr('number', {defaultValue: 200}),
-  height:             DS.attr('number', {defaultValue: 44}),
+  width:              DS.attr('number', {defaultValue: 250}),
+  height:             DS.attr('number', {defaultValue: 75}),
 
   xmlName:  'audioPlayers',
 

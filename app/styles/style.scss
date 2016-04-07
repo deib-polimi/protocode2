@@ -65,6 +65,18 @@ html, body {
   padding: 114px 27px 107px 31px;
 }
 
+.device-view.ios.iPhone6Plus {
+  background-image: url("../images/devices/ios/iPhone_6plus.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  //Dimensione device nel riquadro
+  width: 370px;
+  height: 763px;
+  //Padding della view rispetto al device
+  padding: 99px 25px 97px 27px;
+}
+
 .device-view.android.Nexus6P {
   background-image: url("../images/devices/android/nexus_6p.png");
   background-repeat: no-repeat;
@@ -138,11 +150,12 @@ html, body {
 
 .control-audio-player-view .control-content {
   display: flex;
-  flex-flow: row no-wrap;
-  justify-content: space-between;
+  //flex-flow: row no-wrap;
+  //justify-content: space-between;
   align-content: center;
   align-items: center;
-  width: 100%;
+  width: 156px;
+  margin:auto;
   height: 100%;
 }
 
@@ -325,7 +338,7 @@ html, body {
   align-items: flex-end;
   background-color: #dddddd;
   width: 100%;
-  height: 48px;
+  height: 37px;
   border-top: solid 1px #b2b2b2;
   bottom: 0;
 }
@@ -419,7 +432,7 @@ html, body {
 .android .device-screen-view .command-bar {
   position: absolute;
   width: 100%;
-  bottom: -3px;
+  bottom: -4px;
   left: 0;
   height: 48px;
   background-image: url("../images/ui_controls/android/command_bar.png");
@@ -517,10 +530,10 @@ html, body {
 
 
 .control-audio-player-view .control-content .control-button {
-  height:30px;
-  width:32%;
-  padding: 5px;
-  border-radius: 5px;
+  height:48px;
+  width:48px;
+  margin: 2px;
+  border-radius: 25px;
 }
 
 .control-audio-player-view .control-content .control-button span {
@@ -528,7 +541,10 @@ html, body {
 }
 
 .ios .control-audio-player-view .control-content .control-button {
-
+  height:48px;
+  width:48px;
+  margin: 2px;
+  border-radius: 25px;
 }
 
 .android .control-audio-player-view .control-content .control-button {
@@ -612,24 +628,24 @@ html, body {
 }
 
 .android .control-grid-view-cell img {
-  height: 182px;
+  height: 167px;
   width: 167px;
 }
 
 .android .control-grid-view-cell p {
-  height:43px;
-  line-height:43px;
-  margin:0px 0px -43px 0px;
+  height:45px;
+  line-height:45px;
+  margin:0px 0px -45px 0px;
   //font-weight:bold;
   position:relative;
-  top:-43px;
+  top:-45px;
   color:#fff;
   background: rgba(0,0,0,0.4);
   text-align:left;padding-left:12px
 }
 
 .android .control-grid-view-cell {
-  height: 182px;
+  height: 167px;
   width: 167px;
 }
 

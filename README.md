@@ -1,10 +1,14 @@
-# Protocode 2.0 #
+# Protocode#
 
 Protocode is a web application that helps you to prototype iOS and Android mobile apps. Thanks to its model-driven approach, you create a prototype app once for different operating systems.
 
-## What's new ##
+## What's new ##v2.0
 
-## Features ##
+* __Updated widgets__: It is now possible to edit more properties of the widgets like color or font dimension for buttons, labels and edit texts; list views and grid views are now available in 3 different layouts : simple text, with an image or both. Finally, there is a new Map widget that can be added to the application.
+
+* __Updated editor__: Nexus 6P simulator for Android Marshmellow and iPhone 6 Plus for iOS 9.
+
+## Features ## from v1.0
 Here's a list of the key points of this web application:
 
 * __Widget based prototyping tool__: the user can create the pages that compose the prototype adding various controls such as label, edit texts etc. Now it supports 16 controls: button, label, edit text, web view, image view, video view, audio player, list view, grid view, photocamera controller, videocamera controller and audio recorder.
@@ -37,4 +41,4 @@ In order to deploy the web application we need:
 
 ## External Links ##
 
-[Protocode](https://github.com/deib-polimi/protocode/) original version
+[Protocode v1.0](https://github.com/deib-polimi/protocode/)
