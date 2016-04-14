@@ -1,1 +1,0 @@
-• Add filtering in store.find() for {Photocamera|Videocamera}Controller
