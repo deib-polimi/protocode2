@@ -10,6 +10,7 @@
     "FileSaver": "*",
     "ember-localstorage-adapter": "0.3.1",
     "blob": "*",
+    "mjolnic-bootstrap-colorpicker": "2.3.3",
     "vkbeautify-wrapper": "*"
   },
   "devDependencies": {
