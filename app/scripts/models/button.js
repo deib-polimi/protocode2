@@ -1,5 +1,5 @@
 App.Button = App.UiControl.extend({
-  title:            DS.attr('string', {defaultValue: 'BUTTON'}),
+  title:            DS.attr('string', {defaultValue: 'Button'}),
   clickListener:    DS.belongsTo('clickListener'),
 
   width:            DS.attr('number', {defaultValue: 88}),
@@ -38,7 +38,7 @@ App.Button = App.UiControl.extend({
     if (clickListener != null) {
         button.appendChild(clickListener.toXml(xmlDoc));
     }
-    
+
     return button;
   }
 });

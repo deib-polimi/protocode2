@@ -184,7 +184,7 @@ html, body {
 
 .control-list-view:hover, .control-grid-view:hover {
   box-shadow: 0 0 0 1px #ccc;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 .control-list-view-cell {
@@ -217,7 +217,6 @@ html, body {
 
 .ios .control-button {
   color: $ios-primary-color;
-  font-weight: bold;
 }
 
 .ios .control-button a {
@@ -336,10 +335,10 @@ html, body {
   justify-content: space-around;
   align-content: center;
   align-items: flex-end;
-  background-color: #dddddd;
+  background-color: rgb(247,247,247);
   width: 100%;
-  height: 37px;
-  border-top: solid 1px #b2b2b2;
+  height: 44px;
+  border-top: solid 1px rgb(247,247,247);
   bottom: 0;
 }
 
@@ -363,7 +362,7 @@ html, body {
 /*** Ui Controls -> iOS ***/
 /*** ScreenView -> iOS ***/
 .ios .device-screen-view {
-  font: 14px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+  font: 12px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
 }
 
 .ios .device-screen-view .action-bar {
@@ -374,8 +373,8 @@ html, body {
   width: 100%;
   top: 0;
   left: 0;
-  height: 62px;
-  border-bottom: solid 1px #b2b2b2;
+  height: 44px;
+  border-bottom: solid 1px rgb(247,247,247);
   background-image: url("../images/ui_controls/ios/status_bar.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -570,7 +569,7 @@ html, body {
 
 
 .android .control-label {
-  
+
 }
 
 .android .control-edit-text {

@@ -74,9 +74,9 @@ App.ApplicationRoute = Ember.Route.extend({
         label: 'iPhone 6 Plus',
         platform: 'ios',
         //Aggancio top
-        viewTop: 81,
+        viewTop: 58,
         //Aggancio bottom
-        viewBottom: 736,
+        viewBottom: 729,
         //Dimensioni in points
         screenWidth: 414,
         screenHeight: 736,
@@ -98,7 +98,7 @@ App.ApplicationRoute = Ember.Route.extend({
 
           });
       });
-      
+
       this.store.createRecord('device', {
         name: 'Nexus6P',
         label: 'Nexus 6P',
