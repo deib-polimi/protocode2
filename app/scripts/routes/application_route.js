@@ -73,16 +73,16 @@ App.ApplicationRoute = Ember.Route.extend({
         name: 'iPhone6Plus',
         label: 'iPhone 6 Plus',
         platform: 'ios',
-        //Aggancio top
-        viewTop: 58,
-        //Aggancio bottom
-        viewBottom: 729,
+        //Altezza status bar in points(=css)
+        viewTop: 64,
+        //Altezza schermos
+        viewBottom: 736,
         //Dimensioni in points
         screenWidth: 414,
         screenHeight: 736,
-        //Dimensioni nel css - padding
-        cssWidth: 318,
-        cssHeight: 567
+        //Dimensione - padding = dimensione schermo (vedi css)
+        cssWidth: 414,
+        cssHeight: 736
       }).save().then(function (device) {
         self.store.createRecord('menu').save().then(
           function (newMenu) {
