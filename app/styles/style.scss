@@ -70,12 +70,12 @@ html, body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
-  //Dimensione smartphone
-  width: 480px;
-  height: 976px;
-  //Padding della view rispetto al device
-  padding: 122px 32px 118px 34px;
-  //Dimensione - padding = dimensione schermo
+  //Dimensione immagine originale
+  width: 500px;
+  height: 1000px;
+  //Padding per centrare lo schermo 
+  //dimensione schermo in pixel = dimensione in dp 414x736
+  padding: 130px 43px 134px 43px;
 }
 
 .device-view.android.Nexus6P {
@@ -83,11 +83,12 @@ html, body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
-  //Dimensione device nel riquadro
-  width: 450px;
-  height: 973px;
-  //Padding della view rispetto al device
-  padding: 124px 20px 118px 19px;
+  //Dimensione immagine originale
+  width: 500px;
+  height: 1000px;
+  //Padding per centrare lo schermo 
+  //dimensione schermo in pixel = dimensione in dp 411x731
+  padding: 135px 45px 134px 44px;
 }
 
 //Misure da prendere dal model, qui solo 100%
@@ -375,7 +376,7 @@ html, body {
   width: 100%;
   top: 0;
   left: 0;
-  //(px = points iphone)
+  //Altezza status bar in pixel = altezza in points
   height: 63px; //+1 border bottom
   border-bottom: solid 1px rgb(247,247,247);
   background-image: url("../images/ui_controls/ios/status_bar.png");
@@ -390,19 +391,19 @@ html, body {
 /********************************** Android **********************************/
 /*** ScreenView -> Android ***/
 .android .device-screen-view {
-  font: 14px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+  font: 16px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
 }
 
 .android .device-screen-view .action-bar {
   position: absolute;
   width: 100%;
-  top: 23px;
+  top: 29px;
   left: 0;
-  height: 50px;
-  line-height: 50px;
+  height: 64px;
+  line-height: 64px;
   background-color: #3F51B5;
-  border-bottom: solid 1px #3F51B5;
-  background-repeat: no-repeat;
+  //border-bottom: solid 1px #3F51B5;
+  //background-repeat: no-repeat;
   padding-left: 8px;
 }
 
@@ -412,7 +413,7 @@ html, body {
   //background: url('../images/ui_controls/android/ic_launcher.png') no-repeat transparent;
   background-size: auto 93%;
   color: #FFFFFF;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .android .device-screen-view .action-bar:before {
@@ -425,7 +426,8 @@ html, body {
   width: 100%;
   top: 0;
   left: 0;
-  height: 25px;
+  //Altezza status bar in pixel = altezza in points
+  height: 30px;
   background-image: url("../images/ui_controls/android/status_bar.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -434,9 +436,9 @@ html, body {
 .android .device-screen-view .command-bar {
   position: absolute;
   width: 100%;
-  bottom: -4px;
+  bottom: 0px;
   left: 0;
-  height: 48px;
+  height: 55px;
   background-image: url("../images/ui_controls/android/command_bar.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -476,13 +478,13 @@ html, body {
 .app-menu.android:before {
   content: $fa-var-ellipsis-v;
   font-family: FontAwesome;
-  font-size : 16px;
+  font-size : 22px;
   font-weight: normal;
   font-style: normal;
   color: #FFF;
   display: block;
   position: absolute;
-  top: 11px;
+  top: 16px;
   right: 0;
   text-decoration: inherit;
   padding-right: 10px;
@@ -495,8 +497,8 @@ html, body {
 .app-menu.android {
   display: block;
   position: absolute;
-  top: 27px;
-  right: 3px;
+  top: 33px;
+  right: 5px;
   width: auto;
   height: auto;
 
@@ -506,9 +508,9 @@ html, body {
 .app-menu-item.android {
   display: none;
   position: relative;
-  min-width: 185px;
+  min-width: 225px;
   min-height: auto;
-  padding: 12px;
+  padding: 20px;
   background-color: #FFFFFF;
   border-bottom: solid 1px #FFFFFF;
 }

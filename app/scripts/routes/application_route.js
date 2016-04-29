@@ -73,9 +73,9 @@ App.ApplicationRoute = Ember.Route.extend({
         name: 'iPhone6Plus',
         label: 'iPhone 6 Plus',
         platform: 'ios',
-        //Altezza status bar in points(=css)
+        //Altezza status bar in points
         viewTop: 64,
-        //Altezza schermos
+        //Altezza schermo in points
         viewBottom: 736,
         //Dimensioni in points
         screenWidth: 414,
@@ -103,16 +103,16 @@ App.ApplicationRoute = Ember.Route.extend({
         name: 'Nexus6P',
         label: 'Nexus 6P',
         platform: 'android',
-        //Aggancio top
-        viewTop: 89,
-        //Aggancio bottom
-        viewBottom: 676,
+        //Altezza status bar(30) + toolbar(64) in dp
+        viewTop: 93,
+        //Altezza schermo (731) - altezza command bar(55) in dp
+        viewBottom: 675,
         //Dimensioni in dp
         screenWidth: 411,
         screenHeight: 731,
         //Dimensioni nel css - padding
-        cssWidth: 338,
-        cssHeight: 601
+        cssWidth: 411,
+        cssHeight: 731
       }).save();
 
 
