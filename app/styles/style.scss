@@ -73,7 +73,7 @@ html, body {
   //Dimensione immagine originale
   width: 500px;
   height: 1000px;
-  //Padding per centrare lo schermo 
+  //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 414x736
   padding: 130px 43px 134px 43px;
 }
@@ -86,7 +86,7 @@ html, body {
   //Dimensione immagine originale
   width: 500px;
   height: 1000px;
-  //Padding per centrare lo schermo 
+  //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 411x731
   padding: 135px 45px 134px 44px;
 }
@@ -544,11 +544,8 @@ html, body {
   margin:auto;
 }
 
-.ios .control-audio-player-view .control-content .control-button {
-  height:48px;
-  width:48px;
-  margin: 2px;
-  border-radius: 25px;
+.ios .control-audio-player-view .control-content .control-button span {
+  font-size:30px;
 }
 
 .android .control-audio-player-view .control-content .control-button {
@@ -556,8 +553,6 @@ html, body {
   color:#fff;
   font-size: 15px;
 }
-
-
 
 .android .control-button {
   background-color: #cecece;
@@ -572,7 +567,6 @@ html, body {
   font-weight:bold;
 }
 
-
 .android .control-label {
 
 }
@@ -584,7 +578,7 @@ html, body {
   display: flex;
 }
 
-  .android .control-edit-text .inner-control:after {
+.android .control-edit-text .inner-control:after {
     content: "";
     position: absolute;
     background: #FF4081;
@@ -593,7 +587,7 @@ html, body {
     height: 2px;
     width: 100%;
     bottom: 5px;
-  }
+}
 
 .android .control-edit-text .control-content {
   align-self: center;
