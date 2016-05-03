@@ -1,14 +1,14 @@
 <div class="control-content">
 	{{#if isWithImage}}
-		<img class="list-image" src="images/ui_controls/android/listimage.png" />
-		{{title}}
+		<div class="list-image"></div>
+		<p class="list-text">{{title}}</p>
 	{{else}}
 		{{#if isDetailed}}
-			<img class="list-image" src="images/ui_controls/android/listimage.png" />
-			{{title}}
-			<img class="list-icon" src="images/ui_controls/android/listicon.png" />
+			<div class="list-image"></div>
+			<p class="list-text">{{title}}</p>
+			<div class="list-icon"></div>
 		{{else}}
-			{{title}}
+			<p class="list-text">{{title}}</p>
 		{{/if}}
 	{{/if}}
 </div>

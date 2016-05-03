@@ -280,31 +280,42 @@ html, body {
 }
 
 .ios .control-list-view-cell {
-  height: 44px;
-  padding: 5px 0;
-  font-size: 20px;
-  line-height: 30px;
-  //margin-left: 14px;
+  height: 56px;
+  padding: 8px 16px 8px 0px;
+  margin-left: 16px;
+  line-height: 40px;
+  color: #333;
   left: 0;
   right: 0;
   width: auto;
-  border-bottom: solid 1px $ios-list-view-cell-border-color;
-  font-size: $ios-list-view-cell-font-size;
-  color: #000;
-  line-height: 34px;
+  border-bottom: solid 1px #d9d9d9;
 }
 
-.ios .control-list-view-cell img.list-image {
-  width : 35px;
-  height : 35px;
-  margin : 0px 10px;
+.ios .control-list-view-cell .list-image {
+  width : 40px;
+  height : 40px;
+  margin-right: 16px;
+  background-image : url("../images/ui_controls/ios/listimage.png");
+  background-size : 100%;
+  float:left;
 }
 
-.ios .control-list-view-cell img.list-icon {
-  width : 24px;
-  height : 24px;
-  float: right;
-  margin: 4px 10px 0px 0px;
+.ios .control-list-view-cell .list-icon {
+  width : 22px;
+  height : 22px;
+  margin: 9px 0px;
+  background: url("../images/ui_controls/ios/listicon.png");
+  background-size : 100%;
+  float:left;
+}
+
+.ios .control-list-view-cell p.list-text {
+  margin : 0;
+  font-size : 16px;
+  display : inline-block;
+  width : 285px;
+  margin-right: 16px;
+  float:left;
 }
 
 .ios .control-grid-view-cell img {
@@ -609,20 +620,33 @@ html, body {
   right: 0;
   width: auto;
   border-bottom: solid 1px #d9d9d9;
-  font-size: 16px;
 }
 
-.android .control-list-view-cell img.list-image {
+.android .control-list-view-cell .list-image {
   width : 40px;
   height : 40px;
   margin-right: 16px;
+  background-image : url("../images/ui_controls/android/listimage.png");
+  background-size : 100%;
+  float:left;
 }
 
-.android .control-list-view-cell img.list-icon {
+.android .control-list-view-cell .list-icon {
   width : 22px;
   height : 22px;
-  float: right;
-  margin-top: 9px;
+  margin: 9px 0px;
+  background: url("../images/ui_controls/android/listicon.png");
+  background-size : 100%;
+  float:left;
+}
+
+.android .control-list-view-cell p.list-text {
+  margin : 0;
+  font-size : 16px;
+  display : inline-block;
+  width : 285px;
+  margin-right: 16px;
+  float:left;
 }
 
 .android .control-grid-view-cell img {
