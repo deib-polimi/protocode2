@@ -1,13 +1,13 @@
 <div class="control-content">
 	{{#if isWithImage}}
-		<img src="images/ui_controls/android/grid_image.jpg"/>
+		<div class="grid-image"></div>
 	{{else}}
 		{{#if isDetailed}}
-			<img src="images/ui_controls/android/grid_image.jpg" />
-			<p>{{title}}</p>
+			<div class="grid-image"></div>
+			<p class="grid-text">{{title}}</p>
 		{{else}}
-			<img src="images/ui_controls/android/grid_image_empty.jpg" />
-			<p>{{title}}</p>
+			<div class="grid-image-empty"></div>
+			<p class="grid-text">{{title}}</p>
 		{{/if}}
 	{{/if}}
 </div>
