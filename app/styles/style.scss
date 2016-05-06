@@ -705,6 +705,31 @@ html, body {
   background-repeat: round;
 }
 
+
+
+.control-switch .control-content {
+  height: 100%;
+  display: flex;
+}
+.android .control-switch .switch-image {
+  width: 51px;
+  height:31px;
+  background: url('/images/ui_controls/android/switch.png');
+  background-size: 100%;
+  margin : auto;
+}
+.ios .control-switch .switch-image {
+  width: 51px;
+  height:31px;
+  background: url('/images/ui_controls/ios/switch.png');
+  background-size: 100%;
+  margin : auto;
+}
+
+
+
+
+
 /* Drag & Drop */
 .dragging-over {
   box-shadow: 0 0 5px 5px #007aff;

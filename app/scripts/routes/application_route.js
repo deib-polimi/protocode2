@@ -137,6 +137,16 @@ App.ApplicationRoute = Ember.Route.extend({
         type: 'editText'
       }).save();
       this.store.createRecord('uiControlTemplate', {
+        label: 'Switch',
+        nameImg: 'switch.png',
+        type: 'switch'
+      }).save();
+      this.store.createRecord('uiControlTemplate', {
+        label: 'Slider',
+        nameImg: 'slider.png',
+        type: 'slider'
+      }).save();
+      this.store.createRecord('uiControlTemplate', {
         label: 'Web View',
         nameImg: 'webview.png',
         type: 'webView'

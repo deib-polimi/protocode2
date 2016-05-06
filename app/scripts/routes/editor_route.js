@@ -1,6 +1,6 @@
 App.EditorRoute = Ember.Route.extend({
     model: function () {
-      
+
         return Ember.RSVP.hash({
           application: this.store.find('application').then(function(dataArray) {
             return dataArray.objectAt(0);
@@ -27,6 +27,8 @@ App.EditorRoute = Ember.Route.extend({
           listViews:  this.store.find('listView'),
           maps:  this.store.find('map'),
           photocameraControllers:  this.store.find('photocameraController'),
+          sliders:  this.store.find('slider'),
+          switches:  this.store.find('switch'),
           videoViews:  this.store.find('videoView'),
           videocameraControllers:  this.store.find('videocameraController'),
           webViews:  this.store.find('webView'),

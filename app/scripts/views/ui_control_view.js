@@ -52,6 +52,14 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
         return App.UiMapView;
         break;
 
+      case ('App.Switch'):
+        return App.UiSwitchView;
+        break;
+
+      case ('App.Slider'):
+        return App.UiSliderView;
+        break;
+
       case ('App.PhotocameraController'):
         return App.UiPhotocameraControllerView;
         break;
@@ -73,19 +81,19 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
 
   alignParentTop: function() {
     return this.get('context.alignParentTop');
-  }.property('context.alignParentTop'), 
+  }.property('context.alignParentTop'),
 
   alignParentBottom: function() {
     return this.get('context.alignParentBottom');
-  }.property('context.alignParentBottom'), 
+  }.property('context.alignParentBottom'),
 
   alignParentStart: function() {
     return this.get('context.alignParentStart');
-  }.property('context.alignParentStart'), 
+  }.property('context.alignParentStart'),
 
   alignParentEnd: function() {
     return this.get('context.alignParentEnd');
-  }.property('context.alignParentEnd'), 
+  }.property('context.alignParentEnd'),
 
   top: function() {
     return this.computeVerticalAxis(this.get('context.top'));
@@ -148,7 +156,7 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
   style: function() {
     var result = '';
 
-    result += 'top: ' + this.get('top') + 'px; ';    
+    result += 'top: ' + this.get('top') + 'px; ';
     result += 'left: ' + this.get('start') + 'px; ';
     result += 'height: ' + this.get('computedHeight') + 'px;';
     result += 'width: ' + this.get('computedWidth') + 'px;';

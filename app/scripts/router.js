@@ -1,5 +1,5 @@
 App.Router.map(function () {
-  
+
   this.resource('editor', function() {
   	this.resource('viewControllers', function() {
       this.resource('viewController', {path: '/viewController/:viewController_id'}, function() {
@@ -27,6 +27,10 @@ App.Router.map(function () {
         this.resource('controlListViewCell', {path: '/listViewCell/:listViewCell_id'}, function () {
         });
         this.resource('controlMap', {path: '/map/:map_id'}, function () {
+        });
+        this.resource('controlSwitch', {path: '/switch/:switch_id'}, function () {
+        });
+        this.resource('controlSlider', {path: '/slider/:slider_id'}, function () {
         });
         this.resource('controlPhotocameraController', {path: '/photocameraController/:photocameraController_id'}, function () {
         });
