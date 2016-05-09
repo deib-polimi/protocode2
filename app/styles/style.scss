@@ -712,18 +712,73 @@ html, body {
   display: flex;
 }
 .android .control-switch .switch-image {
-  width: 51px;
-  height:31px;
-  background: url('/images/ui_controls/android/switch.png');
+  width: 40px;
+  height:27px;
+  background: url('/images/ui_controls/android/switch_circle.png');
   background-size: 100%;
   margin : auto;
 }
 .ios .control-switch .switch-image {
   width: 51px;
   height:31px;
-  background: url('/images/ui_controls/ios/switch.png');
+  background: url('/images/ui_controls/ios/switch_circle.png');
   background-size: 100%;
   margin : auto;
+}
+
+.control-slider .control-content {
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.android .control-slider .slider-left-row {
+  position : absolute;
+  background-color : rgb(252,34,110);
+  width: 50%;
+  height: 2px;
+}
+
+.android .control-slider .slider-right-row {
+  position : absolute;
+  left : 54%;
+  background-color : rgb(237,237,237);
+  width: 46%;
+  height: 2px;
+}
+
+.android .control-slider .slider-image {
+  width: 40px;
+  height: 40px;
+  background: url('/images/ui_controls/android/slider_circle.png');
+  background-size: 100%;
+  margin : auto;
+  //z-index : 1;
+}
+
+.ios .control-slider .slider-left-row {
+  position : absolute;
+  background-color : rgb(10,93,247);
+  width: 42%;
+  height: 2px;
+}
+
+.ios .control-slider .slider-right-row {
+  position : absolute;
+  left : 59%;
+  background-color : rgb(164,164,164);
+  width: 41%;
+  height: 2px;
+}
+
+.ios .control-slider .slider-image {
+  width: 80px;
+  height: 40px;
+  background: url('/images/ui_controls/ios/slider_circle.png');
+  background-size: 100%;
+  margin : auto;
+  //z-index : 1;
 }
 
 

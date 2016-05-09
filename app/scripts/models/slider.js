@@ -1,10 +1,10 @@
 App.Slider = App.UiControl.extend({
   name:       DS.attr('string', {defaultValue: 'Slider'}),
 
-  width:      DS.attr('number', {defaultValue: 88}),
-  height:     DS.attr('number', {defaultValue: 36}),
+  width:      DS.attr('number', {defaultValue: 150}),
+  height:     DS.attr('number', {defaultValue: 50}),
 
-  xmlName:    'slider',
+  xmlName:    'sliders',
 
   toXml: function(xmlDoc) {
     var slider = xmlDoc.createElement(this.get('xmlName'));
