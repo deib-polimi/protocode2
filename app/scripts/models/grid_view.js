@@ -2,7 +2,8 @@ App.GridView = App.UiControl.extend({
   gridViewCells:    DS.hasMany('gridViewCell', {inverse: 'parentGridView'}),
   clickListener:    DS.belongsTo('clickListener'),
 
-  height:           DS.attr('number', {defaultValue: 200}),
+  width:           DS.attr('number', {defaultValue: 204}),
+  height:           DS.attr('number', {defaultValue: 408}),
 
   gridType:         DS.attr('string', {defaultValue: 'simple'}),
 
@@ -19,7 +20,7 @@ App.GridView = App.UiControl.extend({
     });
 
     var clickListener = this.get('clickListener');
-    
+
     if (clickListener) {
       clickListener.deleteRecord();
       clickListener.save();
@@ -30,7 +31,7 @@ App.GridView = App.UiControl.extend({
 
   toXml: function(xmlDoc) {
     var self = this;
-    
+
     var elem = xmlDoc.createElement(self.get('xmlName'));
     self.decorateXml(elem);
 

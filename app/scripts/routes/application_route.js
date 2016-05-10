@@ -196,6 +196,16 @@ App.ApplicationRoute = Ember.Route.extend({
         nameImg: 'map.png',
         type: 'map'
       }).save();
+      this.store.createRecord('uiControlTemplate', {
+        label: 'Datepicker',
+        nameImg: 'datepicker.png',
+        type: 'datepicker'
+      }).save();
+      this.store.createRecord('uiControlTemplate', {
+        label: 'Timepicker',
+        nameImg: 'timepicker.png',
+        type: 'timepicker'
+      }).save();
 
 
     }

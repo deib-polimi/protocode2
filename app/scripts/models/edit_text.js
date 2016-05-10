@@ -2,7 +2,7 @@ App.EditText = App.UiControl.extend({
   title:        DS.attr('string', {defaultValue: ''}),
   placeholder:  DS.attr('string', {defaultValue: 'EditText'}),
 
-  width:        DS.attr('number', {defaultValue: 150}),
+  width:        DS.attr('number', {defaultValue: 88}),
   height:       DS.attr('number', {defaultValue: 36}),
 
   textColor:        DS.attr('string', {defaultValue: '#000000'}),
@@ -13,13 +13,13 @@ App.EditText = App.UiControl.extend({
   toXml: function(xmlDoc) {
     var elem = xmlDoc.createElement(this.get('xmlName'));
     this.decorateXml(elem);
-    
+
     elem.setAttribute('initialContent', this.get('title'));
     elem.setAttribute('placeholder', this.get('placeholder'));
 
     elem.setAttribute('textColor', this.get('textColor'));
     elem.setAttribute('textSize', this.get('textSize'));
-    
+
     return elem;
   }
 });

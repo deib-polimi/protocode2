@@ -182,6 +182,7 @@ html, body {
 
 .control-list-view {
   background-color: #fff;
+  overflow-y: hidden;
 }
 
 .control-list-view:hover, .control-grid-view:hover {
@@ -197,6 +198,10 @@ html, body {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.control-grid-view {
+  overflow-y: hidden;
 }
 
 .control-grid-view-cell {
@@ -306,14 +311,14 @@ html, body {
   margin: 9px 0px;
   background: url("../images/ui_controls/ios/listicon.png");
   background-size : 100%;
-  float:left;
+  float:right;
 }
 
 .ios .control-list-view-cell p.list-text {
   margin : 0;
   font-size : 16px;
   display : inline-block;
-  width : 285px;
+  //width : 285px;
   margin-right: 16px;
   float:left;
 }
@@ -648,14 +653,14 @@ html, body {
   margin: 9px 0px;
   background: url("../images/ui_controls/android/listicon.png");
   background-size : 100%;
-  float:left;
+  float:right;
 }
 
 .android .control-list-view-cell p.list-text {
   margin : 0;
   font-size : 16px;
   display : inline-block;
-  width : 285px;
+  //width : 285px;
   margin-right: 16px;
   float:left;
 }
@@ -717,11 +722,51 @@ html, body {
   background: url('/images/ui_controls/android/switch_circle.png');
   background-size: 100%;
   margin : auto;
+  background-repeat : no-repeat;
 }
 .ios .control-switch .switch-image {
   width: 51px;
   height:31px;
   background: url('/images/ui_controls/ios/switch_circle.png');
+  background-size: 100%;
+  margin : auto;
+  background-repeat : no-repeat;
+}
+
+.control-datepicker .control-content {
+  height: 100%;
+  display: flex;
+}
+.android .control-datepicker .datepicker-image {
+  width: 351px;
+  height:432px;
+  background: url('/images/ui_controls/android/datepicker_big.png');
+  background-size: 100%;
+  margin : auto;
+}
+.ios .control-datepicker .datepicker-image {
+  width: 320px;
+  height:216px;
+  background: url('/images/ui_controls/ios/datepicker.png');
+  background-size: 100%;
+  margin : auto;
+}
+
+.control-timepicker .control-content {
+  height: 100%;
+  display: flex;
+}
+.android .control-timepicker .timepicker-image {
+  width: 351px;
+  height:432px;
+  background: url('/images/ui_controls/android/timepicker_big.png');
+  background-size: 100%;
+  margin : auto;
+}
+.ios .control-timepicker .timepicker-image {
+  width: 320px;
+  height:216px;
+  background: url('/images/ui_controls/ios/timepicker.png');
   background-size: 100%;
   margin : auto;
 }
@@ -754,7 +799,7 @@ html, body {
   background: url('/images/ui_controls/android/slider_circle.png');
   background-size: 100%;
   margin : auto;
-  //z-index : 1;
+  background-repeat : no-repeat;
 }
 
 .ios .control-slider .slider-left-row {
@@ -778,7 +823,7 @@ html, body {
   background: url('/images/ui_controls/ios/slider_circle.png');
   background-size: 100%;
   margin : auto;
-  //z-index : 1;
+  background-repeat : no-repeat;
 }
 
 

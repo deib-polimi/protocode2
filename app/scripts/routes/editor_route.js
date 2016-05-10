@@ -26,6 +26,8 @@ App.EditorRoute = Ember.Route.extend({
           labels:  this.store.find('label'),
           listViews:  this.store.find('listView'),
           maps:  this.store.find('map'),
+          datepickers:  this.store.find('datepicker'),
+          timepickers:  this.store.find('timepicker'),
           photocameraControllers:  this.store.find('photocameraController'),
           sliders:  this.store.find('slider'),
           switches:  this.store.find('switch'),

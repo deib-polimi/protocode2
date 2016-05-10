@@ -3,19 +3,19 @@ App.Map = App.UiControl.extend({
 
   lat:        DS.attr('number', {defaultValue: 45.478}),
   lon:        DS.attr('number', {defaultValue: 9.227}),
-  
-  width:      DS.attr('number', {defaultValue: 300}),
-  height:     DS.attr('number', {defaultValue: 200}),
+
+  width:      DS.attr('number', {defaultValue: 270}),
+  height:     DS.attr('number', {defaultValue: 270}),
 
   xmlName:        'map',
 
   toXml: function(xmlDoc) {
     var map = xmlDoc.createElement(this.get('xmlName'));
     this.decorateXml(map);
-    
+
     map.setAttribute('lat', this.get('lat'));
     map.setAttribute('lon', this.get('lon'));
-    
+
     return map;
   },
 

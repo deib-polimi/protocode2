@@ -13,14 +13,13 @@
         <div class="tab-content">
           <div class="tab-pane fade in active" id="home">
             {{input-text label="Name" value=name action='acceptChanges'}}
-            {{input-text label="HTML file name" value=htmlFileName action='acceptChanges'}}
           </div>
           <div class="tab-pane fade" id="position">
             {{partial "partials/ui_control_position"}}
           </div>
           <div class="tab-pane fade" id="dimension">
-            {{input-number label="Width [dp]" min="0" value=width action='acceptChanges' }}
-            {{input-number label="Height [dp]" min="0" value=height action='acceptChanges' }}
+            {{input-number label="Width [dp]" min="351" value=width action='acceptChanges' }}
+            {{input-number label="Height [dp]" min="432" value=height action='acceptChanges' }}
             {{partial "partials/ui_control_dimension"}}
           </div>
         </div>

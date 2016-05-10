@@ -6,8 +6,8 @@ App.Label = App.UiControl.extend({
   textColor:        DS.attr('string', {defaultValue: '#000000'}),
   textSize:         DS.attr('number', {defaultValue: 16}),
   textDecoration:   DS.attr('string', {defaultValue: 'none'}),
-  
-  width:      DS.attr('number', {defaultValue: 150}),
+
+  width:      DS.attr('number', {defaultValue: 88}),
   height:     DS.attr('number', {defaultValue: 36}),
 
   xmlName:  'textViews',

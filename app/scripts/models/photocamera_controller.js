@@ -1,6 +1,9 @@
 App.PhotocameraController = App.UiControl.extend({
   imageView: DS.belongsTo('imageView', {inverse: null}),
 
+  width:            DS.attr('number', {defaultValue: 88}),
+  height:           DS.attr('number', {defaultValue: 36}),
+
   xmlName:   'photocameraController',
 
   toXml: function(xmlDoc) {
@@ -12,7 +15,7 @@ App.PhotocameraController = App.UiControl.extend({
     if (imageView != null) {
       elem.setAttribute('imageViewId', imageView.get('name'));
     }
-    
+
     return elem;
   },
 

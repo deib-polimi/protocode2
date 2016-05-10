@@ -1,14 +1,14 @@
 App.VideoView = App.UiControl.extend({
   sourceType: DS.belongsTo('sourceType', {inverse: null}),
 
-  width:    DS.attr('number', {defaultValue: 300}),
-  height:   DS.attr('number', {defaultValue: 200}),
+  width:    DS.attr('number', {defaultValue: 240}),
+  height:   DS.attr('number', {defaultValue: 128}),
 
   xmlName:  'videoViews',
 
   didCreate: function() {
     this._super();
-    
+
     var sourceType = this.store.createRecord('sourceType');
     this.set('sourceType', sourceType);
     sourceType.save();
@@ -54,7 +54,7 @@ App.VideoView = App.UiControl.extend({
         elem.setAttribute(attr.name, attr.value);
       };
     }
-    
+
     return elem;
   },
 

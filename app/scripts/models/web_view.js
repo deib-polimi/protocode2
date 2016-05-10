@@ -1,8 +1,8 @@
 App.WebView = App.UiControl.extend({
   htmlFileName:    DS.attr('string'),
 
-  width:    DS.attr('number', {defaultValue: 300}),
-  height:   DS.attr('number', {defaultValue: 200}),
+  width:    DS.attr('number', {defaultValue: 240}),
+  height:   DS.attr('number', {defaultValue: 128}),
 
   xmlName:  'webViews',
 
@@ -11,7 +11,7 @@ App.WebView = App.UiControl.extend({
     this.decorateXml(elem);
 
     elem.setAttribute('HTMLFileName', this.get('htmlFileName'));
-    
+
     return elem;
   }
 });

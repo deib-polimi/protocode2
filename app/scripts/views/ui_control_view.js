@@ -28,6 +28,10 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
         return App.UiContainerView;
         break;
 
+      case ('App.Datepicker'):
+        return App.UiDatepickerView;
+        break;
+
       case ('App.EditText'):
         return App.UiEditTextView;
         break;
@@ -52,6 +56,10 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
         return App.UiMapView;
         break;
 
+      case ('App.PhotocameraController'):
+        return App.UiPhotocameraControllerView;
+        break;
+
       case ('App.Switch'):
         return App.UiSwitchView;
         break;
@@ -60,8 +68,8 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
         return App.UiSliderView;
         break;
 
-      case ('App.PhotocameraController'):
-        return App.UiPhotocameraControllerView;
+      case ('App.Timepicker'):
+        return App.UiTimepickerView;
         break;
 
       case ('App.VideocameraController'):

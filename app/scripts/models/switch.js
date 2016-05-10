@@ -1,7 +1,7 @@
 App.Switch = App.UiControl.extend({
   name:       DS.attr('string', {defaultValue: 'Switch'}),
 
-  width:      DS.attr('number', {defaultValue: 88}),
+  width:      DS.attr('number', {defaultValue: 51}),
   height:     DS.attr('number', {defaultValue: 36}),
 
   xmlName:    'switches',

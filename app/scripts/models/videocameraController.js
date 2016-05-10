@@ -1,6 +1,9 @@
 App.VideocameraController = App.UiControl.extend({
   videoView: DS.belongsTo('videoView', {inverse: null}),
 
+  width:            DS.attr('number', {defaultValue: 88}),
+  height:           DS.attr('number', {defaultValue: 36}),
+
   xmlName:   'videocameraController',
 
   toXml: function(xmlDoc) {
@@ -12,7 +15,7 @@ App.VideocameraController = App.UiControl.extend({
     if (videoView != null) {
       elem.setAttribute('videoViewId', videoView.get('name'));
     }
-    
+
     return elem;
   },
 

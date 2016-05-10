@@ -1,6 +1,9 @@
 App.AudioRecorder = App.UiControl.extend({
   audioPlayer: DS.belongsTo('audioPlayer', {inverse: null}),
 
+  width:            DS.attr('number', {defaultValue: 88}),
+  height:           DS.attr('number', {defaultValue: 36}),
+
   xmlName:   'audioRecorder',
 
   toXml: function(xmlDoc) {
@@ -12,7 +15,7 @@ App.AudioRecorder = App.UiControl.extend({
     if (audioPlayer != null) {
       elem.setAttribute('audioPlayerId', audioPlayer.get('name'));
     }
-    
+
     return elem;
   },
 

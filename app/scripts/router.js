@@ -28,6 +28,10 @@ App.Router.map(function () {
         });
         this.resource('controlMap', {path: '/map/:map_id'}, function () {
         });
+        this.resource('controlDatepicker', {path: '/datepicker/:datepicker_id'}, function () {
+        });
+        this.resource('controlTimepicker', {path: '/timepicker/:timepicker_id'}, function () {
+        });
         this.resource('controlSwitch', {path: '/switch/:switch_id'}, function () {
         });
         this.resource('controlSlider', {path: '/slider/:slider_id'}, function () {
