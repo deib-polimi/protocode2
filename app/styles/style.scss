@@ -95,9 +95,16 @@ html, body {
 .device-view .device-screen-view {
   overflow: hidden;
   position: relative;
-  background-color: #fff;
   width: 100%;
   height: 100%;
+}
+
+.android .device-screen-view {
+  background-color: #f9f9f9;
+}
+
+.ios .device-screen-view {
+  background-color: #ffffff;
 }
 
 .device-view .device-screen-view .expanded-area {
@@ -737,9 +744,10 @@ html, body {
   height: 100%;
   display: flex;
 }
+
 .android .control-datepicker .datepicker-image {
-  width: 351px;
-  height:432px;
+  width: 348px;
+  height:338px;
   background: url('/images/ui_controls/android/datepicker_big.png');
   background-size: 100%;
   margin : auto;
@@ -757,8 +765,8 @@ html, body {
   display: flex;
 }
 .android .control-timepicker .timepicker-image {
-  width: 351px;
-  height:432px;
+  width: 346px;
+  height:346px;
   background: url('/images/ui_controls/android/timepicker_big.png');
   background-size: 100%;
   margin : auto;
