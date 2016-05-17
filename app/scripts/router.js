@@ -10,6 +10,8 @@ App.Router.map(function () {
         });
         this.resource('controlButton', {path: '/button/:button_id'}, function () {
         });
+        this.resource('controlCard', {path: '/card/:card_id'}, function () {
+        });
         this.resource('controlContainer', {path: '/container/:container_id'}, function () {
         });
         this.resource('controlEditText', {path: '/editText/:editText_id'}, function () {

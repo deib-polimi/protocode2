@@ -1,9 +1,10 @@
 <div class="form-group">
 	<label {{bind-attr for="textField.elementId"}}>{{label}}</label>
-	{{input 
+	{{input
 		value=value
 		class="form-control"
 		placeholder=label
+		maxlength=maxlength
     type=type
 		viewName="textField"
 		focus-out="acceptChanges"

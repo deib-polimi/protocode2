@@ -24,6 +24,10 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
         return App.UiButtonView;
         break;
 
+      case ('App.Card'):
+        return App.UiCardView;
+        break;
+
       case ('App.Container'):
         return App.UiContainerView;
         break;

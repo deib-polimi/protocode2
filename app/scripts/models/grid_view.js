@@ -5,6 +5,9 @@ App.GridView = App.UiControl.extend({
   width:           DS.attr('number', {defaultValue: 204}),
   height:           DS.attr('number', {defaultValue: 408}),
 
+  alignParentStart:   DS.attr('boolean', {defaultValue: true}),
+  alignParentEnd:     DS.attr('boolean', {defaultValue: true}),
+
   gridType:         DS.attr('string', {defaultValue: 'simple'}),
 
   xmlName:        'gridViews',

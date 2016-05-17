@@ -599,6 +599,7 @@ html, body {
   text-align: center;
   font-size: 14px;
   font-weight:bold;
+  text-transform: uppercase;
 }
 
 .android .control-label {
@@ -680,7 +681,7 @@ html, body {
 .android .control-grid-view-cell .grid-image {
   height: 203px;
   width: 203px;
-  background-image : url("../images/ui_controls/android/grid_image.jpg");
+  background-image : url("../images/ui_controls/android/grid_image.png");
   background-size : 100%;
 }
 
@@ -835,6 +836,94 @@ html, body {
 }
 
 
+.android .control-card {
+  background : #ffffff;
+  border-radius: 2px;
+  box-shadow: 3px 3px 8px #ccc;
+}
+
+.android .control-card .card-image {
+  width : 100%;
+  height : 222px;
+  background: url('/images/ui_controls/android/card_image.png');
+  background-size: 100%;
+  background-repeat : no-repeat;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.android .control-card .card-title {
+  font-size : 24px;
+  padding : 24px 16px 16px 16px;
+  margin:0;
+  color : #333;
+}
+
+.android .control-card .card-subtitle {
+  font-size : 14px;
+  padding : 0px 16px 16px 16px;
+  margin:0;
+  color : #999;
+}
+
+.android .control-card .card-buttons {
+  width : 100%;
+  height : 75px;
+  padding : 30px 4px 4px 4px;
+  text-transform: uppercase;
+}
+
+.android .control-card .card-buttons .card-button {
+  float :left;
+  text-align : center;
+  margin : 4px 4px 4px 4px;
+  color : #FF4081;
+  width : 88px;
+}
+
+.ios .control-card {
+  background : rgb(252, 252, 252);
+  border-radius: 0px;
+  //box-shadow: 3px 3px 8px #ccc;
+}
+
+.ios .control-card .card-image {
+  width : 100%;
+  height : 222px;
+  background: url('/images/ui_controls/ios/card_image.png');
+  background-size: 100%;
+  background-repeat : no-repeat;
+  //border-top-left-radius: 2px;
+  //border-top-right-radius: 2px;
+}
+
+.ios .control-card .card-title {
+  font-size : 24px;
+  padding : 24px 16px 16px 16px;
+  margin:0;
+  color : #333;
+}
+
+.ios .control-card .card-subtitle {
+  font-size : 14px;
+  padding : 14px 16px 2px 16px;
+  margin:0;
+  color : #666;
+}
+
+.ios .control-card .card-buttons {
+  width : 100%;
+  height : 75px;
+  padding : 30px 4px 4px 4px;
+}
+
+.ios .control-card .card-buttons .card-button {
+  float :left;
+  text-align : center;
+  margin : 4px 4px 4px 4px;
+  color : #007aff;
+  width : 88px;
+}
 
 
 

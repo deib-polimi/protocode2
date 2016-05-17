@@ -8,55 +8,27 @@
         <ul class="nav nav-tabs">
           <li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-pencil"></i></a></li>
           <li><a href="#position" data-toggle="tab"><i class="fa fa-arrows"></i></a></li>
-          <li><a href="#dimension" data-toggle="tab"><i class="fa fa-expand"></i></a></li>
         </ul>
         <div class="tab-content">
           <div class="tab-pane fade in active" id="home">
             {{input-text label="Name" value=name action='acceptChanges'}}
-
+            {{input-text label="Title" maxlength=30 value=title action='acceptChanges'}}
+            {{input-text label="Subtitle" maxlength=50 value=subtitle action='acceptChanges'}}
             <div class="form-group">
-              <label>Grid style</label>
+              <label>Number of actions</label>
               <br>
               <div class="btn-group">
-                <label {{bind-attr class=":btn :btn-default simpleGrid:active"}}>
-                  {{input type="checkbox" checked=simpleGrid class="hidden"}} Simple
+                <label {{bind-attr class=":btn :btn-default oneAction:active"}}>
+                  {{input type="checkbox" checked=oneAction class="hidden"}} 1
                 </label>
-                <label {{bind-attr class=":btn :btn-default imageGrid:active"}}>
-                  {{input type="checkbox" checked=imageGrid class="hidden"}} Image
+                <label {{bind-attr class=":btn :btn-default twoActions:active"}}>
+                  {{input type="checkbox" checked=twoActions class="hidden"}} 2
                 </label>
-                <label {{bind-attr class=":btn :btn-default detailedGrid:active"}}>
-                  {{input type="checkbox" checked=detailedGrid class="hidden"}} Detailed
+                <label {{bind-attr class=":btn :btn-default threeActions:active"}}>
+                  {{input type="checkbox" checked=threeActions class="hidden"}} 3
                 </label>
               </div>
             </div>
-
-            {{input-select label="Click listener" content=controllers.viewControllers.model optionLabelPath="content.name" optionValuePath="content" selection=navigationTarget prompt="Navigate to:"}}
-            <label>Grid view cells</label>
-            <ul class="list-group" id="collapse-views" >
-              {{#each item in gridViewCells}}
-                <li class="list-group-item">
-                  {{#link-to "controlGridViewCell" item}}{{item.name}}{{/link-to}}
-                </li>
-              {{/each}}
-              {{#if isCreating}}
-                <li class="list-group-item">
-                  <div class="input-group">
-                    {{focus-input value=newNameGridViewCell class="form-control" insert-newline="createGridViewCell"}}
-                    <span class="input-group-btn">
-                      <button type="button" class="btn btn-default" {{action "createGridViewCell"}}>
-                        <i class="fa fa-save"></i>
-                      </button>
-                      <button type="button" class="btn btn-default" {{action "setCreating" false}}>
-                        <i class="fa fa-times"></i>
-                      </button>
-                    </span>
-                  </div>
-                </li>
-              {{/if}}
-            </ul>
-            <button type="button" class="btn btn-default btn-block" {{action "setCreating" true}}>
-              <i class="fa fa-plus"></i> Add grid view cell
-            </button>
           </div>
           <div class="tab-pane fade" id="position">
             <div class="form-group">
@@ -79,9 +51,6 @@
 
             {{input-number label="Position Y [dp]" min="0" value=posY action='acceptChanges'}}
           </div>
-          <div class="tab-pane fade" id="dimension">
-            {{input-number label="Height [dp]" min="205" value=height action='acceptChanges' }}
-        </div>
 
       </div>
       <div class="panel-footer">

@@ -20,6 +20,7 @@ App.EditorRoute = Ember.Route.extend({
           audioPlayers: this.store.find('audioPlayer'),
           audioRecorders:  this.store.find('audioRecorder'),
           buttons:  this.store.find('button'),
+          cards:  this.store.find('card'),
           editTexts:  this.store.find('editText'),
           gridViews:  this.store.find('gridView'),
           imageViews:  this.store.find('imageView'),
