@@ -271,14 +271,18 @@ html, body {
 }
 
 .ios .control-web-view .control-content:after {
-  content: "UIWebView";
+  font-size: $control-icon-font-size;
+  font-family: FontAwesome;
+  content: $fa-var-globe;
   color: #fff;
   margin: auto;
 }
 
 
 .ios .control-image-view .control-content:after {
-  content: "UIImageView";
+  font-size: $control-icon-font-size;
+  font-family: FontAwesome;
+  content: $fa-var-picture-o;
   color: #fff;
   margin: auto;
 }
@@ -792,6 +796,7 @@ html, body {
   background-color : rgb(252,34,110);
   width: 50%;
   height: 2px;
+  top:50%;
 }
 
 .android .control-slider .slider-right-row {
@@ -800,6 +805,7 @@ html, body {
   background-color : rgb(237,237,237);
   width: 46%;
   height: 2px;
+  top:50%;
 }
 
 .android .control-slider .slider-image {
@@ -816,6 +822,7 @@ html, body {
   background-color : rgb(10,93,247);
   width: 42%;
   height: 2px;
+  top:50%;
 }
 
 .ios .control-slider .slider-right-row {
@@ -824,6 +831,7 @@ html, body {
   background-color : rgb(164,164,164);
   width: 41%;
   height: 2px;
+  top:50%;
 }
 
 .ios .control-slider .slider-image {

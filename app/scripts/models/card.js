@@ -3,7 +3,7 @@ App.Card = App.UiControl.extend({
   title:      DS.attr('string', {defaultValue: 'Title goes here'}),
   subtitle:      DS.attr('string', {defaultValue: 'Subtitle here'}),
 
-  width:           DS.attr('number', {defaultValue: 204}),
+  width:           DS.attr('number', {defaultValue: 398}),
   height:           DS.attr('number', {defaultValue: 398}),
 
   marginTop:          DS.attr('number', {defaultValue: 8}),
@@ -35,6 +35,7 @@ App.Card = App.UiControl.extend({
     this.decorateXml(card);
     card.setAttribute('title', this.get('title'));
     card.setAttribute('subtitle', this.get('subtitle'));
+    card.setAttribute('numActions', this.get('numActions'));
     return card;
   }
 
