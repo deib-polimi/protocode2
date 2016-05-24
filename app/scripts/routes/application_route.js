@@ -38,40 +38,9 @@ App.ApplicationRoute = Ember.Route.extend({
     createApp: function () {
       var self = this;
 
-      /*
-      this.store.createRecord('device', {
-        name: 'iPhone5s',
-        label: 'iPhone 5s',
-        platform: 'ios',
-        //Aggancio top
-        viewTop: 62,
-        //Aggancio bottom
-        viewBottom: 568,
-        //Dimensioni in dp
-        screenWidth: 320,
-        screenHeight: 568,
-        //Dimensioni nel css - padding
-        cssWidth: 312,
-        cssHeight: 556
-      }).save().then(function (device) {
-        self.store.createRecord('menu').save().then(
-          function (newMenu) {
-            self.store.createRecord('application', {
-              id: 'newAppId'
-            }).save().then(function (app) {
-              app.set('device', device);
-              app.set('menu', newMenu);
-              app.save();
-              newMenu.save();
-              device.save();
-            });
-
-          });
-      });
-      */
       this.store.createRecord('device', {
         name: 'iPhone6Plus',
-        label: 'iPhone 6 Plus',
+        label: 'iOS (414x736) iPhone 6 Plus',
         platform: 'ios',
         //Altezza status bar in points
         viewTop: 64,
@@ -80,7 +49,7 @@ App.ApplicationRoute = Ember.Route.extend({
         //Dimensioni in points
         screenWidth: 414,
         screenHeight: 736,
-        //Dimensione - padding = dimensione schermo (vedi css)
+        //Dimensioni in px - padding css
         cssWidth: 414,
         cssHeight: 736
       }).save().then(function (device) {
@@ -100,8 +69,40 @@ App.ApplicationRoute = Ember.Route.extend({
       });
 
       this.store.createRecord('device', {
+        name: 'iPhone6',
+        label: 'iOS (375x667) iPhone 6',
+        platform: 'ios',
+        //Altezza status bar in points
+        viewTop: 65,
+        //Altezza schermo in points
+        viewBottom: 667,
+        //Dimensioni in points
+        screenWidth: 375,
+        screenHeight: 667,
+        //Dimensioni in px - padding css
+        cssWidth: 375,
+        cssHeight: 667
+      }).save();
+
+      this.store.createRecord('device', {
+        name: 'iPhone5',
+        label: 'iOS (320x568) iPhone 5',
+        platform: 'ios',
+        //Altezza status bar in points
+        viewTop: 65,
+        //Altezza schermo in points
+        viewBottom: 568,
+        //Dimensioni in points
+        screenWidth: 320,
+        screenHeight: 568,
+        //Dimensioni in px - padding css
+        cssWidth: 320,
+        cssHeight: 568
+      }).save();
+
+      this.store.createRecord('device', {
         name: 'Nexus6P',
-        label: 'Nexus 6P',
+        label: 'Android (411x731) Nexus 6P ',
         platform: 'android',
         //Altezza status bar(30) + toolbar(64) in dp
         viewTop: 93,
@@ -110,17 +111,27 @@ App.ApplicationRoute = Ember.Route.extend({
         //Dimensioni in dp
         screenWidth: 411,
         screenHeight: 731,
-        //Dimensioni nel css - padding
+        //Dimensioni in px - padding css
         cssWidth: 411,
         cssHeight: 731
       }).save();
 
+      this.store.createRecord('device', {
+        name: 'Nexus5',
+        label: 'Android (360x640) Nexus 5 ',
+        platform: 'android',
+        //Altezza status bar(23) + toolbar(56) in dp
+        viewTop: 79,
+        //Altezza schermo (640) - altezza command bar(47) in dp
+        viewBottom: 593,
+        //Dimensioni in dp
+        screenWidth: 360,
+        screenHeight: 640,
+        //Dimensioni in px - padding css
+        cssWidth: 360,
+        cssHeight: 640
+      }).save();
 
-      /*this.store.createRecord('uiControlTemplate', {
-        label: 'Container View',
-        nameImg: 'container.png',
-        type: 'container'
-      }).save();*/
       this.store.createRecord('uiControlTemplate', {
         label: 'Button',
         nameImg: 'button.png',

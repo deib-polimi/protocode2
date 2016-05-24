@@ -55,14 +55,30 @@ html, body {
   transition: -webkit-transform 0.3s ease-out;
 }
 
-.device-view.ios.iPhone5s {
-  background-image: url("../images/devices/ios/iPhone_5s.png");
+.device-view.ios.iPhone5 {
+  background-image: url("../images/devices/ios/iPhone_5.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
-  width: 370px;
-  height: 777px;
-  padding: 114px 27px 107px 31px;
+  //Dimensione immagine originale
+  width: 500px;
+  height: 1000px;
+  //Padding per centrare lo schermo
+  //dimensione schermo in pixel = dimensione in dp 375x667
+  padding: 220px 84px 212px 96px;
+}
+
+.device-view.ios.iPhone6 {
+  background-image: url("../images/devices/ios/iPhone_6.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  //Dimensione immagine originale
+  width: 500px;
+  height: 1000px;
+  //Padding per centrare lo schermo
+  //dimensione schermo in pixel = dimensione in dp 375x667
+  padding: 165px 61px 168px 64px;
 }
 
 .device-view.ios.iPhone6Plus {
@@ -89,6 +105,19 @@ html, body {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 411x731
   padding: 135px 45px 134px 44px;
+}
+
+.device-view.android.Nexus5 {
+  background-image: url("../images/devices/android/nexus_5.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  //Dimensione immagine originale
+  width: 500px;
+  height: 1000px;
+  //Padding per centrare lo schermo
+  //dimensione schermo in pixel = dimensione in dp 360x640
+  padding: 156px 70px 204px 70px;
 }
 
 //Misure da prendere dal model, qui solo 100%
@@ -334,23 +363,59 @@ html, body {
   float:left;
 }
 
-.ios .control-grid-view-cell {
+.iPhone6Plus .control-grid-view-cell {
   height: 204px;
   width: 204px;
 }
 
+.iPhone6 .control-grid-view-cell {
+  height: 185px;
+  width: 185px;
+}
+
+.iPhone5 .control-grid-view-cell {
+  height: 157px;
+  width: 157px;
+}
+
 .ios .control-grid-view-cell .grid-image {
-  height: 204px;
-  width: 204px;
   background-image : url("../images/ui_controls/ios/grid_image.png");
   background-size : 100%;
 }
 
+.iPhone6Plus .control-grid-view-cell .grid-image {
+  height: 204px;
+  width: 204px;
+}
+
+.iPhone6 .control-grid-view-cell .grid-image {
+  height: 185px;
+  width: 185px;
+}
+
+.iPhone5 .control-grid-view-cell .grid-image {
+  height: 157px;
+  width: 157px;
+}
+
 .ios .control-grid-view-cell .grid-image-empty {
-  height: 205px;
-  width: 205px;
   background-image : url("../images/ui_controls/ios/grid_image_empty.jpg");
   background-size : 100%;
+}
+
+.iPhone6Plus .control-grid-view-cell .grid-image-empty {
+  height: 204px;
+  width: 204px;
+}
+
+.iPhone6 .control-grid-view-cell .grid-image-empty {
+  height: 185px;
+  width: 185px;
+}
+
+.iPhone5 .control-grid-view-cell .grid-image-empty {
+  height: 157px;
+  width: 157px;
 }
 
 .ios .control-grid-view-cell p.grid-text {
@@ -414,12 +479,26 @@ html, body {
   width: 100%;
   top: 0;
   left: 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.iPhone6Plus .device-screen-view .status-bar {
+  background-image: url("../images/ui_controls/ios/status_bar6plus.png");
   //Altezza status bar in pixel = altezza in points
   height: 63px; //+1 border bottom
   border-bottom: solid 1px rgb(247,247,247);
-  background-image: url("../images/ui_controls/ios/status_bar.png");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+}
+.iPhone6 .device-screen-view .status-bar {
+  background-image: url("../images/ui_controls/ios/status_bar6.png");
+  //Altezza status bar in pixel = altezza in points
+  height: 64px; //+1 border bottom
+  border-bottom: solid 1px #ccc;
+}
+.iPhone5 .device-screen-view .status-bar {
+  background-image: url("../images/ui_controls/ios/status_bar5.png");
+  //Altezza status bar in pixel = altezza in points
+  height: 64px; //+1 border bottom
+  border-bottom: solid 1px #ccc;
 }
 
 .ios .device-screen-view .command-bar {
@@ -435,25 +514,38 @@ html, body {
 .android .device-screen-view .action-bar {
   position: absolute;
   width: 100%;
-  top: 29px;
   left: 0;
-  height: 64px;
-  line-height: 64px;
   background-color: #3F51B5;
-  //border-bottom: solid 1px #3F51B5;
-  //background-repeat: no-repeat;
   padding-left: 8px;
 }
 
-.android .device-screen-view .action-bar .bar-content {
+.Nexus6P .device-screen-view .action-bar {
+  top: 29px;
+  height: 64px;
+  line-height: 64px;
+}
+
+.Nexus5 .device-screen-view .action-bar {
+  top: 23px;
+  height: 56px;
+  line-height: 56px;
+}
+
+.Nexus6P .device-screen-view .action-bar .bar-content {
   margin-left: 10px;
-  //padding-left: 60px;
-  //background: url('../images/ui_controls/android/ic_launcher.png') no-repeat transparent;
   background-size: auto 93%;
   color: #FFFFFF;
   font-size: 22px;
 }
 
+.Nexus5 .device-screen-view .action-bar .bar-content {
+  margin-left: 5px;
+  background-size: auto 93%;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+///???????????
 .android .device-screen-view .action-bar:before {
   border-bottom: solid 1px #d2d2d2;
   padding-bottom: 1px;
@@ -464,11 +556,22 @@ html, body {
   width: 100%;
   top: 0;
   left: 0;
-  //Altezza status bar in pixel = altezza in points
-  height: 30px;
-  background-image: url("../images/ui_controls/android/status_bar.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.Nexus6P .device-screen-view .status-bar {
+  //Altezza status bar in pixel = altezza in points
+  //411 X 30
+  height: 30px;
+  background-image: url("../images/ui_controls/android/status_bar6p.png");
+}
+
+.Nexus5 .device-screen-view .status-bar {
+  //Altezza status bar in pixel = altezza in points
+  //360 X 23
+  height: 23px;
+  background-image: url("../images/ui_controls/android/status_bar5.png");
 }
 
 .android .device-screen-view .command-bar {
@@ -476,10 +579,20 @@ html, body {
   width: 100%;
   bottom: 0px;
   left: 0;
-  height: 55px;
-  background-image: url("../images/ui_controls/android/command_bar.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.Nexus6P .device-screen-view .command-bar {
+  //411 X 55
+  height: 55px;
+  background-image: url("../images/ui_controls/android/command_bar6p.png");
+}
+
+.Nexus5 .device-screen-view .command-bar {
+  //360 X 47
+  height: 47px;
+  background-image: url("../images/ui_controls/android/command_bar5.png");
 }
 
 .android .control-web-view, .android .control-image-view, .android .control-video-view {
@@ -516,13 +629,11 @@ html, body {
 .app-menu.android:before {
   content: $fa-var-ellipsis-v;
   font-family: FontAwesome;
-  font-size : 22px;
   font-weight: normal;
   font-style: normal;
   color: #FFF;
   display: block;
   position: absolute;
-  top: 16px;
   right: 0;
   text-decoration: inherit;
   padding-right: 10px;
@@ -532,15 +643,31 @@ html, body {
   text-align: right;
 }
 
+.Nexus6P .app-menu.android:before {
+  font-size : 22px;
+  top: 16px;
+}
+
+.Nexus5 .app-menu.android:before {
+  font-size : 18px;
+  top: 14px;
+}
+
 .app-menu.android {
   display: block;
   position: absolute;
-  top: 33px;
   right: 5px;
   width: auto;
   height: auto;
-
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.Nexus6P .app-menu.android {
+  top: 33px;
+}
+
+.Nexus5 .app-menu.android {
+  top: 28px;
 }
 
 .app-menu-item.android {
@@ -548,9 +675,16 @@ html, body {
   position: relative;
   min-width: 225px;
   min-height: auto;
-  padding: 20px;
   background-color: #FFFFFF;
   border-bottom: solid 1px #FFFFFF;
+}
+
+.Nexus6P .app-menu-item.android {
+  padding: 20px;
+}
+
+.Nexus5 .app-menu-item.android {
+  padding: 16px;
 }
 
 .app-menu-item.android:last-child {
@@ -843,6 +977,13 @@ html, body {
   background-repeat : no-repeat;
 }
 
+.control-card .control-content, .control-card {
+  height : 100%
+}
+
+.control-card .card-title, .control-card .card-subtitle {
+  overflow : hidden;
+}
 
 .android .control-card {
   background : #ffffff;
@@ -852,12 +993,19 @@ html, body {
 
 .android .control-card .card-image {
   width : 100%;
-  height : 222px;
   background: url('/images/ui_controls/android/card_image.png');
   background-size: 100%;
   background-repeat : no-repeat;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+}
+
+.Nexus6P .control-card .card-image {
+  height : 222px;
+}
+
+.Nexus5 .control-card .card-image {
+  height : 193px;
 }
 
 .android .control-card .card-title {
@@ -869,22 +1017,24 @@ html, body {
 
 .android .control-card .card-subtitle {
   font-size : 14px;
-  padding : 0px 16px 16px 16px;
+  padding : 0px 16px;
   margin:0;
   color : #999;
 }
 
 .android .control-card .card-buttons {
   width : 100%;
-  height : 75px;
-  padding : 30px 4px 4px 4px;
+  height : 50px;
+  margin : 32px 0px 8px 0px;
+  padding : 0px 4px;
   text-transform: uppercase;
 }
 
 .android .control-card .card-buttons .card-button {
   float :left;
   text-align : center;
-  margin : 4px 4px 4px 4px;
+  line-height: 50px;
+  margin : 0px 4px;
   color : #FF4081;
   width : 88px;
 }
@@ -892,37 +1042,51 @@ html, body {
 .ios .control-card {
   background : rgb(252, 252, 252);
   border-radius: 0px;
-  //box-shadow: 3px 3px 8px #ccc;
 }
 
 .ios .control-card .card-image {
   width : 100%;
-  height : 222px;
+  height : 56.25%;
   background: url('/images/ui_controls/ios/card_image.png');
   background-size: 100%;
   background-repeat : no-repeat;
-  //border-top-left-radius: 2px;
-  //border-top-right-radius: 2px;
 }
+
 
 .ios .control-card .card-title {
   font-size : 24px;
-  padding : 24px 16px 16px 16px;
+  padding : 24px 16px 0px 16px;
+  width:100%;
+  height:17%;
   margin:0;
   color : #333;
 }
 
 .ios .control-card .card-subtitle {
   font-size : 14px;
-  padding : 14px 16px 2px 16px;
+  padding : 16px 16px 0px 16px;
+  width:100%;
+  height:11%;
   margin:0;
   color : #666;
 }
 
 .ios .control-card .card-buttons {
   width : 100%;
-  height : 75px;
+  height:15.75%;
   padding : 30px 4px 4px 4px;
+}
+
+.iPhone6Plus .control-card .card-buttons {
+  padding-top : 24px;
+}
+
+.iPhone6 .control-card .card-buttons {
+  padding-top : 18px;
+}
+
+.iPhone5 .control-card .card-buttons {
+  padding-top : 10px;
 }
 
 .ios .control-card .card-buttons .card-button {

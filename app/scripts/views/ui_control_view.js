@@ -170,6 +170,22 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
 
     result += 'top: ' + this.get('top') + 'px; ';
     result += 'left: ' + this.get('start') + 'px; ';
+
+    //This changes the height of the card according to platform
+    //It's ok because height will be evaluated dinamically later
+    var controlType = this.get('uiControlType').toString();
+    var platform = this.get('device.platform').toString();
+    if(controlType == 'App.UiCardView') {
+        //Card always squared in ios
+        if(platform == 'ios') {
+          this.set('computedHeight', this.get('computedWidth'));
+        }
+        //Card height is always 175 + dynamic image height in android
+        else if(platform == 'android') {
+          this.set('computedHeight', ((this.get('computedWidth')*9/16)+174));
+        }
+    }
+
     result += 'height: ' + this.get('computedHeight') + 'px;';
     result += 'width: ' + this.get('computedWidth') + 'px;';
 

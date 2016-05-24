@@ -8,7 +8,7 @@ App.DeviceView = Ember.View.extend({
   platform: function () {
     return this.get('controller.controllers.editor.device.platform');
   }.property('controller.controllers.editor.device'),
-  
+
   deviceModel: function() {
     return this.get('controller.controllers.editor.device.name');
   }.property('controller.controllers.editor.device'),

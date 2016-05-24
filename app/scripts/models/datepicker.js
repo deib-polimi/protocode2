@@ -1,8 +1,8 @@
 App.Datepicker = App.UiControl.extend({
   name:       DS.attr('string', {defaultValue: 'Datepicker'}),
 
-  width:      DS.attr('number', {defaultValue: 400}),
-  height:     DS.attr('number', {defaultValue: 450}),
+  width:      DS.attr('number', {defaultValue: 348}),
+  height:     DS.attr('number', {defaultValue: 338}),
 
   xmlName:    'datepickers',
 
