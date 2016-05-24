@@ -217,7 +217,7 @@ html, body {
 }
 
 .control-list-view {
-  background-color: #fff;
+  //background-color: #fff;
   overflow-y: hidden;
 }
 
@@ -811,16 +811,29 @@ html, body {
   float:left;
 }
 
-.android .control-grid-view-cell {
+.Nexus6P .control-grid-view-cell {
   height: 203px;
   width: 203px;
 }
 
+.Nexus5 .control-grid-view-cell {
+  height: 178px;
+  width: 178px;
+}
+
 .android .control-grid-view-cell .grid-image {
-  height: 203px;
-  width: 203px;
   background-image : url("../images/ui_controls/android/grid_image.png");
   background-size : 100%;
+}
+
+.Nexus6P .control-grid-view-cell .grid-image {
+  height: 203px;
+  width: 203px;
+}
+
+.Nexus5 .control-grid-view-cell .grid-image {
+  height: 178px;
+  width: 178px;
 }
 
 .android .control-grid-view-cell .grid-image-empty {
@@ -828,6 +841,16 @@ html, body {
   width: 203px;
   background-image : url("../images/ui_controls/android/grid_image_empty.jpg");
   background-size : 100%;
+}
+
+.Nexus6P .control-grid-view-cell .grid-image-empty {
+  height: 203px;
+  width: 203px;
+}
+
+.Nexus5 .control-grid-view-cell .grid-image-empty {
+  height: 178px;
+  width: 178px;
 }
 
 .android .control-grid-view-cell p.grid-text {
