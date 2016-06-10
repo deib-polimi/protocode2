@@ -2,7 +2,7 @@ App.AudioRecorder = App.UiControl.extend({
   audioPlayer: DS.belongsTo('audioPlayer', {inverse: null}),
 
   width:            DS.attr('number', {defaultValue: 88}),
-  height:           DS.attr('number', {defaultValue: 36}),
+  height:           DS.attr('number', {defaultValue: 40}),
 
   xmlName:   'audioRecorder',
 

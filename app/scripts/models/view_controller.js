@@ -2,6 +2,7 @@ var attr = DS.attr;
 
 App.ViewController = DS.Model.extend({
 	name:            attr('string'),
+	backgroundColor:  DS.attr('string', {defaultValue: ''}),
   launcher:         attr('boolean', {defaultValue: false}),
   uiControls:       DS.hasMany('uiControl', {polymorphic: true, async: true}),
   application:      DS.belongsTo('application', {inverse: 'viewControllers'}),
@@ -43,10 +44,11 @@ App.ViewController = DS.Model.extend({
 
   toXml: function(xmlDoc) {
     var self = this;
-    
+
     var promise = new Promise(function (resolve, reject) {
       var viewController = xmlDoc.createElement(self.get('xmlName'));
       viewController.setAttribute('name', self.get('name'));
+			viewController.setAttribute('backgroundColor', self.get('backgroundColor'));
       viewController.setAttribute('launcher', self.get('launcher'));
 
       self.get('alertDialogs').map(function (alertDialog) {
@@ -75,11 +77,11 @@ App.ViewController = DS.Model.extend({
 
           resolve(viewController);
 
-        });  
+        });
       });
     });
 
-    return promise; 
+    return promise;
   },
 
   getRefPath: function(path) {
