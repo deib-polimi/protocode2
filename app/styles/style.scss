@@ -295,8 +295,8 @@ html, body {
 
 .ios .control-web-view, .ios .control-image-view, .ios .control-video-view {
   background-color: rgba($ios-web-view-background-color, $control-view-background-opacity);
-  border: solid 1px $ios-web-view-border-color;
-  box-shadow: 0 0 0 1px #fff;
+  //border: solid 1px $ios-web-view-border-color;
+  //box-shadow: 0 0 0 1px #fff;
 }
 
 .ios .control-web-view .control-content:after {
@@ -326,14 +326,15 @@ html, body {
 
 .ios .control-list-view-cell {
   height: 56px;
-  padding: 8px 16px 8px 0px;
-  margin-left: 16px;
+  padding: 8px 16px 8px 16px;
+  //padding: 8px 16px 8px 0px;
+  //margin-left: 16px;
   line-height: 40px;
   color: #333;
   left: 0;
   right: 0;
   width: auto;
-  border-bottom: solid 1px #d9d9d9;
+  border-bottom: solid 1px #efefef;
 }
 
 .ios .control-list-view-cell .list-image {
@@ -399,7 +400,7 @@ html, body {
 }
 
 .ios .control-grid-view-cell .grid-image-empty {
-  background-image : url("../images/ui_controls/ios/grid_image_empty.jpg");
+  background-image : url("../images/ui_controls/ios/grid_image_empty.png");
   background-size : 100%;
 }
 
@@ -425,7 +426,7 @@ html, body {
   padding: 14px 10px 14px 10px;
   margin: 0px 0px -44px 0px;
   position: relative;
-  top: -45px;
+  top: -44px;
   color: #fff;
   background: rgba(0, 0, 0, 0.4);
   text-align: left;
@@ -597,8 +598,8 @@ html, body {
 
 .android .control-web-view, .android .control-image-view, .android .control-video-view {
   background-color: rgba($android-web-view-background-color, $control-view-background-opacity);
-  border: solid 1px #000;
-  box-shadow: 0 0 0 1px #fff;
+  //border: solid 1px #000;
+  //box-shadow: 0 0 0 1px #fff;
 }
 
 .android .control-web-view .control-content:after {
@@ -728,15 +729,15 @@ html, body {
 
 .android .control-button {
   background-color: #cecece;
-  border-bottom: solid 8px #f9f9f9;
-  border-top: solid 8px #f9f9f9;
-  border-left: solid 4px #f9f9f9;
-  border-right: solid 4px #f9f9f9;
-  border-radius: 2px;
+  //border-bottom: solid 8px #f9f9f9;
+  //border-top: solid 8px #f9f9f9;
+  //border-left: solid 4px #f9f9f9;
+  //border-right: solid 4px #f9f9f9;
+  //border-radius: 2px;
   text-align: center;
   font-size: 14px;
   font-weight:bold;
-  text-transform: uppercase;
+  //text-transform: uppercase;
 }
 
 .android .control-audio-player-view .control-button {
@@ -785,7 +786,7 @@ html, body {
   left: 0;
   right: 0;
   width: auto;
-  border-bottom: solid 1px #d9d9d9;
+  border-bottom: solid 1px #efefef;
 }
 
 .android .control-list-view-cell .list-image {
@@ -843,7 +844,7 @@ html, body {
 .android .control-grid-view-cell .grid-image-empty {
   height: 203px;
   width: 203px;
-  background-image : url("../images/ui_controls/android/grid_image_empty.jpg");
+  background-image : url("../images/ui_controls/android/grid_image_empty.png");
   background-size : 100%;
 }
 
@@ -864,7 +865,7 @@ html, body {
   padding: 14px 10px 14px 10px;
   margin: 0px 0px -44px 0px;
   position: relative;
-  top: -45px;
+  top: -44px;
   color: #fff;
   background: rgba(0, 0, 0, 0.4);
   text-align: left;
@@ -1124,6 +1125,11 @@ html, body {
   width : 88px;
 }
 
+.android .control-photocamera-controller-view,
+.android .control-videocamera-controller-view,
+.android .control-audio-recorder-view {
+  border-radius : 2px;
+}
 
 .photocamera_icon {
   width: 36px;

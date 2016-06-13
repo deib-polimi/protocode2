@@ -5,6 +5,7 @@ App.ListView = App.UiControl.extend({
   width:           DS.attr('number', {defaultValue: 270}),
   height:           DS.attr('number', {defaultValue: 270}),
 
+  backgroundColor:  DS.attr('string', {defaultValue: ''}),
   listType:         DS.attr('string', {defaultValue: 'simple'}),
 
   xmlName:          'listViews',
@@ -35,6 +36,7 @@ App.ListView = App.UiControl.extend({
       var elem = xmlDoc.createElement(self.get('xmlName'));
       self.decorateXml(elem);
 
+      elem.setAttribute('backgroundColor', this.get('backgroundColor'));
       elem.setAttribute('listType', this.get('listType'));
 
       var clickListener = self.get('clickListener');

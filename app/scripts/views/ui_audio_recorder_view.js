@@ -6,10 +6,23 @@ App.UiAudioRecorderView = Ember.View.extend({
   attributeBindings: ['style'],
 
   style: function() {
-    var screenColor = this.get("parentView.parentView.context.backgroundColor");
-    style = "border-color : "+screenColor;
+    var isAndroid = this.get('controller.controllers.editor.device.platform') == 'android';
+    var parentWidth = this.get("parentView.context.width");
+    var parentHeight = this.get("parentView.context.height");
+
+    style = '';
+
+    if(isAndroid) {
+      style += 'width: ' + (parentWidth - 8) + "px;";
+      style += 'height: ' + (parentHeight - 16) + "px;";
+      style += 'margin: 8px 4px; ';  
+    }
+
     return style;
   }.property(
-    'parentView.parentView.context.backgroundColor'
+    'context.width',
+    'context.height',
+    'controller.controllers.editor.device.platform'
   )
+  
 });

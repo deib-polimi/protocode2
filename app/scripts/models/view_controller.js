@@ -3,6 +3,7 @@ var attr = DS.attr;
 App.ViewController = DS.Model.extend({
 	name:            attr('string'),
 	backgroundColor:  DS.attr('string', {defaultValue: ''}),
+  backgroundImage:  DS.attr('string', {defaultValue: ''}),
   launcher:         attr('boolean', {defaultValue: false}),
   uiControls:       DS.hasMany('uiControl', {polymorphic: true, async: true}),
   application:      DS.belongsTo('application', {inverse: 'viewControllers'}),
@@ -49,6 +50,7 @@ App.ViewController = DS.Model.extend({
       var viewController = xmlDoc.createElement(self.get('xmlName'));
       viewController.setAttribute('name', self.get('name'));
 			viewController.setAttribute('backgroundColor', self.get('backgroundColor'));
+      viewController.setAttribute('backgroundImage', self.get('backgroundImage'));
       viewController.setAttribute('launcher', self.get('launcher'));
 
       self.get('alertDialogs').map(function (alertDialog) {
