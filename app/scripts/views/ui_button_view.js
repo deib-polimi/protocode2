@@ -38,8 +38,8 @@ App.UiButtonView = Ember.View.extend({
     var hasBackColor = backColor != '';
     var hasClickColor = clickColor != '';
     var isButtonDefault = (!hasBackColor && !hasClickColor);
-    var parentWidth = this.get("parentView.context.width");
-    var parentHeight = this.get("parentView.context.height");
+    var parentWidth = this.get("parentView.context.computedWidth");
+    var parentHeight = this.get("parentView.context.computedHeight");
 
     var style = ""
   	style += 'color: ' + this.get('context.textColor') + "; ";
@@ -48,19 +48,19 @@ App.UiButtonView = Ember.View.extend({
     if(isAndroid && isButtonDefault) {
       style += 'width: ' + (parentWidth - 8) + "px;";
       style += 'height: ' + (parentHeight - 16) + "px;";
-      style += 'margin: 8px 4px; ';  
+      style += 'margin: 8px 4px; ';
     }
 
     if(hasBackColor) {
-      style += 'background-color: ' + this.get('context.backgroundColor') + "; ";      
+      style += 'background-color: ' + this.get('context.backgroundColor') + "; ";
     }
 
   	return style;
   }.property(
     'context.textColor',
     'context.borderRadius',
-    'context.width',
-    'context.height',
+    'context.computedWidth',
+    'context.computedHeight',
   	'context.backgroundColor',
     'context.clickColor',
     'controller.controllers.editor.device.platform'
