@@ -15,6 +15,7 @@ App.ApplicationRoute = Ember.Route.extend({
         'menu',
         'menuItem',
         'platform',
+        'smartwatch',
         'uiControlTemplate'
       ];
 
@@ -53,19 +54,27 @@ App.ApplicationRoute = Ember.Route.extend({
         cssWidth: 414,
         cssHeight: 736
       }).save().then(function (device) {
-        self.store.createRecord('menu').save().then(
-          function (newMenu) {
-            self.store.createRecord('application', {
-              id: 'newAppId'
-            }).save().then(function (app) {
-              app.set('device', device);
-              app.set('menu', newMenu);
-              app.save();
-              newMenu.save();
-              device.save();
-            });
 
-          });
+        self.store.createRecord('smartwatch').save().then(
+          function (newSmartwatch) {
+            self.store.createRecord('menu').save().then(
+              function (newMenu) {
+                self.store.createRecord('application', {id: 'newAppId'}).save().then(
+                  function (app) {
+                    app.set('device', device);
+                    app.set('menu', newMenu);
+                    app.set('smartwatch', newSmartwatch);
+                    app.save();
+                    newSmartwatch.save();
+                    newMenu.save();
+                    device.save();
+                  }
+                );
+              }
+            );
+          }
+        );
+
       });
 
       this.store.createRecord('device', {

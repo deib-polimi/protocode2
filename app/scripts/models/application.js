@@ -1,6 +1,9 @@
 App.Application = DS.Model.extend({
   name: DS.attr('string', {defaultValue: 'newApp'}),
   menu: DS.belongsTo('menu'),
+
+  smartwatch: DS.belongsTo('smartwatch'),
+
   viewControllers: DS.hasMany('viewController', {inverse: 'application'}),
 
   deleteRecord: function () {
@@ -38,18 +41,19 @@ App.Application = DS.Model.extend({
         values.map(function (value) {
           appModel.appendChild(value);
         })
-        
+
         appModel.appendChild(self.get('menu').toXml(xmlDoc));
+        appModel.appendChild(self.get('smartwatch').toXml(xmlDoc));
 
         xmlDoc.appendChild(appModel);
 
         resolve(xmlDoc);
       });
-      
+
     });
 
     return promise;
-    
+
   }
 });
 

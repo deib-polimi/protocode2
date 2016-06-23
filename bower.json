@@ -11,6 +11,7 @@
     "ember-localstorage-adapter": "0.3.1",
     "blob": "*",
     "mjolnic-bootstrap-colorpicker": "2.3.3",
+    "bootstrap-switch": "3.3.2",
     "vkbeautify-wrapper": "*"
   },
   "devDependencies": {

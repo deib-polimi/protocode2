@@ -6,7 +6,7 @@
           <div class="panel-heading" data-toggle="collapse" data-target="#collapse-views">
             <h3 class="panel-title">
               Views
-            </h3>  
+            </h3>
           </div>
           <ul class="list-group" id="collapse-views" class="collapse in">
             {{#each item in controller item-controller="viewController"}}
@@ -25,10 +25,10 @@
                   {{focus-input value=newNameViewController class="form-control" focus-out="createViewController" insert-newline="createViewController"}}
                   <span class="input-group-btn">
                     <button type="button" class="btn btn-default" {{action "createViewController"}}>
-                      <i class="fa fa-save"></i> 
+                      <i class="fa fa-save"></i>
                     </button>
                     <button type="button" class="btn btn-default" {{action "setCreating" false}}>
-                      <i class="fa fa-times"></i> 
+                      <i class="fa fa-times"></i>
                     </button>
                   </span>
                 </div>
@@ -38,25 +38,35 @@
           <div class="panel-footer">
             <div class="btn-group">
               <button type="button" class="btn btn-default" {{action "setCreating" true}}>
-                <i class="fa fa-plus"></i> 
+                <i class="fa fa-plus"></i>
               </button>
             </div>
           </div>
         </div>
 
         <div class="panel panel-default">
-          <div class="panel-heading" data-toggle="collapse" data-target="#collapse-ui-control">
-              UIControls (Drag and drop)
+          <div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapse-ui-control">
+              UIControls (Drag and drop) <span style="float:right;cursor:pointer">&#9660;</span>
           </div>
-          <div class="panel-body" id="collapse-ui-control" class="collapse in">
+          <div class="panel-body collapse" id="collapse-ui-control">
             {{#each controllers.uiControlTemplates itemController="uiControlTemplate"}}
               {{view App.UiControlTemplateView}}
             {{/each}}
           </div>
         </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapse-smartwatch">
+              Smartwatch <span style="float:right;cursor:pointer">&#9660;</span>
+          </div>
+          <div class="panel-body collapse" id="collapse-smartwatch">
+            {{input-on-off label="Voice Message from Wearable" checked=voiceMessage}}
+          </div>
+        </div>
+
       </div>
     </div>
-    
+
     {{outlet}}
   </div>
 </div>

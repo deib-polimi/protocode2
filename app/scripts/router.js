@@ -57,7 +57,10 @@ App.Router.map(function () {
         this.resource('progressDialog', {path: '/progressDialog/:progress_dialog_id'}, function () {
         });
       });
-  	});
+
+      this.resource('smartwatch', {}, function() {});
+
+    });
 
     this.resource('model', function () {
 
@@ -66,6 +69,7 @@ App.Router.map(function () {
     this.resource('uiControls', function() {
 
     });
+
   });
 
   this.resource('about');
