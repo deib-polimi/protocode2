@@ -5,6 +5,8 @@ $fa-font-path: "fonts";
 @import "fonts";
 @import "treeview";
 @import "variables";
+@import "../bower_components/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css";
+@import "../bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css";
 
 html, body {
     margin: 30px 0;
@@ -1161,4 +1163,10 @@ html, body {
 /* Drag & Drop */
 .dragging-over {
   box-shadow: 0 0 5px 5px #007aff;
+}
+
+.colorpicker {
+  min-width : initial !important;
+  padding : 5px !important;
+  margin : 2px !important;
 }
