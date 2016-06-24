@@ -1,0 +1,37 @@
+.ios {
+
+  .device-screen-view {
+    background-color: #ffffff;
+  }
+
+  /*============ BUTTONS ============*/
+
+  .control-button {
+    color: $ios-primary-color;
+  }
+
+  .control-button a {
+    text-decoration: none;
+  }
+
+  /*============ EDIT TEXT ============*/
+
+  .control-edit-text {
+    border: solid 1px $ios-border-color;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  .control-edit-text .control-content {
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .control-edit-text .control-content .placeholder {
+    color: $ios-placeholder-color;
+  }
+
+}

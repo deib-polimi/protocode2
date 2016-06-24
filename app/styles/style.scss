@@ -10,20 +10,16 @@ html, body {
     margin: 30px 0;
 }
 
-#main {
-	/* background-image: url("../images/gui/tiny_grid/tiny_grid.png"); */
-}
-
 .spacer {
   margin-top: 15px;
 }
 
 .navbar-default {
-	background-image: url("../images/gui/grey/grey.png");
+	background-image: url("../img/gui/grey/grey.png");
 }
 
 .plotted {
-	background-image: url("../images/gui/tiny_grid/tiny_grid.png");
+	background-image: url("../img/gui/tiny_grid/tiny_grid.png");
   overflow: auto;
 }
 
@@ -44,80 +40,53 @@ html, body {
   -webkit-transition: transform 0.1s;
 }
 
-
-/****** Device views ******/
 .device-view {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px auto;
   -moz-transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
   transition: transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
-}
-
-.device-view.ios.iPhone5 {
-  background-image: url("../images/devices/ios/iPhone_5.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
-  //Dimensione immagine originale
+  //Dimensione immagine dispositivo originale
   width: 500px;
   height: 1000px;
+}
+
+.device-view.iPhone5 {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 375x667
   padding: 220px 84px 212px 96px;
+  background-image: url("../img/devices/ios/iPhone_5.png");
 }
 
-.device-view.ios.iPhone6 {
-  background-image: url("../images/devices/ios/iPhone_6.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100%;
-  //Dimensione immagine originale
-  width: 500px;
-  height: 1000px;
+.device-view.iPhone6 {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 375x667
   padding: 171px 60px 162px 65px;
+  background-image: url("../img/devices/ios/iPhone_6.png");
 }
 
-.device-view.ios.iPhone6Plus {
-  background-image: url("../images/devices/ios/iPhone_6plus.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100%;
-  //Dimensione immagine originale
-  width: 500px;
-  height: 1000px;
+.device-view.iPhone6Plus {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 414x736
   padding: 130px 43px 134px 43px;
+  background-image: url("../img/devices/ios/iPhone_6plus.png");
 }
 
-.device-view.android.Nexus6P {
-  background-image: url("../images/devices/android/nexus_6p.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100%;
-  //Dimensione immagine originale
-  width: 500px;
-  height: 1000px;
+.device-view.Nexus6P {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 411x731
   padding: 135px 45px 134px 44px;
+  background-image: url("../img/devices/android/nexus_6p.png");
 }
 
-.device-view.android.Nexus5 {
-  background-image: url("../images/devices/android/nexus_5.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100%;
-  //Dimensione immagine originale
-  width: 500px;
-  height: 1000px;
+.device-view.Nexus5 {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 360x640
   padding: 156px 70px 204px 70px;
+  background-image: url("../img/devices/android/nexus_5.png");
 }
 
 //Misure da prendere dal model, qui solo 100%
@@ -128,14 +97,6 @@ html, body {
   height: 100%;
 }
 
-.android .device-screen-view {
-  background-color: #f9f9f9;
-}
-
-.ios .device-screen-view {
-  background-color: #ffffff;
-}
-
 .device-view .device-screen-view .expanded-area {
   position: absolute;
   top: 0;
@@ -143,11 +104,6 @@ html, body {
   width: 100%;
   height: 100%;
 }
-
-/* Menus */
-
-
-/* Controls */
 
 .ui-control {
   position: absolute;
@@ -166,10 +122,6 @@ html, body {
 
 .inner-control {
   position: absolute;
-  /*top: -10%;
-  right: -10%;
-  width: 120%;
-  height: 120%;*/
   top: 0;
   left: 0;
   width: 100%;
@@ -188,8 +140,6 @@ html, body {
 
 .control-audio-player-view .control-content {
   display: flex;
-  //flex-flow: row no-wrap;
-  //justify-content: space-between;
   align-content: center;
   align-items: center;
   width: 192px;
@@ -217,7 +167,6 @@ html, body {
 }
 
 .control-list-view {
-  //background-color: #fff;
   overflow-y: hidden;
 }
 
@@ -252,19 +201,9 @@ html, body {
   overflow: hidden;
 }
 
-.control-button .control-content {
-
-}
-
 /********************************** iOS **********************************/
 
-.ios .control-button {
-  color: $ios-primary-color;
-}
 
-.ios .control-button a {
-  text-decoration: none;
-}
 
 .control-container {
   position: relative;
@@ -273,24 +212,6 @@ html, body {
   border: dashed 1px #ccc;
   border-radius: 5px;
   overflow: hidden;
-}
-
-.ios .control-edit-text {
-  border: solid 1px $ios-border-color;
-  border-radius: 8px;
-  background-color: #fff;
-  overflow: hidden;
-}
-
-.ios .control-edit-text .control-content {
-  padding: 5px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.ios .control-edit-text .control-content .placeholder {
-  color: $ios-placeholder-color;
 }
 
 .ios .control-web-view, .ios .control-image-view, .ios .control-video-view {
@@ -341,7 +262,7 @@ html, body {
   width : 40px;
   height : 40px;
   margin-right: 16px;
-  background-image : url("../images/ui_controls/ios/listimage.png");
+  background-image : url("../img/ui_controls/ios/listimage.png");
   background-size : 100%;
   float:left;
 }
@@ -350,7 +271,7 @@ html, body {
   width : 22px;
   height : 22px;
   margin: 9px 0px;
-  background: url("../images/ui_controls/ios/listicon.png");
+  background: url("../img/ui_controls/ios/listicon.png");
   background-size : 100%;
   float:right;
 }
@@ -380,7 +301,7 @@ html, body {
 }
 
 .ios .control-grid-view-cell .grid-image {
-  background-image : url("../images/ui_controls/ios/grid_image.png");
+  background-image : url("../img/ui_controls/ios/grid_image.png");
   background-size : 100%;
 }
 
@@ -400,7 +321,7 @@ html, body {
 }
 
 .ios .control-grid-view-cell .grid-image-empty {
-  background-image : url("../images/ui_controls/ios/grid_image_empty.png");
+  background-image : url("../img/ui_controls/ios/grid_image_empty.png");
   background-size : 100%;
 }
 
@@ -484,19 +405,19 @@ html, body {
   background-repeat: no-repeat;
 }
 .iPhone6Plus .device-screen-view .status-bar {
-  background-image: url("../images/ui_controls/ios/status_bar6plus.png");
+  background-image: url("../img/ui_controls/ios/status_bar6plus.png");
   //Altezza status bar in pixel = altezza in points
   height: 63px; //+1 border bottom
   border-bottom: solid 1px rgb(247,247,247);
 }
 .iPhone6 .device-screen-view .status-bar {
-  background-image: url("../images/ui_controls/ios/status_bar6.png");
+  background-image: url("../img/ui_controls/ios/status_bar6.png");
   //Altezza status bar in pixel = altezza in points
   height: 64px; //+1 border bottom
   border-bottom: solid 1px #ccc;
 }
 .iPhone5 .device-screen-view .status-bar {
-  background-image: url("../images/ui_controls/ios/status_bar5.png");
+  background-image: url("../img/ui_controls/ios/status_bar5.png");
   //Altezza status bar in pixel = altezza in points
   height: 64px; //+1 border bottom
   border-bottom: solid 1px #ccc;
@@ -565,14 +486,14 @@ html, body {
   //Altezza status bar in pixel = altezza in points
   //411 X 30
   height: 30px;
-  background-image: url("../images/ui_controls/android/status_bar6p.png");
+  background-image: url("../img/ui_controls/android/status_bar6p.png");
 }
 
 .Nexus5 .device-screen-view .status-bar {
   //Altezza status bar in pixel = altezza in points
   //360 X 23
   height: 23px;
-  background-image: url("../images/ui_controls/android/status_bar5.png");
+  background-image: url("../img/ui_controls/android/status_bar5.png");
 }
 
 .android .device-screen-view .command-bar {
@@ -587,13 +508,13 @@ html, body {
 .Nexus6P .device-screen-view .command-bar {
   //411 X 55
   height: 55px;
-  background-image: url("../images/ui_controls/android/command_bar6p.png");
+  background-image: url("../img/ui_controls/android/command_bar6p.png");
 }
 
 .Nexus5 .device-screen-view .command-bar {
   //360 X 47
   height: 47px;
-  background-image: url("../images/ui_controls/android/command_bar5.png");
+  background-image: url("../img/ui_controls/android/command_bar5.png");
 }
 
 .android .control-web-view, .android .control-image-view, .android .control-video-view {
@@ -793,7 +714,7 @@ html, body {
   width : 40px;
   height : 40px;
   margin-right: 16px;
-  background-image : url("../images/ui_controls/android/listimage.png");
+  background-image : url("../img/ui_controls/android/listimage.png");
   background-size : 100%;
   float:left;
 }
@@ -802,7 +723,7 @@ html, body {
   width : 22px;
   height : 22px;
   margin: 9px 0px;
-  background: url("../images/ui_controls/android/listicon.png");
+  background: url("../img/ui_controls/android/listicon.png");
   background-size : 100%;
   float:right;
 }
@@ -827,7 +748,7 @@ html, body {
 }
 
 .android .control-grid-view-cell .grid-image {
-  background-image : url("../images/ui_controls/android/grid_image.png");
+  background-image : url("../img/ui_controls/android/grid_image.png");
   background-size : 100%;
 }
 
@@ -844,7 +765,7 @@ html, body {
 .android .control-grid-view-cell .grid-image-empty {
   height: 203px;
   width: 203px;
-  background-image : url("../images/ui_controls/android/grid_image_empty.png");
+  background-image : url("../img/ui_controls/android/grid_image_empty.png");
   background-size : 100%;
 }
 
@@ -875,12 +796,12 @@ html, body {
 /*** Map -> Android ***/
 
 .android .control-map {
-  background: url('../images/ui_controls/android/google_map.png');
+  background: url('../img/ui_controls/android/google_map.png');
   background-repeat: round;
 }
 
 .ios .control-map {
-  background: url('../images/ui_controls/ios/ios_map.png');
+  background: url('../img/ui_controls/ios/ios_map.png');
   background-repeat: round;
 }
 
@@ -893,7 +814,7 @@ html, body {
 .android .control-switch .switch-image {
   width: 40px;
   height:27px;
-  background: url('../images/ui_controls/android/switch_circle.png');
+  background: url('../img/ui_controls/android/switch_circle.png');
   background-size: 100%;
   margin : auto;
   background-repeat : no-repeat;
@@ -901,7 +822,7 @@ html, body {
 .ios .control-switch .switch-image {
   width: 51px;
   height:31px;
-  background: url('../images/ui_controls/ios/switch_circle.png');
+  background: url('../img/ui_controls/ios/switch_circle.png');
   background-size: 100%;
   margin : auto;
   background-repeat : no-repeat;
@@ -915,14 +836,14 @@ html, body {
 .android .control-datepicker .datepicker-image {
   width: 348px;
   height:338px;
-  background: url('../images/ui_controls/android/datepicker_big.png');
+  background: url('../img/ui_controls/android/datepicker_big.png');
   background-size: 100%;
   margin : auto;
 }
 .ios .control-datepicker .datepicker-image {
   width: 320px;
   height:216px;
-  background: url('../images/ui_controls/ios/datepicker.png');
+  background: url('../img/ui_controls/ios/datepicker.png');
   background-size: 100%;
   margin : auto;
 }
@@ -934,14 +855,14 @@ html, body {
 .android .control-timepicker .timepicker-image {
   width: 346px;
   height:346px;
-  background: url('../images/ui_controls/android/timepicker_big.png');
+  background: url('../img/ui_controls/android/timepicker_big.png');
   background-size: 100%;
   margin : auto;
 }
 .ios .control-timepicker .timepicker-image {
   width: 320px;
   height:216px;
-  background: url('../images/ui_controls/ios/timepicker.png');
+  background: url('../img/ui_controls/ios/timepicker.png');
   background-size: 100%;
   margin : auto;
 }
@@ -973,7 +894,7 @@ html, body {
 .android .control-slider .slider-image {
   width: 40px;
   height: 40px;
-  background: url('../images/ui_controls/android/slider_circle.png');
+  background: url('../img/ui_controls/android/slider_circle.png');
   background-size: 100%;
   margin : auto;
   background-repeat : no-repeat;
@@ -999,7 +920,7 @@ html, body {
 .ios .control-slider .slider-image {
   width: 80px;
   height: 40px;
-  background: url('../images/ui_controls/ios/slider_circle.png');
+  background: url('../img/ui_controls/ios/slider_circle.png');
   background-size: 100%;
   margin : auto;
   background-repeat : no-repeat;
@@ -1021,7 +942,7 @@ html, body {
 
 .android .control-card .card-image {
   width : 100%;
-  background: url('../images/ui_controls/android/card_image.png');
+  background: url('../img/ui_controls/android/card_image.png');
   background-size: 100%;
   background-repeat : no-repeat;
   border-top-left-radius: 2px;
@@ -1075,7 +996,7 @@ html, body {
 .ios .control-card .card-image {
   width : 100%;
   height : 56.25%;
-  background: url('../images/ui_controls/ios/card_image.png');
+  background: url('../img/ui_controls/ios/card_image.png');
   background-size: 100%;
   background-repeat : no-repeat;
 }
@@ -1137,11 +1058,11 @@ html, body {
 }
 
 .ios .photocamera_icon {
-  background: url('../images/ui_controls/ios/photocamera_icon.png');
+  background: url('../img/ui_controls/ios/photocamera_icon.png');
 }
 
 .android .photocamera_icon {
-  background: url('../images/ui_controls/android/photocamera_icon.png');
+  background: url('../img/ui_controls/android/photocamera_icon.png');
 }
 
 .videocamera_icon {
@@ -1150,11 +1071,11 @@ html, body {
 }
 
 .android .videocamera_icon {
-  background: url('../images/ui_controls/android/videocamera_icon.png');
+  background: url('../img/ui_controls/android/videocamera_icon.png');
 }
 
 .ios .videocamera_icon {
-  background: url('../images/ui_controls/ios/videocamera_icon.png');
+  background: url('../img/ui_controls/ios/videocamera_icon.png');
 }
 
 
@@ -1168,3 +1089,6 @@ html, body {
   padding : 5px !important;
   margin : 2px !important;
 }
+
+@import "android-style";
+@import "ios-style";
