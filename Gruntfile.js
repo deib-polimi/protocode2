@@ -260,15 +260,29 @@ module.exports = function (grunt) {
         },
         // Put files not handled in other tasks here
         copy: {
+            images: {
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        filter: 'isFile',
+                        cwd: '<%= yeoman.app %>/bower_components/',
+                        dest: '<%= yeoman.app %>/../dist/images/bootstrap-colorpicker/',
+                        src: [
+                            'mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/*.png'
+                        ]
+                    }
+                ]
+            },
             fonts: {
                 files: [
-                    { 
+                    {
                         expand: true,
                         flatten: true,
                         filter: 'isFile',
                         cwd: '<%= yeoman.app %>/bower_components/',
                         dest: '<%= yeoman.app %>/styles/fonts/',
-                        src: [ 
+                        src: [
                             'bootstrap-sass-official/vendor/assets/fonts/**', // Bootstrap
                             'font-awesome/fonts/**' // Font-Awesome
                         ]
