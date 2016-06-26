@@ -6,6 +6,7 @@ App.EditorRoute = Ember.Route.extend({
             return dataArray.objectAt(0);
           }),
           devices: this.store.find('device'),
+          wearables: this.store.find('wearable'),
           // Used to fetch all parts
           navigations: this.store.find('navigation'),
           clickListeners: this.store.find('clickListener'),
@@ -44,6 +45,7 @@ App.EditorRoute = Ember.Route.extend({
       this._super(controller, model);
       controller.set('model', model.application);
       controller.set('devices', model.devices);
+      controller.set('wearables', model.wearables);
       controller.set('deviceModel', model.devices.findBy('id', this.get('deviceId')));
     }
 });

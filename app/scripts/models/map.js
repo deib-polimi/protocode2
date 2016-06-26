@@ -4,8 +4,8 @@ App.Map = App.UiControl.extend({
   lat:        DS.attr('number', {defaultValue: 45.478}),
   lon:        DS.attr('number', {defaultValue: 9.227}),
 
-  width:      DS.attr('number', {defaultValue: 270}),
-  height:     DS.attr('number', {defaultValue: 270}),
+  width:      DS.attr('number', {defaultValue: 200}),
+  height:     DS.attr('number', {defaultValue: 330}),
 
   xmlName:        'map',
 

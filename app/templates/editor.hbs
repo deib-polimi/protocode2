@@ -13,11 +13,19 @@
               insert-newline="acceptChanges"}}
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-3">
         <div class="form-inline">
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-mobile-phone"></i></span> 
              {{view Ember.Select content=devices optionLabelPath='content.label' optionValuePath="content" class="form-control" value=device}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-inline">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-clock-o"></i></span> 
+             {{view Ember.Select content=wearables optionLabelPath='content.label' optionValuePath="content" class="form-control" value=wearable}}
           </div>
         </div>
       </div>

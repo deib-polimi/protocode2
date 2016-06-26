@@ -5,7 +5,7 @@
         <div class="panel panel-default">
           <div class="panel-heading" data-toggle="collapse" data-target="#collapse-views">
             <h3 class="panel-title">
-              Views
+              ViewControllers
             </h3>
           </div>
           <ul class="list-group" id="collapse-views" class="collapse in">
@@ -45,8 +45,8 @@
         </div>
 
         <div class="panel panel-default">
-          <div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapse-ui-control">
-              UIControls (Drag and drop) <span style="float:right;cursor:pointer">&#9660;</span>
+          <div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapse-ui-control" style="cursor:pointer">
+              UIControls (Drag and drop) <span style="float:right">&#9660;</span>
           </div>
           <div class="panel-body collapse" id="collapse-ui-control">
             {{#each controllers.uiControlTemplates itemController="uiControlTemplate"}}
@@ -56,13 +56,22 @@
         </div>
 
         <div class="panel panel-default">
-          <div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapse-smartwatch">
-              Smartwatch <span style="float:right;cursor:pointer">&#9660;</span>
+          <div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapse-smartwatch" style="cursor:pointer">
+              Smartwatch <span style="float:right">&#9660;</span>
           </div>
           <div class="panel-body collapse" id="collapse-smartwatch">
-            {{input-on-off label="Voice Message from Wearable" checked=voiceMessage}}
+            {{input-on-off label="Send Voice Message" checked=voiceMessage}}
           </div>
         </div>
+
+        <div class="panel panel-primary">
+      <div class="panel-heading">
+        <strong class="panel-title">{{controllers.editor.model.wearable.label}}</strong>
+      </div>
+      <div class="panel-body plotted">
+        {{view App.WearableView}}
+      </div>
+  </div>
 
       </div>
     </div>

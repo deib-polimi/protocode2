@@ -12,6 +12,7 @@ App.ApplicationRoute = Ember.Route.extend({
         'application',
         'container',
         'device',
+        'wearable',
         'menu',
         'menuItem',
         'platform',
@@ -54,27 +55,39 @@ App.ApplicationRoute = Ember.Route.extend({
         cssWidth: 414,
         cssHeight: 736
       }).save().then(function (device) {
-
-        self.store.createRecord('smartwatch').save().then(
-          function (newSmartwatch) {
-            self.store.createRecord('menu').save().then(
-              function (newMenu) {
-                self.store.createRecord('application', {id: 'newAppId'}).save().then(
-                  function (app) {
-                    app.set('device', device);
-                    app.set('menu', newMenu);
-                    app.set('smartwatch', newSmartwatch);
-                    app.save();
-                    newSmartwatch.save();
-                    newMenu.save();
-                    device.save();
+        self.store.createRecord('wearable', {
+            name: 'AppleWatch',
+            label: 'iOS Apple Watch 38mm ',
+            platform: 'ios',
+            screenWidth: 136,
+            screenHeight: 170,
+            cssWidth: 136,
+            cssHeight: 170
+          }).save().then(
+          function (newWearable) {
+            self.store.createRecord('smartwatch').save().then(
+              function (newSmartwatch) {
+                self.store.createRecord('menu').save().then(
+                  function (newMenu) {
+                    self.store.createRecord('application', {id: 'newAppId'}).save().then(
+                      function (app) {
+                        app.set('device', device);
+                        app.set('wearable', newWearable);
+                        app.set('menu', newMenu);
+                        app.set('smartwatch', newSmartwatch);
+                        app.save();
+                        newSmartwatch.save();
+                        newMenu.save();
+                        newWearable.save();
+                        device.save();
+                      }
+                    );
                   }
                 );
               }
             );
           }
         );
-
       });
 
       this.store.createRecord('device', {
@@ -140,6 +153,21 @@ App.ApplicationRoute = Ember.Route.extend({
         cssWidth: 360,
         cssHeight: 640
       }).save();
+
+
+      this.store.createRecord('wearable', {
+        name: 'Moto360',
+        label: 'Android Moto 360',
+        platform: 'android',
+        //Dimensioni in dp
+        screenWidth: 187,
+        screenHeight: 187,
+        //Dimensioni in px - padding css
+        cssWidth: 187,
+        cssHeight: 187
+      }).save();
+
+
 
       this.store.createRecord('uiControlTemplate', {
         label: 'Button',
