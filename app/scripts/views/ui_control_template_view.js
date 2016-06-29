@@ -21,13 +21,6 @@ App.UiControlTemplateView = Ember.View.extend({
   },
 
   didInsertElement: function(event) {
-    /*$(this.get('element')).tooltip(
-      {delay: {
-        show: 300,
-        hide: 0
-        }
-      }
-    );
-    */
   }
+  
 });

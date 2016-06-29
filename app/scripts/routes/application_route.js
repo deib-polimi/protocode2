@@ -16,8 +16,9 @@ App.ApplicationRoute = Ember.Route.extend({
         'menu',
         'menuItem',
         'platform',
-        'smartwatch',
-        'uiControlTemplate'
+        'watchPlatform',
+        'uiControlTemplate',
+        'uiWatchControlTemplate'
       ];
 
       models.map(function (model) {
@@ -55,33 +56,58 @@ App.ApplicationRoute = Ember.Route.extend({
         cssWidth: 414,
         cssHeight: 736
       }).save().then(function (device) {
-        self.store.createRecord('wearable', {
+          self.store.createRecord('wearable', {
             name: 'AppleWatch',
-            label: 'iOS Apple Watch 38mm ',
-            platform: 'ios',
-            screenWidth: 136,
-            screenHeight: 170,
-            cssWidth: 136,
-            cssHeight: 170
+            label: 'WatchOS (156x195) Apple Watch 42mm',
+            watchPlatform: 'watchos',
+            viewTop: 22,
+            viewBottom: 195,
+            screenWidth: 156,
+            screenHeight: 195,
+            cssWidth: 156,
+            cssHeight: 195
           }).save().then(
-          function (newWearable) {
-            self.store.createRecord('smartwatch').save().then(
-              function (newSmartwatch) {
-                self.store.createRecord('menu').save().then(
-                  function (newMenu) {
-                    self.store.createRecord('application', {id: 'newAppId'}).save().then(
-                      function (app) {
-                        app.set('device', device);
-                        app.set('wearable', newWearable);
-                        app.set('menu', newMenu);
-                        app.set('smartwatch', newSmartwatch);
-                        app.save();
-                        newSmartwatch.save();
-                        newMenu.save();
-                        newWearable.save();
-                        device.save();
-                      }
-                    );
+          function (wearable) {
+            self.store.createRecord('menu').save().then(
+              function (newMenu) {
+                self.store.createRecord('application', {id: 'newAppId'}).save().then(
+                  function (app) {
+                    app.set('device', device);
+                    app.set('wearable', wearable);
+                    app.set('menu', newMenu);
+                    app.save();
+                    newMenu.save();
+                    wearable.save();
+                    device.save();
+
+                    self.store.createRecord('wearable', {
+                      name: 'AsusZenWatch',
+                      label: 'AndroidWear (213x213) Asus Zen Watch',
+                      watchPlatform: 'androidwear',
+                      viewTop: 0,
+                      viewBottom: 213,
+                      //Dimensioni in dp
+                      screenWidth: 213,
+                      screenHeight: 213,
+                      //Dimensioni in px - padding css
+                      cssWidth: 213,
+                      cssHeight: 213
+                    }).save();
+
+                    self.store.createRecord('wearable', {
+                      name: 'Moto360',
+                      label: 'AndroidWear (241x248) Moto 360',
+                      watchPlatform: 'androidwear',
+                      viewTop: 0,
+                      viewBottom: 248,
+                      //Dimensioni in dp
+                      screenWidth: 241,
+                      screenHeight: 248,
+                      //Dimensioni in px - padding css
+                      cssWidth: 241,
+                      cssHeight: 248
+                    }).save();
+
                   }
                 );
               }
@@ -153,21 +179,6 @@ App.ApplicationRoute = Ember.Route.extend({
         cssWidth: 360,
         cssHeight: 640
       }).save();
-
-
-      this.store.createRecord('wearable', {
-        name: 'Moto360',
-        label: 'Android Moto 360',
-        platform: 'android',
-        //Dimensioni in dp
-        screenWidth: 187,
-        screenHeight: 187,
-        //Dimensioni in px - padding css
-        cssWidth: 187,
-        cssHeight: 187
-      }).save();
-
-
 
       this.store.createRecord('uiControlTemplate', {
         label: 'Button',
@@ -258,6 +269,22 @@ App.ApplicationRoute = Ember.Route.extend({
         label: 'Card',
         nameImg: 'card.png',
         type: 'card'
+      }).save();
+
+      this.store.createRecord('uiWatchControlTemplate', {
+        label: 'Watch Button',
+        nameImg: 'watch_button.png',
+        type: 'watchButton'
+      }).save();
+      this.store.createRecord('uiWatchControlTemplate', {
+        label: 'Watch Label',
+        nameImg: 'watch_label.png',
+        type: 'watchLabel'
+      }).save();
+      this.store.createRecord('uiWatchControlTemplate', {
+        label: 'Watch Voice Message',
+        nameImg: 'watch_voice_message.png',
+        type: 'watchVoiceMessage'
       }).save();
 
 

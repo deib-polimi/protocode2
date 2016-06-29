@@ -1,64 +1,61 @@
 <div class="col-md-3">
-  <div class="panel panel-info">
-      <div class="panel-heading">
-          <h3 class="panel-title">{{name}}</h3>
-      </div>
-      <div class="panel-body">
-        {{partial "partials/first_commands"}}
-        <ul class="nav nav-tabs">
-          <li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-pencil"></i></a></li>
-          <li><a href="#position" data-toggle="tab"><i class="fa fa-arrows"></i></a></li>
-        </ul>
-        <div class="tab-content">
-          <div class="tab-pane fade in active" id="home">
-            {{input-text label="Name" value=name action='acceptChanges'}}
-            {{input-text label="Title" maxlength=25 value=title action='acceptChanges'}}
-            {{input-text label="Subtitle" maxlength=50 value=subtitle action='acceptChanges'}}
-            <div class="form-group">
-              <label>Number of actions</label>
-              <br>
-              <div class="btn-group">
-                <label {{bind-attr class=":btn :btn-default oneAction:active"}}>
-                  {{input type="checkbox" checked=oneAction class="hidden"}} 1
-                </label>
-                <label {{bind-attr class=":btn :btn-default twoActions:active"}}>
-                  {{input type="checkbox" checked=twoActions class="hidden"}} 2
-                </label>
-                <label {{bind-attr class=":btn :btn-default threeActions:active"}}>
-                  {{input type="checkbox" checked=threeActions class="hidden"}} 3
-                </label>
-              </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{name}}</h3>
+        </div>
+        <div class="panel-body">
+            {{partial "partials/first_commands"}}
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-pencil"></i></a></li>
+                <li><a href="#position" data-toggle="tab"><i class="fa fa-arrows"></i></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="home">
+                    {{input-text label="Name" value=name action='acceptChanges'}}
+                    {{input-text label="Title" maxlength=25 value=title action='acceptChanges'}}
+                    {{input-text label="Subtitle" maxlength=50 value=subtitle action='acceptChanges'}}
+                    <div class="form-group">
+                        <label>Number of actions</label>
+                        <br>
+                        <div class="btn-group">
+                            <label {{bind-attr class=":btn :btn-default oneAction:active"}}>
+                                {{input type="checkbox" checked=oneAction class="hidden"}} 1
+                            </label>
+                            <label {{bind-attr class=":btn :btn-default twoActions:active"}}>
+                                {{input type="checkbox" checked=twoActions class="hidden"}} 2
+                            </label>
+                            <label {{bind-attr class=":btn :btn-default threeActions:active"}}>
+                                {{input type="checkbox" checked=threeActions class="hidden"}} 3
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="position">
+                    <div class="form-group">
+                        <label>Align with parent</label>
+                        <br>
+                        <div class="btn-group">
+                            <label {{bind-attr class=":btn :btn-default alignParentTop:active"}}>
+                                {{input type="checkbox" checked=alignParentTop class="hidden"}} <i class="fa fa-chevron-up"></i>
+                            </label>
+                            <label {{bind-attr class=":btn :btn-default alignParentBottom:active"}}>
+                                {{input type="checkbox" checked=alignParentBottom class="hidden"}} <i class="fa fa-chevron-down"></i>
+                            </label>
+                        </div>
+                    </div>
+                    {{input-select label="Align with top" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=alignTop prompt="Select sibling"}}
+                    {{input-select label="Align with bottom" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=alignBottom prompt="Select sibling"}}
+                    {{input-select label="Above to" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=above prompt="Select sibling"}}
+                    {{input-select label="Below to" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=below prompt="Select sibling"}}
+                    {{input-number label="Position Y [dp]" min="0" value=posY action='acceptChanges'}}
+                </div>
             </div>
-          </div>
-          <div class="tab-pane fade" id="position">
-            <div class="form-group">
-              <label>Align with parent</label>
-              <br>
-              <div class="btn-group">
-                <label {{bind-attr class=":btn :btn-default alignParentTop:active"}}>
-                  {{input type="checkbox" checked=alignParentTop class="hidden"}} <i class="fa fa-chevron-up"></i>
-                </label>
-                <label {{bind-attr class=":btn :btn-default alignParentBottom:active"}}>
-                  {{input type="checkbox" checked=alignParentBottom class="hidden"}} <i class="fa fa-chevron-down"></i>
-                </label>
-              </div>
+            <div class="panel-footer">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" {{action "deleteUiControl"}}>
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+                </div>
             </div>
-            {{input-select label="Align with top" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=alignTop prompt="Select sibling"}}
-            {{input-select label="Align with bottom" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=alignBottom prompt="Select sibling"}}
-
-            {{input-select label="Above to" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=above prompt="Select sibling"}}
-            {{input-select label="Below to" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=below prompt="Select sibling"}}
-
-            {{input-number label="Position Y [dp]" min="0" value=posY action='acceptChanges'}}
-          </div>
-
-      </div>
-      <div class="panel-footer">
-         <div class="btn-group">
-            <button type="button" class="btn btn-default" {{action "deleteUiControl"}}>
-              <i class="fa fa-trash-o"></i>
-            </button>
-          </div>
-      </div>
-  </div>
-</div>
+        </div>
+    </div>

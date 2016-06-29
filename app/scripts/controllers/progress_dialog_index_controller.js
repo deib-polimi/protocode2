@@ -1,1 +1,0 @@
-App.ProgressDialogIndexController = App.DialogIndexController.extend();

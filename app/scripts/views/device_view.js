@@ -22,4 +22,5 @@ App.DeviceView = Ember.View.extend({
   style: function() {
     return this.get('zoomLevelStyle');
   }.property('zoomLevelStyle')
+  
 });

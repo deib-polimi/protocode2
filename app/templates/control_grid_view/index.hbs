@@ -1,95 +1,96 @@
 <div class="col-md-3">
-  <div class="panel panel-info">
-      <div class="panel-heading">
-          <h3 class="panel-title">{{name}}</h3>
-      </div>
-      <div class="panel-body">
-        {{partial "partials/first_commands"}}
-        <ul class="nav nav-tabs">
-          <li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-pencil"></i></a></li>
-          <li><a href="#position" data-toggle="tab"><i class="fa fa-arrows"></i></a></li>
-          <li><a href="#dimension" data-toggle="tab"><i class="fa fa-expand"></i></a></li>
-        </ul>
-        <div class="tab-content">
-          <div class="tab-pane fade in active" id="home">
-            {{input-text label="Name" value=name action='acceptChanges'}}
-
-            <div class="form-group">
-              <label>Grid style</label>
-              <br>
-              <div class="btn-group">
-                <label {{bind-attr class=":btn :btn-default simpleGrid:active"}}>
-                  {{input type="checkbox" checked=simpleGrid class="hidden"}} Simple
-                </label>
-                <label {{bind-attr class=":btn :btn-default imageGrid:active"}}>
-                  {{input type="checkbox" checked=imageGrid class="hidden"}} Image
-                </label>
-                <label {{bind-attr class=":btn :btn-default detailedGrid:active"}}>
-                  {{input type="checkbox" checked=detailedGrid class="hidden"}} Detailed
-                </label>
-              </div>
-            </div>
-
-            {{input-select label="Click listener" content=controllers.viewControllers.model optionLabelPath="content.name" optionValuePath="content" selection=navigationTarget prompt="Navigate to:"}}
-            <label>Grid view cells</label>
-            <ul class="list-group" id="collapse-views" >
-              {{#each item in gridViewCells}}
-                <li class="list-group-item">
-                  {{#link-to "controlGridViewCell" item}}{{item.name}}{{/link-to}}
-                </li>
-              {{/each}}
-              {{#if isCreating}}
-                <li class="list-group-item">
-                  <div class="input-group">
-                    {{focus-input value=newNameGridViewCell class="form-control" insert-newline="createGridViewCell"}}
-                    <span class="input-group-btn">
-                      <button type="button" class="btn btn-default" {{action "createGridViewCell"}}>
-                        <i class="fa fa-save"></i>
-                      </button>
-                      <button type="button" class="btn btn-default" {{action "setCreating" false}}>
-                        <i class="fa fa-times"></i>
-                      </button>
-                    </span>
-                  </div>
-                </li>
-              {{/if}}
-            </ul>
-            <button type="button" class="btn btn-default btn-block" {{action "setCreating" true}}>
-              <i class="fa fa-plus"></i> Add grid view cell
-            </button>
-          </div>
-          <div class="tab-pane fade" id="position">
-            <div class="form-group">
-              <label>Align with parent</label>
-              <br>
-              <div class="btn-group">
-                <label {{bind-attr class=":btn :btn-default alignParentTop:active"}}>
-                  {{input type="checkbox" checked=alignParentTop class="hidden"}} <i class="fa fa-chevron-up"></i>
-                </label>
-                <label {{bind-attr class=":btn :btn-default alignParentBottom:active"}}>
-                  {{input type="checkbox" checked=alignParentBottom class="hidden"}} <i class="fa fa-chevron-down"></i>
-                </label>
-              </div>
-            </div>
-            {{input-select label="Align with top" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=alignTop prompt="Select sibling"}}
-            {{input-select label="Align with bottom" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=alignBottom prompt="Select sibling"}}
-
-            {{input-select label="Above to" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=above prompt="Select sibling"}}
-            {{input-select label="Below to" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=below prompt="Select sibling"}}
-
-            {{input-number label="Position Y [dp]" min="0" value=posY action='acceptChanges'}}
-          </div>
-          <div class="tab-pane fade" id="dimension">
-            {{input-number label="Height [dp]" min="205" value=height action='acceptChanges' }}
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{name}}</h3>
         </div>
+        <div class="panel-body">
+            {{partial "partials/first_commands"}}
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-pencil"></i></a></li>
+                <li><a href="#position" data-toggle="tab"><i class="fa fa-arrows"></i></a></li>
+                <li><a href="#dimension" data-toggle="tab"><i class="fa fa-expand"></i></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="home">
+                    {{input-text label="Name" value=name action='acceptChanges'}}
+                    <div class="form-group">
+                        <label>Grid style</label>
+                        <br>
+                        <div class="btn-group">
+                            <label {{bind-attr class=":btn :btn-default simpleGrid:active"}}>
+                                {{input type="checkbox" checked=simpleGrid class="hidden"}} Simple
+                            </label>
+                            <label {{bind-attr class=":btn :btn-default imageGrid:active"}}>
+                                {{input type="checkbox" checked=imageGrid class="hidden"}} Image
+                            </label>
+                            <label {{bind-attr class=":btn :btn-default detailedGrid:active"}}>
+                                {{input type="checkbox" checked=detailedGrid class="hidden"}} Detailed
+                            </label>
+                        </div>
+                    </div>
+                    {{input-select
+                        label="Click listener"
+                        content=controllers.viewControllers.model
+                        optionLabelPath="content.name"
+                        optionValuePath="content"
+                        selection=navigationTarget
+                        prompt="Navigate to:"}}
+                    <label>Grid view cells</label>
+                    <ul class="list-group" id="collapse-views">
+                        {{#each item in gridViewCells}}
+                        <li class="list-group-item">
+                            {{#link-to "controlGridViewCell" item}}{{item.name}}{{/link-to}}
+                        </li>
+                        {{/each}}
+                        {{#if isCreating}}
+                        <li class="list-group-item">
+                            <div class="input-group">
+                                {{focus-input value=newNameGridViewCell class="form-control" insert-newline="createGridViewCell"}}
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default" {{action "createGridViewCell"}}>
+                                        <i class="fa fa-save"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-default" {{action "setCreating" false}}>
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </li>
+                        {{/if}}
+                    </ul>
+                    <button type="button" class="btn btn-default btn-block" {{action "setCreating" true}}>
+                        <i class="fa fa-plus"></i> Add grid view cell
+                    </button>
+                </div>
+                <div class="tab-pane fade" id="position">
+                    <div class="form-group">
+                        <label>Align with parent</label>
+                        <br>
+                        <div class="btn-group">
+                            <label {{bind-attr class=":btn :btn-default alignParentTop:active"}}>
+                                {{input type="checkbox" checked=alignParentTop class="hidden"}} <i class="fa fa-chevron-up"></i>
+                            </label>
+                            <label {{bind-attr class=":btn :btn-default alignParentBottom:active"}}>
+                                {{input type="checkbox" checked=alignParentBottom class="hidden"}} <i class="fa fa-chevron-down"></i>
+                            </label>
+                        </div>
+                    </div>
+                    {{input-select label="Align with top" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=alignTop prompt="Select sibling"}}
+                    {{input-select label="Align with bottom" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=alignBottom prompt="Select sibling"}}
+                    {{input-select label="Above to" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=above prompt="Select sibling"}} {{input-select label="Below to" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=below prompt="Select sibling"}}
+                    {{input-number label="Position Y [dp]" min="0" value=posY action='acceptChanges'}}
+                </div>
+                <div class="tab-pane fade" id="dimension">
+                    {{input-number label="Height [dp]" min="205" value=height action='acceptChanges' }}
+                </div>
 
-      </div>
-      <div class="panel-footer">
-         <div class="btn-group">
-            <button type="button" class="btn btn-default" {{action "deleteUiControl"}}>
-              <i class="fa fa-trash-o"></i>
-            </button>
-          </div>
-      </div>
-  </div>
-</div>
+            </div>
+            <div class="panel-footer">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" {{action "deleteUiControl"}}>
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

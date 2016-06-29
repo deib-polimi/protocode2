@@ -1,9 +1,21 @@
 App.Router.map(function () {
-
   this.resource('editor', function() {
+    this.resource('watchControllers', function() {
+      this.resource('watchController', {path: '/watchController/:watchController_id'}, function() {
+        this.resource('dispatchUiWatchControl', {path: '/uiWatchControl/:ui_watch_control_id'}, function () {
+        });
+        this.resource('controlWatchButton', {path: '/watchButton/:watch_button_id'}, function () {
+        });
+        this.resource('controlWatchLabel', {path: '/watchLabel/:watch_label_id'}, function () {
+        });
+        this.resource('controlWatchVoiceMessage', {path: '/watchVoiceMessage/:watch_voice_message_id'}, function () {
+        });
+      });
+    });
   	this.resource('viewControllers', function() {
       this.resource('viewController', {path: '/viewController/:viewController_id'}, function() {
-        this.resource('dispatchUiControl', {path: '/uiControl/:ui_control_id'});
+        this.resource('dispatchUiControl', {path: '/uiControl/:ui_control_id'}, function () {
+        });
         this.resource('controlAudioPlayer', {path: '/audioPlayer/:audioPlayer_id'}, function () {
         });
         this.resource('controlAudioRecorder', {path: '/audioRecorder/:audioRecorder_id'}, function () {
@@ -57,20 +69,10 @@ App.Router.map(function () {
         this.resource('progressDialog', {path: '/progressDialog/:progress_dialog_id'}, function () {
         });
       });
-
-      this.resource('smartwatch', {}, function() {});
-
     });
-
-    this.resource('model', function () {
-
-    });
-
-    this.resource('uiControls', function() {
-
-    });
-
   });
-
+  this.resource('uiControls');
+  this.resource('uiWatchControls');
   this.resource('about');
+  this.resource('model');
 });

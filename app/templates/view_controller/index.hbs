@@ -1,90 +1,106 @@
+<!-- Opzioni ViewController -->
 <div class="col-md-3">
-	<div class="panel panel-info">
-	    <div class="panel-heading">
-	        <h3 class="panel-title">{{name}}</h3>
-	    </div>
-	    <div class="panel-body">
-        {{partial "partials/first_commands"}}
-        <ul class="nav nav-tabs">
-          <li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-pencil"></i></a></li>
-          <li><a href="#alert-dialogs" data-toggle="tab" title="Alert dialogs"><i class="fa fa-bell"></i> {{alertDialogs.length}}</a></li>
-          <li><a href="#progress-dialogs" data-toggle="tab" title="Progress dialogs"><i class="fa fa-spinner"></i> {{progressDialogs.length}}</a></li>
-          <li><a href="#async-task-tab" data-toggle="tab" title="Async tasks"><i class="fa fa-history"></i> {{asyncTasks.length}}</a></li>
-        </ul>
-
-        <div class="tab-content">
-          <div class="tab-pane fade in active" id="home">
-						<br>
-            <label {{bind-attr class=":btn :btn-default :btn-block launcher:active"}}>
-              {{input type="checkbox" checked=launcher class="hidden"}} <i class="fa fa-home"></i> Set launcher
-            </label>
-						<br>
-						{{input-text label="Name" value=name action='acceptChanges'}}
-						{{input-color-picker label="Background Color" value=backgroundColor action='acceptChanges'}}
-            {{input-text label="Background Image" value=backgroundImage action='acceptChanges'}}
-            <label><i class="fa fa-sitemap"></i> UiControls</label>
-            <div class="tree">
-              <ul>
-                <li><span><i class="fa fa-mobile"></i> {{name}}</span></li>
-                <ul>
-                  {{partial "partials/tree_container"}}
-                </ul>
-              </ul>
-            </div>
-          </div>
-
-          <div class="tab-pane fade" id="alert-dialogs">
-            <h4>Alert dialogs</h4>
-            <button type="button" class="btn btn-default btn-block" {{action "createAlertDialog"}}>
-              <i class="fa fa-plus"></i> Add alert dialog
-            </button>
-            <ul class="list-group">
-              {{#each item in alertDialogs}}
-                <li class="list-group-item">
-                  {{#link-to "alertDialog" item}}{{item.name}}{{/link-to}}
-                </li>
-              {{/each}}
-            </ul>
-          </div>
-          <div class="tab-pane fade" id="progress-dialogs">
-            <h4>Progress dialogs</h4>
-            <button type="button" class="btn btn-default btn-block" {{action "createProgressDialog"}}>
-              <i class="fa fa-plus"></i> Add progress dialog
-            </button>
-            <ul class="list-group">
-              {{#each item in progressDialogs}}
-                <li class="list-group-item">
-                  {{#link-to "progressDialog" item}}{{item.name}}{{/link-to}}
-                </li>
-              {{/each}}
-            </ul>
-          </div>
-          <div class="tab-pane fade" id="async-task-tab">
-            <h4>Async tasks</h4>
-            <button type="button" class="btn btn-default btn-block" {{action "createAsyncTask"}}>
-              <i class="fa fa-plus"></i> Add async task
-            </button>
-            <ul class="list-group">
-              {{#each item in asyncTasks}}
-                <li class="list-group-item">
-                  {{#link-to "asyncTask" item}}{{item.name}}{{/link-to}}
-                </li>
-              {{/each}}
-            </ul>
-          </div>
-        </div>
-	    </div>
-	    <div class="panel-footer">
-	    	 <div class="btn-group">
-            <button type="button" class="btn btn-default" {{action "deleteViewController"}}>
-              <i class="fa fa-trash-o"></i>
-            </button>
-          </div>
-          <div class="btn-group pull-right">
-            {{#link-to 'appMenu' application.menu class="btn btn-default"}}
-                <i class="fa fa-bars"></i> Edit menu
-              {{/link-to}}
-          </div>
-	    </div>
-	</div>
+		<div class="panel panel-info">
+				<div class="panel-heading">
+						<h3 class="panel-title">{{name}}</h3>
+				</div>
+				<div class="panel-body">
+						{{partial "partials/first_commands"}}
+						<ul class="nav nav-tabs">
+								<li class="active">
+										<a href="#home" data-toggle="tab">
+												<i class="fa fa-pencil"></i>
+										</a>
+								</li>
+								<li>
+										<a href="#alert-dialogs" data-toggle="tab" title="Alert dialogs">
+												<i class="fa fa-bell"></i> {{alertDialogs.length}}
+										</a>
+								</li>
+								<li>
+										<a href="#progress-dialogs" data-toggle="tab" title="Progress dialogs">
+												<i class="fa fa-spinner"></i> {{progressDialogs.length}}
+										</a>
+								</li>
+								<li>
+										<a href="#async-task-tab" data-toggle="tab" title="Async tasks">
+												<i class="fa fa-history"></i> {{asyncTasks.length}}
+										</a>
+								</li>
+						</ul>
+						<div class="tab-content">
+								<div class="tab-pane fade in active" id="home">
+										<br>
+										<label {{bind-attr class=":btn :btn-default :btn-block launcher:active"}}>
+												{{input type="checkbox" checked=launcher class="hidden"}} <i class="fa fa-home"></i>
+												Set launcher
+										</label>
+										<br>
+										{{input-text label="Name" value=name action='acceptChanges'}}
+										{{input-color-picker label="Background Color" value=backgroundColor action='acceptChanges'}}
+										{{input-text label="Background Image" value=backgroundImage action='acceptChanges'}}
+										<label><i class="fa fa-sitemap"></i> UiControls</label>
+										<div class="tree">
+												<ul>
+														<li><span><i class="fa fa-mobile"></i> {{name}}</span></li>
+														<ul>
+																{{partial "partials/tree_container"}}
+														</ul>
+												</ul>
+										</div>
+								</div>
+								<div class="tab-pane fade" id="alert-dialogs">
+										<h4>Alert dialogs</h4>
+										<button type="button" class="btn btn-default btn-block" {{action "createAlertDialog"}}>
+												<i class="fa fa-plus"></i> Add alert dialog
+										</button>
+										<ul class="list-group">
+												{{#each item in alertDialogs}}
+												<li class="list-group-item">
+														{{#link-to "alertDialog" item}}{{item.name}}{{/link-to}}
+												</li>
+												{{/each}}
+										</ul>
+								</div>
+								<div class="tab-pane fade" id="progress-dialogs">
+										<h4>Progress dialogs</h4>
+										<button type="button" class="btn btn-default btn-block" {{action "createProgressDialog"}}>
+												<i class="fa fa-plus"></i> Add progress dialog
+										</button>
+										<ul class="list-group">
+												{{#each item in progressDialogs}}
+												<li class="list-group-item">
+														{{#link-to "progressDialog" item}}{{item.name}}{{/link-to}}
+												</li>
+												{{/each}}
+										</ul>
+								</div>
+								<div class="tab-pane fade" id="async-task-tab">
+										<h4>Async tasks</h4>
+										<button type="button" class="btn btn-default btn-block" {{action "createAsyncTask"}}>
+												<i class="fa fa-plus"></i> Add async task
+										</button>
+										<ul class="list-group">
+												{{#each item in asyncTasks}}
+												<li class="list-group-item">
+														{{#link-to "asyncTask" item}}{{item.name}}{{/link-to}}
+												</li>
+												{{/each}}
+										</ul>
+								</div>
+						</div>
+				</div>
+				<div class="panel-footer">
+						<div class="btn-group">
+								<button type="button" class="btn btn-default" {{action "deleteViewController"}}>
+										<i class="fa fa-trash-o"></i>
+								</button>
+						</div>
+						<div class="btn-group pull-right">
+								{{#link-to 'appMenu' application.menu class="btn btn-default" }}
+										<i class="fa fa-bars"></i> Edit menu
+								{{/link-to}}
+						</div>
+				</div>
+		</div>
 </div>

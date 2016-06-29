@@ -3,19 +3,36 @@
 .wearable-view.AppleWatch {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 136x170
-  padding: 106px 71px 111px 68px;
-  background-image: url("../img/wearables/ios/AppleWatch.png");
+  padding: 152px 100px 153px 100px;
+  background-image: url("../img/wearables/watchos/AppleWatch.png");
 }
 
 .wearable-view.Moto360 {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 187x187
-  padding: 95px 44px 105px 44px;
-  background-image: url("../img/wearables/android/Moto360.png");
+  padding: 120px 58px 132px 57px;
+  background-image: url("../img/wearables/androidwear/Moto360.png");
+}
+
+.wearable-view.AsusZenWatch {
+  //Padding per centrare lo schermo
+  //dimensione schermo in pixel = dimensione in dp 187x187
+  padding: 122px 64px 165px 79px;
+  background-image: url("../img/wearables/androidwear/AsusZenWatch.png");
+}
+
+.wearable-view.AppleWatch .wearable-screen-view {
+  background-color: #000000;
 }
 
 .wearable-view.Moto360 .wearable-screen-view {
-	border-radius : 90px;
+  background-color: #000000;
+  border-radius : 135px;
+}
+
+.wearable-view.AsusZenWatch .wearable-screen-view {
+  background-color: #000000;
+  border-radius : 7px;
 }
 
 /*============ IPHONE 6 PLUS ============*/
@@ -184,7 +201,7 @@
 }
 
 .Nexus5 {
-	
+
 	.app-menu.android {
 	  top: 28px;
 	}

@@ -1,3 +1,43 @@
+.androidwear {
+
+	/*============ WEARABLE ============*/
+
+	.wearable-view {
+		font: 16px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+	}
+
+	.wearable-screen-view .status-bar {
+    display : none;
+  }
+
+	/*============ WATCH BUTTON ============*/
+
+	.control-watch-button {
+		background-color: #656466;
+		color : #fff;
+		text-align: center;
+		font-size: 14px;
+		border-radius : 2px;
+	}
+
+	/*============ WATCH VOICE MESSAGE ============*/
+
+	.control-watch-voice-message {
+		background-color: #656466;
+		color : #fff;
+		text-align: center;
+		font-size: 14px;
+		border-radius : 2px;
+	}
+
+	/*============ WATCH LABEL ============*/
+
+	.control-watch-label {
+		font-size: 14px;
+	}
+
+}
+
 .android {
 
 	/*============ SCREEN ============*/
@@ -36,24 +76,6 @@
 	  left: 0;
 	  background-size: 100% auto;
 	  background-repeat: no-repeat;
-	}
-
-	/*============ WEARABLE ============*/
-
-	.wearable-view {
-		font: 16px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
-	}
-
-	.wearable-rec-button {
-	  background: #656466;
-	  width:82px;
-	  height: 40px;
-	  border-radius : 2px;
-	}
-
-	.wearable-rec-button p {
-	  line-height: 40px;
-	  text-transform:uppercase;
 	}
 
 	/*============ BUTTON ============*/

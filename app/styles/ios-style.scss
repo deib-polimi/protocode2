@@ -1,3 +1,44 @@
+.watchos {
+
+  /*============ WEARABLE ============*/
+
+  .wearable-view {
+    font: 15px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+  }
+
+  .wearable-screen-view .status-bar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-image: url("../img/ui_watch_controls/watchos/status_bar.png");
+	  height: 22px;
+  }
+
+  /*============ WATCH BUTTONS ============*/
+
+  .control-watch-button {
+    background-color: #1f1f1f;
+    color : #fff;
+    text-align: center;
+		font-size: 14px;
+		border-radius : 8px;
+  }
+
+  /*============ WATCH VOICE MESSAGE ============*/
+
+  .control-watch-voice-message {
+    background-color: #1f1f1f;
+    color : #fff;
+    text-align: center;
+		font-size: 14px;
+		border-radius : 8px;
+  }
+
+}
+
 .ios {
 
   /*============ SCREEN ============*/
@@ -10,7 +51,7 @@
   .device-screen-view .action-bar, .device-screen-view .command-bar {
     display: none;
   }
-  
+
   .device-screen-view .status-bar {
     position: absolute;
     width: 100%;
@@ -18,23 +59,6 @@
     left: 0;
     background-size: 100% auto;
     background-repeat: no-repeat;
-  }
-
-  /*============ WEARABLE ============*/
-
-  .wearable-view {
-    font: 15px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
-  }
-
-  .wearable-rec-button {
-    background: #333333;
-    width:95%;
-    height: 40px;
-    border-radius : 2px;
-  }
-
-  .wearable-rec-button p {
-    line-height: 40px;
   }
 
   /*============ BUTTONS ============*/

@@ -42,7 +42,8 @@ html, body {
 
 /*============ CONTROL PICKER ============*/
 
-.control-ui-picker {
+.control-ui-picker,
+.control-ui-watch-picker {
   height: 50px;
   width: 50px;
   background-repeat: no-repeat;
@@ -52,7 +53,8 @@ html, body {
   -webkit-transition: transform 0.5s;
 }
 
-.control-ui-picker:hover {
+.control-ui-picker:hover,
+.control-ui-watch-picker:hover {
   transform: scale(1.2) rotate(10deg);
   transition: transform 0.1s;
   -webkit-transform: scale(1.2) rotate(10deg);
@@ -106,8 +108,8 @@ html, body {
   background-position: center center;
   background-size: 100%;
   //Dimensione immagine dispositivo originale
-  width: 275px;
-  height: 387px;
+  width: 356px;
+  height: 500px;
 }
 
 .wearable-view .wearable-screen-view {
@@ -115,19 +117,18 @@ html, body {
   position: relative;
   width: 100%;
   height: 100%;
-
-  background-color: #0f0f0f;
-  display: flex;
 }
 
-.wearable-rec-button {
-  margin: auto;
-  text-align:center;
+.wearable-view .wearable-screen-view .expanded-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.wearable-rec-button p {
-  margin:0;
-  color : #fff;
+.wearable-view .wearable-screen-view.dragging-over {
+  box-shadow: 0 0 5px 5px #007aff;
 }
 
 /*============ INNER CONTROL ============*/
@@ -167,9 +168,49 @@ html, body {
   height: 100%;
 }
 
+/*============ UI WATCH CONTROL ============*/
+
+.ui-watch-control {
+  position: absolute;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.ui-watch-control:hover {
+  cursor: pointer;
+}
+
+.ui-watch-control.is-moving {
+  z-index: 999;
+  cursor: move;
+}
+
+.ui-watch-control .expanded {
+  width: 100%;
+  height: 100%;
+}
+
 /*============ BUTTON ============*/
 
 .control-button {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+/*============ WATCH BUTTON ============*/
+
+.control-watch-button {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+/*============ WATCH VOICE MESSAGE ============*/
+
+.control-watch-voice-message {
   display: flex;
   overflow: hidden;
   align-items: center;
@@ -194,6 +235,28 @@ html, body {
 }
 
 .control-label.left {
+  justify-content: flex-start;
+}
+
+/*============ WATCH LABEL ============*/
+
+.control-watch-label {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  color : #ffffff;
+}
+
+.control-watch-label.right {
+  justify-content: flex-end;
+}
+
+.control-watch-label.center {
+  justify-content: center;
+}
+
+.control-watch-label.left {
   justify-content: flex-start;
 }
 

@@ -1,5 +1,3 @@
-//App.ApplicationAdapter = DS.FixtureAdapter;
-
 App.ApplicationSerializer = DS.LSSerializer.extend({
   /**
   You can use this method to customize how polymorphic objects are serialized.
@@ -41,10 +39,12 @@ App.ApplicationSerializer = DS.LSSerializer.extend({
           }
         });
       }
-      
+
     }
   }
+
 });
+
 App.ApplicationAdapter = DS.LSAdapter.extend({
-    namespace: 'protocode'
+  namespace: 'protocode'
 });

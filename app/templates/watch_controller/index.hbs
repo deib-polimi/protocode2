@@ -1,0 +1,45 @@
+<!-- Opzioni WatchController -->
+<div class="col-md-3">
+		<div class="panel panel-info">
+				<div class="panel-heading">
+						<h3 class="panel-title">{{name}}</h3>
+				</div>
+				<div class="panel-body">
+						{{partial "partials/first_commands"}}
+						<ul class="nav nav-tabs">
+								<li class="active">
+										<a href="#home" data-toggle="tab">
+												<i class="fa fa-pencil"></i>
+										</a>
+								</li>
+						</ul>
+						<div class="tab-content">
+								<div class="tab-pane fade in active" id="home">
+										<br>
+										<label {{bind-attr class=":btn :btn-default :btn-block launcher:active"}}>
+												{{input type="checkbox" checked=launcher class="hidden"}} <i class="fa fa-home"></i>
+												Set launcher
+										</label>
+										<br>
+										{{input-text label="Name" value=name action='acceptChanges'}}
+										<label><i class="fa fa-sitemap"></i> UiWatchControls</label>
+										<div class="tree">
+												<ul>
+														<li><span><i class="fa fa-clock-o"></i> {{name}}</span></li>
+														<ul>
+																{{partial "partials/tree_container_watch"}}
+														</ul>
+												</ul>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="panel-footer">
+						<div class="btn-group">
+								<button type="button" class="btn btn-default" {{action "deleteWatchController"}}>
+										<i class="fa fa-trash-o"></i>
+								</button>
+						</div>
+				</div>
+		</div>
+</div>

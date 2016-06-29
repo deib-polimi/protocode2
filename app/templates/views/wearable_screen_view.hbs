@@ -1,5 +1,7 @@
-{{#if voiceMessage}}
-<div class="wearable-rec-button">
-	<p>Rec</p>
-</div>
-{{/if}}
+{{#link-to "watchController" model tagName="div" class="expanded-area"}}{{/link-to}}
+
+{{#each uiWatchControls}}
+  {{view App.UiWatchControlView}}
+{{/each}}
+
+<div class="status-bar"></div>
