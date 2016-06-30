@@ -128,18 +128,16 @@ App.UiWatchControlController = Ember.ObjectController.extend(App.Saveable, {
         deleteUiWatchControl: function() {
             var controlToDelete = this.get('model');
 
-            if (this.get('parentContainer')) {
-                var uiWatchControls = this.get('parentContainer.uiWatchControls');
+            var watchController = this.get('watchController');
+            watchController.get('uiWatchControls').then(function(uiWatchControls) {
                 uiWatchControls.removeObject(controlToDelete);
-                this.get('parentContainer').save();
-            } else {
-                var watchController = this.get('watchController');
-                watchController.get('uiWatchControls').then(function(uiWatchControls) {
-                    uiWatchControls.removeObject(controlToDelete);
-                    watchController.save();
+                watchController.save();
+                //Reset the order attribute
+                uiWatchControls.forEach(function(uiWatchControl, index){
+                  uiWatchControl.set('order', index+1);
+                  uiWatchControl.save();
                 });
-
-            }
+            });
 
             controlToDelete.deleteRecord();
             controlToDelete.save();

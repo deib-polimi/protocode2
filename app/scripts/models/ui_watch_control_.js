@@ -1,6 +1,8 @@
 App.UiWatchControl = DS.Model.extend({
   name:               DS.attr('string'),
 
+  order:               DS.attr('number', {defaultValue: 0}),
+
   posX:               DS.attr('number', {defaultValue: 0}),
   posY:               DS.attr('number', {defaultValue: 0}),
 
@@ -326,6 +328,8 @@ App.UiWatchControl = DS.Model.extend({
 
   decorateXml: function(xmlElem) {
     xmlElem.setAttribute('id', this.get('name'));
+
+    xmlElem.setAttribute('order', this.get('order'));
 
     xmlElem.setAttribute('posX', this.get('posX'));
     xmlElem.setAttribute('posY', this.get('posY'));

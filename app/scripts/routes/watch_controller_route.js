@@ -43,9 +43,17 @@ App.WatchControllerRoute = Ember.Route.extend({
           var isFirst = this.get('context').get('uiWatchControls').get('lastObject') == undefined;
           if(isFirst) {
             uiWatchControl.set('alignParentTop', true);
+            uiWatchControl.set('order', 1);
             uiWatchControl.save();
           } else {
-            uiWatchControl.set('below',this.get('context').get('uiWatchControls').get('lastObject'));
+            uiWatchControl.set(
+                'below',
+                this.get('context').get('uiWatchControls').get('lastObject')
+            );
+            uiWatchControl.set(
+                'order',
+                (parseInt(this.get('context').get('uiWatchControls').get('lastObject').get('order'))+1)
+            );
             uiWatchControl.save();
           }
       }

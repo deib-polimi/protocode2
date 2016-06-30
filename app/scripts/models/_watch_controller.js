@@ -1,10 +1,10 @@
 App.WatchController = DS.Model.extend({
-	name:            	DS.attr('string'),
-  launcher:         DS.attr('boolean', {defaultValue: false}),
+	name:            		DS.attr('string'),
+  launcher:         	DS.attr('boolean', {defaultValue: false}),
 
-  application:      DS.belongsTo('application', {inverse: 'watchControllers'}),
+  application:      	DS.belongsTo('application', {inverse: 'watchControllers'}),
 
-	uiWatchControls:  DS.hasMany('uiWatchControl', {polymorphic: true, async: true}),
+	uiWatchControls:  	DS.hasMany('uiWatchControl', {polymorphic: true, async: true}),
 
   xmlName:        	'watchControllers',
 
@@ -31,7 +31,7 @@ App.WatchController = DS.Model.extend({
       watchController.setAttribute('name', self.get('name'));
       watchController.setAttribute('launcher', self.get('launcher'));
 
-      self.get('uiWatchControls').then(function (uiWatchControls) {
+			self.get('uiWatchControls').then(function (uiWatchControls) {
 
         Promise.all(uiWatchControls.map(function (uiWatchControl) {
           return uiWatchControl.toXml(xmlDoc);
