@@ -1,26 +1,4 @@
-App.UiPhoneControl = DS.Model.extend({
-  name:               DS.attr('string'),
-
-  posX:               DS.attr('number', {defaultValue: 0}),
-  posY:               DS.attr('number', {defaultValue: 0}),
-
-  paddingTop:         DS.attr('number', {defaultValue: 0}),
-  paddingBottom:      DS.attr('number', {defaultValue: 0}),
-  paddingStart:       DS.attr('number', {defaultValue: 0}),
-  paddingEnd:         DS.attr('number', {defaultValue: 0}),
-
-  marginTop:          DS.attr('number', {defaultValue: 0}),
-  marginBottom:       DS.attr('number', {defaultValue: 0}),
-  marginStart:        DS.attr('number', {defaultValue: 0}),
-  marginEnd:          DS.attr('number', {defaultValue: 0}),
-
-  alignParentTop:     DS.attr('boolean', {defaultValue: false}),
-  alignParentBottom:  DS.attr('boolean', {defaultValue: false}),
-  alignParentStart:   DS.attr('boolean', {defaultValue: false}),
-  alignParentEnd:     DS.attr('boolean', {defaultValue: false}),
-
-  width:              DS.attr('number', {defaultValue: 125}),
-  height:             DS.attr('number', {defaultValue: 30}),
+App.UiPhoneControl = App.UiControl.extend({
 
   viewController: DS.belongsTo('viewController'),
   parentContainer: DS.belongsTo('container', {inverse: 'uiPhoneControls'}),
@@ -326,6 +304,9 @@ App.UiPhoneControl = DS.Model.extend({
     xmlElem.setAttribute('posX', this.get('posX'));
     xmlElem.setAttribute('posY', this.get('posY'));
 
+    xmlElem.setAttribute('width', this.get('width'));
+    xmlElem.setAttribute('height', this.get('height'));
+
     xmlElem.setAttribute('paddingTop', this.get('paddingTop'));
     xmlElem.setAttribute('paddingBottom', this.get('paddingBottom'));
     xmlElem.setAttribute('paddingStart', this.get('paddingStart'));
@@ -340,12 +321,6 @@ App.UiPhoneControl = DS.Model.extend({
     xmlElem.setAttribute('alignParentBottom', this.get('alignParentBottom'));
     xmlElem.setAttribute('alignParentStart', this.get('alignParentStart'));
     xmlElem.setAttribute('alignParentEnd', this.get('alignParentEnd'));
-
-    xmlElem.setAttribute('width', this.get('width'));
-    xmlElem.setAttribute('height', this.get('height'));
-
-    //xmlElem.setAttribute('viewController', this.get('viewController.name'));
-    //xmlElem.setAttribute('parentContainer', this.get('parentContainer.name'));
 
     if (this.get('alignTop')) {
       xmlElem.setAttribute('alignTop', this.get('alignTop').getRefPath(''));

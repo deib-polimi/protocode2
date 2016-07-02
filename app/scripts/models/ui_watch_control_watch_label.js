@@ -2,7 +2,7 @@ App.WatchLabel = App.UiWatchControl.extend({
   name:       DS.attr('string', {defaultValue: 'Label'}),
   title:      DS.attr('string', {defaultValue: 'Label'}),
 
-  textAlign:        DS.attr('string', {defaultValue: 'left'}),
+  textAlign:        DS.attr('string', {defaultValue: 'center'}),
   textDecoration:   DS.attr('string', {defaultValue: 'none'}),
 
   xmlName:  'watchTextViews',

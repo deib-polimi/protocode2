@@ -1,28 +1,13 @@
-App.UiWatchControl = DS.Model.extend({
-  name:               DS.attr('string'),
+App.UiWatchControl = App.UiControl.extend({
 
-  order:               DS.attr('number', {defaultValue: 0}),
-
-  posX:               DS.attr('number', {defaultValue: 0}),
-  posY:               DS.attr('number', {defaultValue: 0}),
-
-  paddingTop:         DS.attr('number', {defaultValue: 0}),
-  paddingBottom:      DS.attr('number', {defaultValue: 0}),
-  paddingStart:       DS.attr('number', {defaultValue: 0}),
-  paddingEnd:         DS.attr('number', {defaultValue: 0}),
-
-  marginTop:          DS.attr('number', {defaultValue: 0}),
-  marginBottom:       DS.attr('number', {defaultValue: 0}),
-  marginStart:        DS.attr('number', {defaultValue: 0}),
-  marginEnd:          DS.attr('number', {defaultValue: 0}),
-
-  alignParentTop:     DS.attr('boolean', {defaultValue: false}),
-  alignParentBottom:  DS.attr('boolean', {defaultValue: false}),
+  //Override
+  /*--------------------------------------------------------------*/
+  height:             DS.attr('number', {defaultValue: 48}),
   alignParentStart:   DS.attr('boolean', {defaultValue: true}),
   alignParentEnd:     DS.attr('boolean', {defaultValue: true}),
+  /*--------------------------------------------------------------*/
 
-  width:              DS.attr('number', {defaultValue: 125}),
-  height:             DS.attr('number', {defaultValue: 48}),
+  order:               DS.attr('number', {defaultValue: 0}),
 
   watchController: DS.belongsTo('watchController'),
   parentContainer: DS.belongsTo('container', {inverse: 'uiWatchControls'}),
@@ -334,6 +319,9 @@ App.UiWatchControl = DS.Model.extend({
     xmlElem.setAttribute('posX', this.get('posX'));
     xmlElem.setAttribute('posY', this.get('posY'));
 
+    xmlElem.setAttribute('width', this.get('width'));
+    xmlElem.setAttribute('height', this.get('height'));
+
     xmlElem.setAttribute('paddingTop', this.get('paddingTop'));
     xmlElem.setAttribute('paddingBottom', this.get('paddingBottom'));
     xmlElem.setAttribute('paddingStart', this.get('paddingStart'));
@@ -348,9 +336,6 @@ App.UiWatchControl = DS.Model.extend({
     xmlElem.setAttribute('alignParentBottom', this.get('alignParentBottom'));
     xmlElem.setAttribute('alignParentStart', this.get('alignParentStart'));
     xmlElem.setAttribute('alignParentEnd', this.get('alignParentEnd'));
-
-    xmlElem.setAttribute('width', this.get('width'));
-    xmlElem.setAttribute('height', this.get('height'));
 
     if (this.get('alignTop')) {
       xmlElem.setAttribute('alignTop', this.get('alignTop').getRefPath(''));
