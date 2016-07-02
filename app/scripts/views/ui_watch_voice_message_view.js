@@ -1,13 +1,13 @@
 App.UiWatchVoiceMessageView = Ember.View.extend({
   tagName: 'div',
   classNames: ['control-watch-voice-message', 'expanded'],
-  classNameBindings: ['controller.controllers.editor.wearable.watchPlatform'],
+  classNameBindings: ['controller.controllers.editor.smartwatch.platform'],
   templateName: 'views/ui_watch_voice_message_view',
 
   attributeBindings: ['style'],
 
   style: function() {
-    var isAndroidWear = this.get('controller.controllers.editor.wearable.watchPlatform') == 'androidwear';
+    var isAndroidWear = this.get('controller.controllers.editor.smartwatch.platform') == 'androidwear';
     var parentWidth = this.get("parentView.context.computedWidth");
     var parentHeight = this.get("parentView.context.computedHeight");
     var style = ""
@@ -26,7 +26,7 @@ App.UiWatchVoiceMessageView = Ember.View.extend({
   }.property(
     'context.computedWidth',
     'context.computedHeight',
-    'controller.controllers.editor.wearable.watchPlatform'
+    'controller.controllers.editor.smartwatch.platform'
   )
 
 });

@@ -11,12 +11,10 @@ App.ApplicationRoute = Ember.Route.extend({
       var models = [
         'application',
         'container',
-        'device',
-        'wearable',
+        'smartphone',
+        'smartwatch',
         'menu',
         'menuItem',
-        'platform',
-        'watchPlatform',
         'uiControlTemplate',
         'uiWatchControlTemplate'
       ];
@@ -41,7 +39,7 @@ App.ApplicationRoute = Ember.Route.extend({
     createApp: function () {
       var self = this;
 
-      this.store.createRecord('device', {
+      this.store.createRecord('smartphone', {
         name: 'iPhone6Plus',
         label: 'iOS (414x736) iPhone 6 Plus',
         platform: 'ios',
@@ -55,11 +53,11 @@ App.ApplicationRoute = Ember.Route.extend({
         //Dimensioni in px - padding css
         cssWidth: 414,
         cssHeight: 736
-      }).save().then(function (device) {
-          self.store.createRecord('wearable', {
+      }).save().then(function (smartphone) {
+          self.store.createRecord('smartwatch', {
             name: 'AppleWatch',
             label: 'WatchOS (156x195) Apple Watch 42mm',
-            watchPlatform: 'watchos',
+            platform: 'watchos',
             viewTop: 22,
             viewBottom: 195,
             screenWidth: 156,
@@ -67,23 +65,23 @@ App.ApplicationRoute = Ember.Route.extend({
             cssWidth: 156,
             cssHeight: 195
           }).save().then(
-          function (wearable) {
+          function (smartwatch) {
             self.store.createRecord('menu').save().then(
               function (newMenu) {
                 self.store.createRecord('application', {id: 'newAppId'}).save().then(
                   function (app) {
-                    app.set('device', device);
-                    app.set('wearable', wearable);
+                    app.set('smartphone', smartphone);
+                    app.set('smartwatch', smartwatch);
                     app.set('menu', newMenu);
                     app.save();
                     newMenu.save();
-                    wearable.save();
-                    device.save();
+                    smartwatch.save();
+                    smartphone.save();
 
-                    self.store.createRecord('wearable', {
+                    self.store.createRecord('smartwatch', {
                       name: 'AsusZenWatch',
                       label: 'AndroidWear (213x213) Asus Zen Watch',
-                      watchPlatform: 'androidwear',
+                      platform: 'androidwear',
                       viewTop: 0,
                       viewBottom: 213,
                       //Dimensioni in dp
@@ -94,10 +92,10 @@ App.ApplicationRoute = Ember.Route.extend({
                       cssHeight: 213
                     }).save();
 
-                    self.store.createRecord('wearable', {
+                    self.store.createRecord('smartwatch', {
                       name: 'Moto360',
                       label: 'AndroidWear (241x248) Moto 360',
-                      watchPlatform: 'androidwear',
+                      platform: 'androidwear',
                       viewTop: 0,
                       viewBottom: 248,
                       //Dimensioni in dp
@@ -116,7 +114,7 @@ App.ApplicationRoute = Ember.Route.extend({
         );
       });
 
-      this.store.createRecord('device', {
+      this.store.createRecord('smartphone', {
         name: 'iPhone6',
         label: 'iOS (375x667) iPhone 6',
         platform: 'ios',
@@ -132,7 +130,7 @@ App.ApplicationRoute = Ember.Route.extend({
         cssHeight: 667
       }).save();
 
-      this.store.createRecord('device', {
+      this.store.createRecord('smartphone', {
         name: 'iPhone5',
         label: 'iOS (320x568) iPhone 5',
         platform: 'ios',
@@ -148,7 +146,7 @@ App.ApplicationRoute = Ember.Route.extend({
         cssHeight: 568
       }).save();
 
-      this.store.createRecord('device', {
+      this.store.createRecord('smartphone', {
         name: 'Nexus6P',
         label: 'Android (411x731) Nexus 6P ',
         platform: 'android',
@@ -164,7 +162,7 @@ App.ApplicationRoute = Ember.Route.extend({
         cssHeight: 731
       }).save();
 
-      this.store.createRecord('device', {
+      this.store.createRecord('smartphone', {
         name: 'Nexus5',
         label: 'Android (360x640) Nexus 5 ',
         platform: 'android',

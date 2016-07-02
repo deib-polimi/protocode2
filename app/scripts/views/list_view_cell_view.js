@@ -1,7 +1,7 @@
 App.ListViewCellView = Ember.View.extend({
   tagName: 'div',
   classNames: ['control-list-view-cell', 'expanded'],
-  classNameBindings: ['controller.controllers.editor.device.platform'],
+  classNameBindings: ['controller.controllers.editor.smartphone.platform'],
   templateName: 'views/list_view_cell_view',
   attributeBindings: ['style'],
 

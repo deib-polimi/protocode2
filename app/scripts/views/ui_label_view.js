@@ -1,17 +1,17 @@
 App.UiLabelView = Ember.View.extend({
   tagName: 'div',
   classNames: ['control-label', 'expanded'],
-  classNameBindings: ['controller.controllers.editor.device.platform', 'context.textAlign'],
+  classNameBindings: ['controller.controllers.editor.smartphone.platform', 'context.textAlign'],
   templateName: 'views/ui_label_view',
 
   attributeBindings: ['style'],
 
-  device: Ember.computed.alias('controller.controllers.editor.device'),
+  smartphone: Ember.computed.alias('controller.controllers.editor.smartphone'),
 
   style: function () {
-    
-    var cssHeight = this.get('device.cssHeight');
-    var screenHeight = this.get('device.screenHeight');
+
+    var cssHeight = this.get('smartphone.cssHeight');
+    var screenHeight = this.get('smartphone.screenHeight');
     var coefficient = cssHeight / screenHeight;
 
   	var style = ""
@@ -21,7 +21,7 @@ App.UiLabelView = Ember.View.extend({
   }.property(
     'context.textColor',
     'context.textSize',
-    'device'
+    'smartphone'
   )
 
 });

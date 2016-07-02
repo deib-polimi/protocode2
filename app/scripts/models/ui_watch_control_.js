@@ -71,7 +71,7 @@ App.UiWatchControl = DS.Model.extend({
       }
       else {
         // Offset of top bar
-        return this.get('watchController.application.wearable.viewTop');
+        return this.get('watchController.application.smartwatch.viewTop');
       }
 
     }
@@ -98,7 +98,7 @@ App.UiWatchControl = DS.Model.extend({
       }
       else {
         // Offset of top bar
-        return parseFloat(this.get('posY')) + this.get('watchController.application.wearable.viewTop');
+        return parseFloat(this.get('posY')) + this.get('watchController.application.smartwatch.viewTop');
       }
 
     }
@@ -110,7 +110,7 @@ App.UiWatchControl = DS.Model.extend({
     'alignBottom.bottom',
     'alignParentBottom',
     'below.bottom',
-    'watchController.application.wearable.viewTop',
+    'watchController.application.smartwatch.viewTop',
     'above',
     'bottom'),
 
@@ -125,7 +125,7 @@ App.UiWatchControl = DS.Model.extend({
       }
       else {
         // Offset bottom
-        return this.get('watchController.application.wearable.viewBottom');
+        return this.get('watchController.application.smartwatch.viewBottom');
 
       }
 
@@ -143,7 +143,7 @@ App.UiWatchControl = DS.Model.extend({
     'outerHeight',
     'parentContainer.height',
     'above.top',
-    'watchController.application.wearable.viewBottom'),
+    'watchController.application.smartwatch.viewBottom'),
 
   start: function() {
     if (this.get('alignStart')) {
@@ -164,7 +164,7 @@ App.UiWatchControl = DS.Model.extend({
         return this.get('parentContainer.width') - this.get('outerWidth');
       }
       else {
-        return this.get('watchController.application.wearable.screenWidth') - this.get('outerWidth');
+        return this.get('watchController.application.smartwatch.screenWidth') - this.get('outerWidth');
       }
 
     }
@@ -185,7 +185,7 @@ App.UiWatchControl = DS.Model.extend({
     'alignParentEnd',
     'toStartOf',
     'end',
-    'watchController.application.wearable.screenWidth'),
+    'watchController.application.smartwatch.screenWidth'),
 
   end: function() {
     if (this.get('alignEnd')) {
@@ -197,7 +197,7 @@ App.UiWatchControl = DS.Model.extend({
         return this.get('parentContainer.width');
       }
       else {
-        return this.get('watchController.application.wearable.screenWidth');
+        return this.get('watchController.application.smartwatch.screenWidth');
       }
 
     }
@@ -214,7 +214,7 @@ App.UiWatchControl = DS.Model.extend({
     'parentContainer',
     'toStartOf.start',
     'outerWidth',
-    'watchController.application.wearable.screenWidth'),
+    'watchController.application.smartwatch.screenWidth'),
 
   computedWidth: function() {
     return  parseFloat(this.get('end')) -

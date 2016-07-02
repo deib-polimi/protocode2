@@ -4,7 +4,7 @@ App.UiWatchControlView = Ember.View.extend(App.UiWatchMoveable, {
   classNameBindings: ['active'],
   attributeBindings: ['style'],
 
-  wearable: Ember.computed.alias('controller.controllers.editor.wearable'),
+  smartwatch: Ember.computed.alias('controller.controllers.editor.smartwatch'),
 
   uiWatchControlType: function () {
     var controlType = this.get('context').constructor.toString();
@@ -45,61 +45,61 @@ App.UiWatchControlView = Ember.View.extend(App.UiWatchMoveable, {
 
   top: function() {
     return this.computeVerticalAxis(this.get('context.top'));
-  }.property('context.top', 'wearable'),
+  }.property('context.top', 'smartwatch'),
 
   bottom: function() {
     return this.computeVerticalAxis(this.get('context.bottom'));
-  }.property('context.bottom', 'wearable'),
+  }.property('context.bottom', 'smartwatch'),
 
   start: function() {
     return this.computeHorizontalAxis(this.get('context.start'));
-  }.property('context.start', 'wearable'),
+  }.property('context.start', 'smartwatch'),
 
   end: function() {
     return this.computeHorizontalAxis(this.get('context.end'));
-  }.property('context.end', 'wearable'),
+  }.property('context.end', 'smartwatch'),
 
   /**** Margin ****/
   marginTop: function() {
     return this.computeVerticalAxis(this.get('context.marginTop'));
-  }.property('context.marginTop', 'wearable'),
+  }.property('context.marginTop', 'smartwatch'),
 
   marginBottom: function() {
     return this.computeVerticalAxis(this.get('context.marginBottom'));
-  }.property('context.marginBottom', 'wearable'),
+  }.property('context.marginBottom', 'smartwatch'),
 
   marginStart: function() {
     return this.computeHorizontalAxis(this.get('context.marginStart'));
-  }.property('context.marginStart', 'wearable'),
+  }.property('context.marginStart', 'smartwatch'),
 
   marginEnd: function() {
     return this.computeHorizontalAxis(this.get('context.marginEnd'));
-  }.property('context.marginEnd', 'wearable'),
+  }.property('context.marginEnd', 'smartwatch'),
 
   /**** Padding ****/
   paddingTop: function() {
     return this.computeVerticalAxis(this.get('context.paddingTop'));
-  }.property('context.paddingTop', 'wearable'),
+  }.property('context.paddingTop', 'smartwatch'),
 
   paddingBottom: function() {
     return this.computeVerticalAxis(this.get('context.paddingBottom'));
-  }.property('context.paddingBottom', 'wearable'),
+  }.property('context.paddingBottom', 'smartwatch'),
 
   paddingStart: function() {
     return this.computeHorizontalAxis(this.get('context.paddingStart'));
-  }.property('context.paddingStart', 'wearable'),
+  }.property('context.paddingStart', 'smartwatch'),
 
   paddingEnd: function() {
     return this.computeHorizontalAxis(this.get('context.paddingEnd'));
-  }.property('context.paddingEnd', 'wearable'),
+  }.property('context.paddingEnd', 'smartwatch'),
 
   computedWidth: function() {
     return this.computeHorizontalAxis(this.get('context.computedWidth'));
-  }.property('context.computedWidth', 'wearable'),
+  }.property('context.computedWidth', 'smartwatch'),
 
   computedHeight: function() {
     return this.computeVerticalAxis(this.get('context.computedHeight'));
-  }.property('context.computedHeight', 'wearable'),
+  }.property('context.computedHeight', 'smartwatch'),
 
   style: function() {
     var result = '';
@@ -137,11 +137,11 @@ App.UiWatchControlView = Ember.View.extend(App.UiWatchMoveable, {
     ),
 
   computeVerticalAxis: function(value) {
-    return value / this.get('wearable.screenHeight') * this.get('wearable.cssHeight');
+    return value / this.get('smartwatch.screenHeight') * this.get('smartwatch.cssHeight');
   },
 
   computeHorizontalAxis: function(value) {
-    return value / this.get('wearable.screenWidth') * this.get('wearable.cssWidth');
+    return value / this.get('smartwatch.screenWidth') * this.get('smartwatch.cssWidth');
   }
 
 });

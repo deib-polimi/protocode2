@@ -1,12 +1,12 @@
 App.UiVideocameraControllerView = Ember.View.extend({
   tagName: 'div',
   classNames: ['control-videocamera-controller-view', 'control-button', 'expanded'],
-  classNameBindings: ['controller.controllers.editor.device.platform'],
+  classNameBindings: ['controller.controllers.editor.smartphone.platform'],
   templateName: 'views/ui_videocamera_controller_view',
   attributeBindings: ['style'],
 
   style: function() {
-    var isAndroid = this.get('controller.controllers.editor.device.platform') == 'android';
+    var isAndroid = this.get('controller.controllers.editor.smartphone.platform') == 'android';
     var parentWidth = this.get("parentView.context.computedWidth");
     var parentHeight = this.get("parentView.context.computedHeight");
 
@@ -22,7 +22,7 @@ App.UiVideocameraControllerView = Ember.View.extend({
   }.property(
     'context.computedWidth',
     'context.computedHeight',
-    'controller.controllers.editor.device.platform'
+    'controller.controllers.editor.smartphone.platform'
   )
 
 });

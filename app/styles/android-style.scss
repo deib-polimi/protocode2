@@ -3,13 +3,13 @@
 
 .androidwear {
 
-	/*============ WEARABLE ============*/
+	/*============ SMARTWATCH ============*/
 
-	.wearable-view {
+	.smartwatch-view {
 		font: 16px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
 	}
 
-	.wearable-screen-view .status-bar {
+	.smartwatch-screen-view .status-bar {
     display : none;
   }
 
@@ -45,12 +45,12 @@
 
 	/*============ SCREEN ============*/
 
-	.device-screen-view {
+	.smartphone-screen-view {
 	  background-color: #f9f9f9;
 	  font: 16px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
 	}
 
-	.device-screen-view .action-bar {
+	.smartphone-screen-view .action-bar {
 	  position: absolute;
 	  width: 100%;
 	  left: 0;
@@ -58,12 +58,12 @@
 	  padding-left: 8px;
 	}
 
-	.device-screen-view .action-bar:before {
+	.smartphone-screen-view .action-bar:before {
 	  border-bottom: solid 1px #d2d2d2;
 	  padding-bottom: 1px;
 	}
 
-	.device-screen-view .status-bar {
+	.smartphone-screen-view .status-bar {
 	  position: absolute;
 	  width: 100%;
 	  top: 0;
@@ -72,7 +72,7 @@
 	  background-repeat: no-repeat;
 	}
 
-	.device-screen-view .command-bar {
+	.smartphone-screen-view .command-bar {
 	  position: absolute;
 	  width: 100%;
 	  bottom: 0px;

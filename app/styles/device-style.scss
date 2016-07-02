@@ -1,52 +1,52 @@
-/*============ WEARABLES ============*/
+/*============ SMARTWATCHES ============*/
 
-.wearable-view.AppleWatch {
+.smartwatch-view.AppleWatch {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 136x170
   padding: 152px 100px 153px 100px;
-  background-image: url("../img/wearables/watchos/AppleWatch.png");
+  background-image: url("../img/smartwatches/watchos/AppleWatch.png");
 }
 
-.wearable-view.Moto360 {
+.smartwatch-view.Moto360 {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 187x187
   padding: 120px 58px 132px 57px;
-  background-image: url("../img/wearables/androidwear/Moto360.png");
+  background-image: url("../img/smartwatches/androidwear/Moto360.png");
 }
 
-.wearable-view.AsusZenWatch {
+.smartwatch-view.AsusZenWatch {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 187x187
   padding: 122px 64px 165px 79px;
-  background-image: url("../img/wearables/androidwear/AsusZenWatch.png");
+  background-image: url("../img/smartwatches/androidwear/AsusZenWatch.png");
 }
 
-.wearable-view.AppleWatch .wearable-screen-view {
+.smartwatch-view.AppleWatch .smartwatch-screen-view {
   background-color: #000000;
 }
 
-.wearable-view.Moto360 .wearable-screen-view {
+.smartwatch-view.Moto360 .smartwatch-screen-view {
   background-color: #000000;
   border-radius : 135px;
 }
 
-.wearable-view.AsusZenWatch .wearable-screen-view {
+.smartwatch-view.AsusZenWatch .smartwatch-screen-view {
   background-color: #000000;
   border-radius : 7px;
 }
 
 /*============ IPHONE 6 PLUS ============*/
 
-.device-view.iPhone6Plus {
+.smartphone-view.iPhone6Plus {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 414x736
   padding: 130px 43px 134px 43px;
-  background-image: url("../img/devices/ios/iPhone_6plus.png");
+  background-image: url("../img/smartphones/ios/iPhone_6plus.png");
 }
 
 .iPhone6Plus {
 
-	.device-screen-view .status-bar {
+	.smartphone-screen-view .status-bar {
 	  background-image: url("../img/ui_controls/ios/status_bar6plus.png");
 	  //Altezza status bar in pixel = altezza in points
 	  height: 63px; //+1 border bottom
@@ -68,16 +68,16 @@
 
 /*============ IPHONE 6 ============*/
 
-.device-view.iPhone6 {
+.smartphone-view.iPhone6 {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 375x667
   padding: 171px 60px 162px 65px;
-  background-image: url("../img/devices/ios/iPhone_6.png");
+  background-image: url("../img/smartphones/ios/iPhone_6.png");
 }
 
 .iPhone6 {
 
-	.device-screen-view .status-bar {
+	.smartphone-screen-view .status-bar {
 	  background-image: url("../img/ui_controls/ios/status_bar6.png");
 	  //Altezza status bar in pixel = altezza in points
 	  height: 64px; //+1 border bottom
@@ -99,16 +99,16 @@
 
 /*============ IPHONE 5 ============*/
 
-.device-view.iPhone5 {
+.smartphone-view.iPhone5 {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 375x667
   padding: 220px 84px 212px 96px;
-  background-image: url("../img/devices/ios/iPhone_5.png");
+  background-image: url("../img/smartphones/ios/iPhone_5.png");
 }
 
 .iPhone5 {
 
-	.device-screen-view .status-bar {
+	.smartphone-screen-view .status-bar {
 	  background-image: url("../img/ui_controls/ios/status_bar5.png");
 	  //Altezza status bar in pixel = altezza in points
 	  height: 64px; //+1 border bottom
@@ -130,11 +130,11 @@
 
 /*============ NEXUS 6P ============*/
 
-.device-view.Nexus6P {
+.smartphone-view.Nexus6P {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 411x731
   padding: 135px 45px 134px 44px;
-  background-image: url("../img/devices/android/nexus_6p.png");
+  background-image: url("../img/smartphones/android/nexus_6p.png");
 }
 
 .Nexus6P {
@@ -193,11 +193,11 @@
 
 /*============ NEXUS 5 ============*/
 
-.device-view.Nexus5 {
+.smartphone-view.Nexus5 {
   //Padding per centrare lo schermo
   //dimensione schermo in pixel = dimensione in dp 360x640
   padding: 156px 70px 204px 70px;
-  background-image: url("../img/devices/android/nexus_5.png");
+  background-image: url("../img/smartphones/android/nexus_5.png");
 }
 
 .Nexus5 {

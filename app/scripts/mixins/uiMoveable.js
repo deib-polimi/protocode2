@@ -15,14 +15,14 @@ App.UiMoveable = Ember.Mixin.create({
 
     var self = this;
 
-    $('.device-screen-view').on('mousemove', function(event) {
+    $('.smartphone-screen-view').on('mousemove', function(event) {
       var element = self.get('element');
       var parentOffset = $(self.get('parentView.element')).offset();
-      var posX = (event.pageX - parentOffset.left - self.get('offsetMouseX')) / self.get('controller.zoomLevel') * self.get('device.screenWidth') / self.get('device.cssWidth');
-      var posY = (event.pageY - parentOffset.top - self.get('offsetMouseY')) / self.get('controller.zoomLevel') * self.get('device.screenHeight') / self.get('device.cssHeight');
+      var posX = (event.pageX - parentOffset.left - self.get('offsetMouseX')) / self.get('controller.zoomLevel') * self.get('smartphone.screenWidth') / self.get('smartphone.cssWidth');
+      var posY = (event.pageY - parentOffset.top - self.get('offsetMouseY')) / self.get('controller.zoomLevel') * self.get('smartphone.screenHeight') / self.get('smartphone.cssHeight');
 
       if (self.get('context.parentContainer') == null) {
-        posY -= self.get('device.viewTop');
+        posY -= self.get('smartphone.viewTop');
       }
 
       if(posY < 0) {
@@ -43,6 +43,6 @@ App.UiMoveable = Ember.Mixin.create({
     event.preventDefault();
     this.set('isMoving', false);
     this.get('context').save();
-    $('.device-screen-view').off('mousemove');
+    $('.smartphone-screen-view').off('mousemove');
   }
 });

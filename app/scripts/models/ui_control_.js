@@ -69,7 +69,7 @@ App.UiControl = DS.Model.extend({
       }
       else {
         // Offset of top bar
-        return this.get('viewController.application.device.viewTop');
+        return this.get('viewController.application.smartphone.viewTop');
       }
 
     }
@@ -96,7 +96,7 @@ App.UiControl = DS.Model.extend({
       }
       else {
         // Offset of top bar
-        return parseFloat(this.get('posY')) + this.get('viewController.application.device.viewTop');
+        return parseFloat(this.get('posY')) + this.get('viewController.application.smartphone.viewTop');
       }
 
     }
@@ -108,7 +108,7 @@ App.UiControl = DS.Model.extend({
     'alignBottom.bottom',
     'alignParentBottom',
     'below.bottom',
-    'viewController.application.device.viewTop',
+    'viewController.application.smartphone.viewTop',
     'above',
     'bottom'),
 
@@ -123,12 +123,12 @@ App.UiControl = DS.Model.extend({
       }
       else {
         // Check tab bar for menu in iOS
-        if (this.get('viewController.application.device.platform') == 'ios' &&
+        if (this.get('viewController.application.smartphone.platform') == 'ios' &&
           this.get('viewController.application.menu.menuItems.length') > 0) {
-          return this.get('viewController.application.device.viewBottom') - 48;
+          return this.get('viewController.application.smartphone.viewBottom') - 48;
         }
 
-        return this.get('viewController.application.device.viewBottom');
+        return this.get('viewController.application.smartphone.viewBottom');
       }
 
     }
@@ -145,7 +145,7 @@ App.UiControl = DS.Model.extend({
     'outerHeight',
     'parentContainer.height',
     'above.top',
-    'viewController.application.device.viewBottom',
+    'viewController.application.smartphone.viewBottom',
     'viewController.application.menu.menuItems.length'),
 
   start: function() {
@@ -167,7 +167,7 @@ App.UiControl = DS.Model.extend({
         return this.get('parentContainer.width') - this.get('outerWidth');
       }
       else {
-        return this.get('viewController.application.device.screenWidth') - this.get('outerWidth');
+        return this.get('viewController.application.smartphone.screenWidth') - this.get('outerWidth');
       }
 
     }
@@ -188,7 +188,7 @@ App.UiControl = DS.Model.extend({
     'alignParentEnd',
     'toStartOf',
     'end',
-    'viewController.application.device.screenWidth'),
+    'viewController.application.smartphone.screenWidth'),
 
   end: function() {
     if (this.get('alignEnd')) {
@@ -200,7 +200,7 @@ App.UiControl = DS.Model.extend({
         return this.get('parentContainer.width');
       }
       else {
-        return this.get('viewController.application.device.screenWidth');
+        return this.get('viewController.application.smartphone.screenWidth');
       }
 
     }
@@ -217,7 +217,7 @@ App.UiControl = DS.Model.extend({
     'parentContainer',
     'toStartOf.start',
     'outerWidth',
-    'viewController.application.device.screenWidth'),
+    'viewController.application.smartphone.screenWidth'),
 
   computedWidth: function() {
     return  parseFloat(this.get('end')) -

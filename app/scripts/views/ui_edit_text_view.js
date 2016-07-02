@@ -1,17 +1,17 @@
 App.UiEditTextView = Ember.View.extend({
   tagName: 'div',
   classNames: ['control-edit-text', 'expanded'],
-  classNameBindings: ['controller.controllers.editor.device.platform'],
+  classNameBindings: ['controller.controllers.editor.smartphone.platform'],
   templateName: 'views/ui_edit_text_view',
 
   attributeBindings: ['style'],
 
-  device: Ember.computed.alias('controller.controllers.editor.device'),
+  smartphone: Ember.computed.alias('controller.controllers.editor.smartphone'),
 
   style: function () {
-    
-    var cssHeight = this.get('device.cssHeight');
-    var screenHeight = this.get('device.screenHeight');
+
+    var cssHeight = this.get('smartphone.cssHeight');
+    var screenHeight = this.get('smartphone.screenHeight');
     var coefficient = cssHeight / screenHeight;
 
   	var style = ""
@@ -21,7 +21,7 @@ App.UiEditTextView = Ember.View.extend({
   }.property(
     'context.textColor',
     'context.textSize',
-    'device'
+    'smartphone'
   )
 
 });

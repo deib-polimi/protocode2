@@ -15,14 +15,14 @@ App.UiWatchMoveable = Ember.Mixin.create({
 
     var self = this;
 
-    $('.wearable-screen-view').on('mousemove', function(event) {
+    $('.smartwatch-screen-view').on('mousemove', function(event) {
       var element = self.get('element');
       var parentOffset = $(self.get('parentView.element')).offset();
-      var posX = (event.pageX - parentOffset.left - self.get('offsetMouseX')) / self.get('controller.zoomLevel') * self.get('wearable.screenWidth') / self.get('wearable.cssWidth');
-      var posY = (event.pageY - parentOffset.top - self.get('offsetMouseY')) / self.get('controller.zoomLevel') * self.get('wearable.screenHeight') / self.get('wearable.cssHeight');
+      var posX = (event.pageX - parentOffset.left - self.get('offsetMouseX')) / self.get('controller.zoomLevel') * self.get('smartwatch.screenWidth') / self.get('smartwatch.cssWidth');
+      var posY = (event.pageY - parentOffset.top - self.get('offsetMouseY')) / self.get('controller.zoomLevel') * self.get('smartwatch.screenHeight') / self.get('smartwatch.cssHeight');
 
       if (self.get('context.parentContainer') == null) {
-        posY -= self.get('wearable.viewTop');
+        posY -= self.get('smartwatch.viewTop');
       }
 
       self.set('context.posX', posX);
@@ -36,6 +36,6 @@ App.UiWatchMoveable = Ember.Mixin.create({
     event.preventDefault();
     this.set('isMoving', false);
     this.get('context').save();
-    $('.wearable-screen-view').off('mousemove');
+    $('.smartwatch-screen-view').off('mousemove');
   }
 });

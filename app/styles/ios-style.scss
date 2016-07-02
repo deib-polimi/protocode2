@@ -2,13 +2,13 @@
 
 .watchos {
 
-  /*============ WEARABLE ============*/
+  /*============ SMARTWATCH ============*/
 
-  .wearable-view {
+  .smartwatch-view {
     font: 15px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
   }
 
-  .wearable-screen-view .status-bar {
+  .smartwatch-screen-view .status-bar {
     position: absolute;
     width: 100%;
     top: 0;
@@ -45,16 +45,16 @@
 
   /*============ SCREEN ============*/
 
-  .device-screen-view {
+  .smartphone-screen-view {
     background-color: #ffffff;
     font: 15px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
   }
 
-  .device-screen-view .action-bar, .device-screen-view .command-bar {
+  .smartphone-screen-view .action-bar, .smartphone-screen-view .command-bar {
     display: none;
   }
 
-  .device-screen-view .status-bar {
+  .smartphone-screen-view .status-bar {
     position: absolute;
     width: 100%;
     top: 0;

@@ -1,13 +1,13 @@
 App.UiWatchButtonView = Ember.View.extend({
   tagName: 'div',
   classNames: ['control-watch-button', 'expanded'],
-  classNameBindings: ['controller.controllers.editor.wearable.watchPlatform'],
+  classNameBindings: ['controller.controllers.editor.smartwatch.platform'],
   templateName: 'views/ui_watch_button_view',
 
   attributeBindings: ['style'],
 
   style: function() {
-    var isAndroidWear = this.get('controller.controllers.editor.wearable.watchPlatform') == 'androidwear';
+    var isAndroidWear = this.get('controller.controllers.editor.smartwatch.platform') == 'androidwear';
     var parentWidth = this.get("parentView.context.computedWidth");
     var parentHeight = this.get("parentView.context.computedHeight");
     var style = ""
@@ -26,7 +26,7 @@ App.UiWatchButtonView = Ember.View.extend({
   }.property(
     'context.computedWidth',
     'context.computedHeight',
-    'controller.controllers.editor.wearable.watchPlatform'
+    'controller.controllers.editor.smartwatch.platform'
   )
 
 });

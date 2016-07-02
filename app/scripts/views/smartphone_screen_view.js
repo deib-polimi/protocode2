@@ -1,8 +1,8 @@
-App.DeviceScreenView = Ember.View.extend(App.UiDroppable, {
+App.SmartphoneScreenView = Ember.View.extend(App.UiDroppable, {
   tagName: 'div',
   attributeBindings: ['style'],
-  classNames: ['device-screen-view'],
-  templateName: 'views/device_screen_view',
+  classNames: ['smartphone-screen-view'],
+  templateName: 'views/smartphone_screen_view',
 
   style: function() {
     var style = ""

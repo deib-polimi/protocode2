@@ -4,7 +4,7 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
   classNameBindings: ['active'],
   attributeBindings: ['style'],
 
-  device: Ember.computed.alias('controller.controllers.editor.device'),
+  smartphone: Ember.computed.alias('controller.controllers.editor.smartphone'),
 
   uiControlType: function () {
     var controlType = this.get('context').constructor.toString();
@@ -108,61 +108,61 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
 
   top: function() {
     return this.computeVerticalAxis(this.get('context.top'));
-  }.property('context.top', 'device'),
+  }.property('context.top', 'smartphone'),
 
   bottom: function() {
     return this.computeVerticalAxis(this.get('context.bottom'));
-  }.property('context.bottom', 'device'),
+  }.property('context.bottom', 'smartphone'),
 
   start: function() {
     return this.computeHorizontalAxis(this.get('context.start'));
-  }.property('context.start', 'device'),
+  }.property('context.start', 'smartphone'),
 
   end: function() {
     return this.computeHorizontalAxis(this.get('context.end'));
-  }.property('context.end', 'device'),
+  }.property('context.end', 'smartphone'),
 
   /**** Margin ****/
   marginTop: function() {
     return this.computeVerticalAxis(this.get('context.marginTop'));
-  }.property('context.marginTop', 'device'),
+  }.property('context.marginTop', 'smartphone'),
 
   marginBottom: function() {
     return this.computeVerticalAxis(this.get('context.marginBottom'));
-  }.property('context.marginBottom', 'device'),
+  }.property('context.marginBottom', 'smartphone'),
 
   marginStart: function() {
     return this.computeHorizontalAxis(this.get('context.marginStart'));
-  }.property('context.marginStart', 'device'),
+  }.property('context.marginStart', 'smartphone'),
 
   marginEnd: function() {
     return this.computeHorizontalAxis(this.get('context.marginEnd'));
-  }.property('context.marginEnd', 'device'),
+  }.property('context.marginEnd', 'smartphone'),
 
   /**** Padding ****/
   paddingTop: function() {
     return this.computeVerticalAxis(this.get('context.paddingTop'));
-  }.property('context.paddingTop', 'device'),
+  }.property('context.paddingTop', 'smartphone'),
 
   paddingBottom: function() {
     return this.computeVerticalAxis(this.get('context.paddingBottom'));
-  }.property('context.paddingBottom', 'device'),
+  }.property('context.paddingBottom', 'smartphone'),
 
   paddingStart: function() {
     return this.computeHorizontalAxis(this.get('context.paddingStart'));
-  }.property('context.paddingStart', 'device'),
+  }.property('context.paddingStart', 'smartphone'),
 
   paddingEnd: function() {
     return this.computeHorizontalAxis(this.get('context.paddingEnd'));
-  }.property('context.paddingEnd', 'device'),
+  }.property('context.paddingEnd', 'smartphone'),
 
   computedWidth: function() {
     return this.computeHorizontalAxis(this.get('context.computedWidth'));
-  }.property('context.computedWidth', 'device'),
+  }.property('context.computedWidth', 'smartphone'),
 
   computedHeight: function() {
     return this.computeVerticalAxis(this.get('context.computedHeight'));
-  }.property('context.computedHeight', 'device'),
+  }.property('context.computedHeight', 'smartphone'),
 
   style: function() {
     var result = '';
@@ -173,7 +173,7 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
     //This changes the height of the card according to platform
     //It's ok because height will be evaluated dinamically later
     var controlType = this.get('uiControlType').toString();
-    var platform = this.get('device.platform').toString();
+    var platform = this.get('smartphone.platform').toString();
     if(controlType == 'App.UiCardView') {
         //Card always squared in ios
         if(platform == 'ios') {
@@ -218,11 +218,11 @@ App.UiControlView = Ember.View.extend(App.UiMoveable, {
     ),
 
   computeVerticalAxis: function(value) {
-    return value / this.get('device.screenHeight') * this.get('device.cssHeight');
+    return value / this.get('smartphone.screenHeight') * this.get('smartphone.cssHeight');
   },
 
   computeHorizontalAxis: function(value) {
-    return value / this.get('device.screenWidth') * this.get('device.cssWidth');
+    return value / this.get('smartphone.screenWidth') * this.get('smartphone.cssWidth');
   }
 
 });

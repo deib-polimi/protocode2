@@ -1,7 +1,7 @@
 App.UiButtonView = Ember.View.extend({
   tagName: 'div',
   classNames: ['control-button', 'expanded'],
-  classNameBindings: ['controller.controllers.editor.device.platform'],
+  classNameBindings: ['controller.controllers.editor.smartphone.platform'],
   templateName: 'views/ui_button_view',
 
   attributeBindings: ['style'],
@@ -17,7 +17,7 @@ App.UiButtonView = Ember.View.extend({
   },
 
   mouseUp: function() {
-    var isAndroid = this.get('controller.controllers.editor.device.platform') == 'android';
+    var isAndroid = this.get('controller.controllers.editor.smartphone.platform') == 'android';
     var backColor = this.get('context.backgroundColor');
     var hasBackColor = backColor != '';
     if(hasBackColor) {
@@ -32,7 +32,7 @@ App.UiButtonView = Ember.View.extend({
   },
 
   style: function () {
-    var isAndroid = this.get('controller.controllers.editor.device.platform') == 'android';
+    var isAndroid = this.get('controller.controllers.editor.smartphone.platform') == 'android';
     var backColor = this.get('context.backgroundColor');
     var clickColor = this.get('context.clickColor');
     var hasBackColor = backColor != '';
@@ -63,7 +63,7 @@ App.UiButtonView = Ember.View.extend({
     'context.computedHeight',
   	'context.backgroundColor',
     'context.clickColor',
-    'controller.controllers.editor.device.platform'
+    'controller.controllers.editor.smartphone.platform'
   )
 
 });
