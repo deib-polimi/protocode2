@@ -107,21 +107,21 @@ App.UiWatchControlController = Ember.ObjectController.extend(App.Saveable, {
             return true;
         }
 
-        var uiControls = [];
-        var uiControlsToCheck = model.getRelatedUiWatchControls().concat(value).uniq();
+        var uiPhoneControls = [];
+        var uiPhoneControlsToCheck = model.getRelatedUiWatchControls().concat(value).uniq();
         var self = this;
 
 
-        while (!($(uiControls).not(uiControlsToCheck).length == 0 && $(uiControlsToCheck).not(uiControls).length == 0) && !uiControlsToCheck.contains(model)) {
-            uiControls = uiControlsToCheck;
+        while (!($(uiPhoneControls).not(uiPhoneControlsToCheck).length == 0 && $(uiPhoneControlsToCheck).not(uiPhoneControls).length == 0) && !uiPhoneControlsToCheck.contains(model)) {
+            uiPhoneControls = uiPhoneControlsToCheck;
 
-            uiControlsToCheck = uiControlsToCheck.reduce(function(results, uiControl) {
-                return results.concat(uiControl.getRelatedUiWatchControls());
+            uiPhoneControlsToCheck = uiPhoneControlsToCheck.reduce(function(results, uiPhoneControl) {
+                return results.concat(uiPhoneControl.getRelatedUiWatchControls());
             }, []).uniq();
 
         }
 
-        return !uiControlsToCheck.contains(model);
+        return !uiPhoneControlsToCheck.contains(model);
     },
 
     actions: {

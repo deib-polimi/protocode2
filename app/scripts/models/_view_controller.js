@@ -6,7 +6,7 @@ App.ViewController = DS.Model.extend({
 
   application:      DS.belongsTo('application', {inverse: 'viewControllers'}),
 
-	uiControls:       DS.hasMany('uiControl', {polymorphic: true, async: true}),
+	uiPhoneControls:       DS.hasMany('uiPhoneControl', {polymorphic: true, async: true}),
   alertDialogs:     DS.hasMany('alertDialog', {inverse: 'viewController'}),
   progressDialogs:  DS.hasMany('progressDialog', {inverse: 'viewController'}),
   asyncTasks:       DS.hasMany('asyncTask', {inverse: 'viewController'}),
@@ -16,11 +16,11 @@ App.ViewController = DS.Model.extend({
   deleteRecord: function () {
     var self = this;
 
-    this.get('uiControls').then(function (uiControls) {
-      uiControls.forEach(function (uiControl) {
+    this.get('uiPhoneControls').then(function (uiPhoneControls) {
+      uiPhoneControls.forEach(function (uiPhoneControl) {
         Ember.run.once(self, function () {
-          uiControl.deleteRecord();
-          uiControl.save();
+          uiPhoneControl.deleteRecord();
+          uiPhoneControl.save();
         });
       });
     });
@@ -30,10 +30,10 @@ App.ViewController = DS.Model.extend({
     var self = this
 
     linkedModels.forEach(function (linkedModel) {
-      self.get(linkedModel).forEach(function (uiControl) {
+      self.get(linkedModel).forEach(function (uiPhoneControl) {
         Ember.run.once(self, function () {
-          uiControl.deleteRecord();
-          uiControl.save();
+          uiPhoneControl.deleteRecord();
+          uiPhoneControl.save();
         });
       });
     });
@@ -63,13 +63,13 @@ App.ViewController = DS.Model.extend({
         viewController.appendChild(asyncTask.toXml(xmlDoc));
       });
 
-      self.get('uiControls').then(function (uiControls) {
+      self.get('uiPhoneControls').then(function (uiPhoneControls) {
 
-        Promise.all(uiControls.map(function (uiControl) {
-          return uiControl.toXml(xmlDoc);
-        })).then(function (uiControlXmls) {
+        Promise.all(uiPhoneControls.map(function (uiPhoneControl) {
+          return uiPhoneControl.toXml(xmlDoc);
+        })).then(function (uiPhoneControlXmls) {
 
-          uiControlXmls.map(function (xml) {
+          uiPhoneControlXmls.map(function (xml) {
 
             viewController.appendChild(xml);
 

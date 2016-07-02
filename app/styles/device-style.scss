@@ -47,7 +47,7 @@
 .iPhone6Plus {
 
 	.smartphone-screen-view .status-bar {
-	  background-image: url("../img/ui_controls/ios/status_bar6plus.png");
+	  background-image: url("../img/ui_phone_controls/ios/status_bar6plus.png");
 	  //Altezza status bar in pixel = altezza in points
 	  height: 63px; //+1 border bottom
 	  border-bottom: solid 1px rgb(247,247,247);
@@ -78,7 +78,7 @@
 .iPhone6 {
 
 	.smartphone-screen-view .status-bar {
-	  background-image: url("../img/ui_controls/ios/status_bar6.png");
+	  background-image: url("../img/ui_phone_controls/ios/status_bar6.png");
 	  //Altezza status bar in pixel = altezza in points
 	  height: 64px; //+1 border bottom
 	  border-bottom: solid 1px #ccc;
@@ -109,7 +109,7 @@
 .iPhone5 {
 
 	.smartphone-screen-view .status-bar {
-	  background-image: url("../img/ui_controls/ios/status_bar5.png");
+	  background-image: url("../img/ui_phone_controls/ios/status_bar5.png");
 	  //Altezza status bar in pixel = altezza in points
 	  height: 64px; //+1 border bottom
 	  border-bottom: solid 1px #ccc;
@@ -169,13 +169,13 @@
 	  //Altezza status bar in pixel = altezza in points
 	  //411 X 30
 	  height: 30px;
-	  background-image: url("../img/ui_controls/android/status_bar6p.png");
+	  background-image: url("../img/ui_phone_controls/android/status_bar6p.png");
 	}
 
 	.command-bar {
 	  //411 X 55
 	  height: 55px;
-	  background-image: url("../img/ui_controls/android/command_bar6p.png");
+	  background-image: url("../img/ui_phone_controls/android/command_bar6p.png");
 	}
 
 	.control-grid-view-cell,
@@ -232,13 +232,13 @@
 	  //Altezza status bar in pixel = altezza in points
 	  //360 X 23
 	  height: 23px;
-	  background-image: url("../img/ui_controls/android/status_bar5.png");
+	  background-image: url("../img/ui_phone_controls/android/status_bar5.png");
 	}
 
 	.command-bar {
 	  //360 X 47
 	  height: 47px;
-	  background-image: url("../img/ui_controls/android/command_bar5.png");
+	  background-image: url("../img/ui_phone_controls/android/command_bar5.png");
 	}
 
 	.control-grid-view-cell,

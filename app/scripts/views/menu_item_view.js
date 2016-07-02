@@ -1,4 +1,4 @@
-App.MenuItemvView = Ember.View.extend({
+App.MenuItemView = Ember.View.extend({
   tagName: 'div',
   classNames: ['app-menu-item'],
   classNameBindings: ['controller.controllers.editor.smartphone.platform'],

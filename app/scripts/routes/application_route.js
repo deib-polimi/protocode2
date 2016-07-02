@@ -15,7 +15,7 @@ App.ApplicationRoute = Ember.Route.extend({
         'smartwatch',
         'menu',
         'menuItem',
-        'uiControlTemplate',
+        'uiPhoneControlTemplate',
         'uiWatchControlTemplate'
       ];
 
@@ -178,92 +178,92 @@ App.ApplicationRoute = Ember.Route.extend({
         cssHeight: 640
       }).save();
 
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Button',
         nameImg: 'button.png',
         type: 'button'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Label',
         nameImg: 'label.png',
         type: 'label'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Edit Text',
         nameImg: 'edittext.png',
         type: 'editText'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Switch',
         nameImg: 'switch.png',
         type: 'switch'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Slider',
         nameImg: 'slider.png',
         type: 'slider'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Web View',
         nameImg: 'webview.png',
         type: 'webView'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Image View',
         nameImg: 'imageview.png',
         type: 'imageView'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Video View',
         nameImg: 'videoview.png',
         type: 'videoView'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Audio Player',
         nameImg: 'audioplayer.png',
         type: 'audioPlayer'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'List View',
         nameImg: 'listview.png',
         type: 'listView'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Grid View',
         nameImg: 'gridview.png',
         type: 'gridView'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Photocamera Controller',
         nameImg: 'photocameracontroller.png',
         type: 'photocameraController'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Videocamera Controller',
         nameImg: 'videocameracontroller.png',
         type: 'videocameraController'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Audio Recorder',
         nameImg: 'audiorecorder.png',
         type: 'audioRecorder'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Map',
         nameImg: 'map.png',
         type: 'map'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Datepicker',
         nameImg: 'datepicker.png',
         type: 'datepicker'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Timepicker',
         nameImg: 'timepicker.png',
         type: 'timepicker'
       }).save();
-      this.store.createRecord('uiControlTemplate', {
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Card',
         nameImg: 'card.png',
         type: 'card'

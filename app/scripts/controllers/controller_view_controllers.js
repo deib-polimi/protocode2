@@ -6,7 +6,7 @@ App.ViewControllersController = Ember.ArrayController.extend({
     isCreating: false,
     newNameViewController: 'newView',
 
-    needs: ['uiControlTemplates', 'editor'],
+    needs: ['uiPhoneControlTemplates', 'editor'],
 
     actions: {
         setCreating: function(value) {

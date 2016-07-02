@@ -125,7 +125,7 @@
 	.control-switch .switch-image {
 	  width: 40px;
 	  height:27px;
-	  background: url('../img/ui_controls/android/switch_circle.png');
+	  background: url('../img/ui_phone_controls/android/switch_circle.png');
 	  background-size: 100%;
   	  background-repeat : no-repeat;
 	}
@@ -146,7 +146,7 @@
 	.control-slider .slider-image {
 	  width: 40px;
 	  height: 40px;
-	  background: url('../img/ui_controls/android/slider_circle.png');
+	  background: url('../img/ui_phone_controls/android/slider_circle.png');
 	  background-size: 100%;
   	  background-repeat : no-repeat;
 	}
@@ -219,7 +219,7 @@
 	  width : 40px;
 	  height : 40px;
 	  margin-right: 16px;
-	  background-image : url("../img/ui_controls/android/listimage.png");
+	  background-image : url("../img/ui_phone_controls/android/listimage.png");
 	  background-size : 100%;
 	  float:left;
 	}
@@ -228,7 +228,7 @@
 	  width : 22px;
 	  height : 22px;
 	  margin: 9px 0px;
-	  background: url("../img/ui_controls/android/listicon.png");
+	  background: url("../img/ui_phone_controls/android/listicon.png");
 	  background-size : 100%;
 	  float:right;
 	}
@@ -244,12 +244,12 @@
 	/*============ GRID VIEW ============*/
 
 	.control-grid-view-cell .grid-image {
-	  background-image : url("../img/ui_controls/android/grid_image.png");
+	  background-image : url("../img/ui_phone_controls/android/grid_image.png");
 	  background-size : 100%;
 	}
 
 	.control-grid-view-cell .grid-image-empty {
-	  background-image : url("../img/ui_controls/android/grid_image_empty.png");
+	  background-image : url("../img/ui_phone_controls/android/grid_image_empty.png");
 	  background-size : 100%;
 	}
 
@@ -274,7 +274,7 @@
 	}
 
 	.control-photocamera-controller-view .photocamera_icon {
-	  background: url('../img/ui_controls/android/photocamera_icon.png');
+	  background: url('../img/ui_phone_controls/android/photocamera_icon.png');
 	}
 
 	/*============ VIDEO CAMERA ============*/
@@ -284,7 +284,7 @@
 	}
 
 	.control-videocamera-controller-view .videocamera_icon {
-	  background: url('../img/ui_controls/android/videocamera_icon.png');
+	  background: url('../img/ui_phone_controls/android/videocamera_icon.png');
 	}
 
 	/*============ AUDIO RECORDER ============*/
@@ -296,7 +296,7 @@
 	/*============ MAP ============*/
 
 	.control-map {
-	  background: url('../img/ui_controls/android/google_map.png');
+	  background: url('../img/ui_phone_controls/android/google_map.png');
 	  background-repeat: round;
 	}
 
@@ -305,7 +305,7 @@
 	.control-datepicker .datepicker-image {
 	  width: 348px;
 	  height:338px;
-	  background: url('../img/ui_controls/android/datepicker_big.png');
+	  background: url('../img/ui_phone_controls/android/datepicker_big.png');
 	  background-size: 100%;
 	  margin : auto;
 	}
@@ -315,7 +315,7 @@
 	.control-timepicker .timepicker-image {
 	  width: 346px;
 	  height:346px;
-	  background: url('../img/ui_controls/android/timepicker_big.png');
+	  background: url('../img/ui_phone_controls/android/timepicker_big.png');
 	  background-size: 100%;
 	  margin : auto;
 	}
@@ -330,7 +330,7 @@
 
 	.control-card .card-image {
 	  width : 100%;
-	  background: url('../img/ui_controls/android/card_image.png');
+	  background: url('../img/ui_phone_controls/android/card_image.png');
 	  background-size: 100%;
 	  background-repeat : no-repeat;
 	  border-top-left-radius: 2px;

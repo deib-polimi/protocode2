@@ -22,8 +22,8 @@ App.Router.map(function() {
             this.resource('viewController', {
                 path: '/viewController/:viewController_id'
             }, function() {
-                this.resource('dispatchUiControl', {
-                    path: '/uiControl/:ui_control_id'
+                this.resource('dispatchUiPhoneControl', {
+                    path: '/uiPhoneControl/:ui_phone_control_id'
                 }, function() {});
                 this.resource('controlAudioPlayer', {
                     path: '/audioPlayer/:audioPlayer_id'
@@ -106,7 +106,7 @@ App.Router.map(function() {
             });
         });
     });
-    this.resource('uiControls');
+    this.resource('uiPhoneControls');
     this.resource('uiWatchControls');
     this.resource('about');
     this.resource('model');

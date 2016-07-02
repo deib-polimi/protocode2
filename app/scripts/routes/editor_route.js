@@ -37,7 +37,7 @@ App.EditorRoute = Ember.Route.extend({
             watchNavigations: this.store.find('watchNavigation'),
             sourceTypes: this.store.find('sourceType'),
 
-            // UiControls
+            // UiPhoneControls
             audioPlayers: this.store.find('audioPlayer'),
             audioRecorders: this.store.find('audioRecorder'),
             buttons: this.store.find('button'),

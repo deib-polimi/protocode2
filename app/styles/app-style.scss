@@ -148,22 +148,22 @@ html, body {
 
 /*============ UI CONTROL ============*/
 
-.ui-control {
+.ui-phone-control {
   position: absolute;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
 
-.ui-control:hover {
+.ui-phone-control:hover {
   cursor: pointer;
 }
 
-.ui-control.is-moving {
+.ui-phone-control.is-moving {
   z-index: 999;
   cursor: move;
 }
 
-.ui-control .expanded {
+.ui-phone-control .expanded {
   width: 100%;
   height: 100%;
 }

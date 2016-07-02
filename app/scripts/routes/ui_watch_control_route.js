@@ -1,6 +1,6 @@
 App.DispatchUiWatchControlRoute = Ember.Route.extend({
     model: function (params) {
-        return this.store.find('uiWatchControl', params.ui_control_id);
+        return this.store.find('uiWatchControl', params.ui_phone_control_id);
     },
 
     afterModel: function(control, transition) {

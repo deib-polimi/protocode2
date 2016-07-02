@@ -98,7 +98,7 @@
   .control-switch .switch-image {
     width: 51px;
     height:31px;
-    background: url('../img/ui_controls/ios/switch_circle.png');
+    background: url('../img/ui_phone_controls/ios/switch_circle.png');
     background-size: 100%;
     background-repeat : no-repeat;
   }
@@ -119,7 +119,7 @@
   .control-slider .slider-image {
     width: 80px;
     height: 40px;
-    background: url('../img/ui_controls/ios/slider_circle.png');
+    background: url('../img/ui_phone_controls/ios/slider_circle.png');
     background-size: 100%;
     background-repeat : no-repeat;
   }
@@ -183,7 +183,7 @@
     width : 40px;
     height : 40px;
     margin-right: 16px;
-    background-image : url("../img/ui_controls/ios/listimage.png");
+    background-image : url("../img/ui_phone_controls/ios/listimage.png");
     background-size : 100%;
     float:left;
   }
@@ -192,7 +192,7 @@
     width : 22px;
     height : 22px;
     margin: 9px 0px;
-    background: url("../img/ui_controls/ios/listicon.png");
+    background: url("../img/ui_phone_controls/ios/listicon.png");
     background-size : 100%;
     float:right;
   }
@@ -222,25 +222,25 @@
   }
 
   .control-grid-view-cell .grid-image {
-    background-image : url("../img/ui_controls/ios/grid_image.png");
+    background-image : url("../img/ui_phone_controls/ios/grid_image.png");
     background-size : 100%;
   }
 
   .control-grid-view-cell .grid-image-empty {
-    background-image : url("../img/ui_controls/ios/grid_image_empty.png");
+    background-image : url("../img/ui_phone_controls/ios/grid_image_empty.png");
     background-size : 100%;
   }
 
   /*============ PHOTO CAMERA ============*/
 
   .photocamera_icon {
-    background: url('../img/ui_controls/ios/photocamera_icon.png');
+    background: url('../img/ui_phone_controls/ios/photocamera_icon.png');
   }
 
   /*============ VIDEO CAMERA ============*/
 
   .videocamera_icon {
-    background: url('../img/ui_controls/ios/videocamera_icon.png');
+    background: url('../img/ui_phone_controls/ios/videocamera_icon.png');
   }
 
   /*============ AUDIO RECORDER ============*/
@@ -248,7 +248,7 @@
   /*============ MAP ============*/
 
   .control-map {
-    background: url('../img/ui_controls/ios/ios_map.png');
+    background: url('../img/ui_phone_controls/ios/ios_map.png');
     background-repeat: round;
   }
 
@@ -257,7 +257,7 @@
   .control-datepicker .datepicker-image {
     width: 320px;
     height:216px;
-    background: url('../img/ui_controls/ios/datepicker.png');
+    background: url('../img/ui_phone_controls/ios/datepicker.png');
     background-size: 100%;
     margin : auto;
   }
@@ -267,7 +267,7 @@
   .control-timepicker .timepicker-image {
     width: 320px;
     height:216px;
-    background: url('../img/ui_controls/ios/timepicker.png');
+    background: url('../img/ui_phone_controls/ios/timepicker.png');
     background-size: 100%;
     margin : auto;
   }
@@ -282,7 +282,7 @@
   .control-card .card-image {
     width : 100%;
     height : 56.25%;
-    background: url('../img/ui_controls/ios/card_image.png');
+    background: url('../img/ui_phone_controls/ios/card_image.png');
     background-size: 100%;
     background-repeat : no-repeat;
   }
