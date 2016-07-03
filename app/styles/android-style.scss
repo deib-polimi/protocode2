@@ -39,6 +39,24 @@
 		font-size: 14px;
 	}
 
+	/*============ WATCH SWITCH ============*/
+
+	.control-watch-switch .watch-switch-image {
+	  width: 58px;
+	  height:32px;
+		margin : auto 8px;
+	  background: url('../img/ui_watch_controls/androidwear/watch_switch_circle.png');
+	}
+
+	.control-watch-switch .watch-switch-title {
+	  width: 100%;
+	  height:32px;
+		line-height:32px;
+		margin : auto auto auto 8px;
+		overflow : hidden;
+	}
+
+
 }
 
 .android {

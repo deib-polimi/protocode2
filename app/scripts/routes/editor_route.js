@@ -60,7 +60,9 @@ App.EditorRoute = Ember.Route.extend({
             // UiWatchControls
             watchButtons: this.store.find('watchButton'),
             watchLabels: this.store.find('watchLabel'),
+            watchSwitches: this.store.find('watchSwitch'),
             watchVoiceMessages: this.store.find('watchVoiceMessage'),
+
         });
     }
 

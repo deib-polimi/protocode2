@@ -273,6 +273,20 @@ html, body {
   margin : auto;
 }
 
+/*============ WATCH SWITCH ============*/
+
+.control-watch-switch .control-content {
+  height: 100%;
+  display: flex;
+  color : #fff;
+}
+
+.control-watch-switch .watch-switch-image,
+.control-watch-switch .watch-switch-title {
+  margin : auto;
+}
+
+
 /*============ SLIDER ============*/
 
 .control-slider .control-content {

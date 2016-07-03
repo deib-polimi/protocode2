@@ -280,11 +280,16 @@ App.ApplicationRoute = Ember.Route.extend({
         type: 'watchLabel'
       }).save();
       this.store.createRecord('uiWatchControlTemplate', {
+        label: 'Watch Switch',
+        nameImg: 'watch_switch.png',
+        type: 'watchSwitch'
+      }).save();
+      this.store.createRecord('uiWatchControlTemplate', {
         label: 'Watch Voice Message',
         nameImg: 'watch_voice_message.png',
         type: 'watchVoiceMessage'
       }).save();
-
+      
 
     }
   }

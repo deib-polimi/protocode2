@@ -16,6 +16,9 @@ App.Router.map(function() {
                 this.resource('controlWatchVoiceMessage', {
                     path: '/watchVoiceMessage/:watch_voice_message_id'
                 }, function() {});
+                this.resource('controlWatchSwitch', {
+                    path: '/watchSwitch/:watch_switch_id'
+                }, function() {});
             });
         });
         this.resource('viewControllers', function() {
