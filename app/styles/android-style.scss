@@ -6,7 +6,7 @@
 	/*============ SMARTWATCH ============*/
 
 	.smartwatch-view {
-		font: 16px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+		font: 14px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
 	}
 
 	.smartwatch-screen-view .status-bar {
@@ -54,6 +54,43 @@
 		line-height:32px;
 		margin : auto auto auto 8px;
 		overflow : hidden;
+	}
+
+	/*============ WATCH SLIDER ============*/
+
+	.control-watch-slider .watch-slider-minus,
+	.control-watch-slider .watch-slider-dash,
+  .control-watch-slider .watch-slider-plus {
+    display : none;
+  }
+
+	.control-watch-slider .watch-slider-left-row,
+	.control-watch-slider .watch-slider-right-row {
+	  position : absolute;
+	  top:50%;
+	  height: 3px;
+	}
+
+	.control-watch-slider .watch-slider-image {
+	  margin : auto;
+	}
+
+	.control-watch-slider .watch-slider-left-row {
+	  background-color : rgb(112,193,183);
+		margin-left:16px;
+	}
+
+	.control-watch-slider .watch-slider-right-row {
+	  background-color : rgb(41,41,41);
+		margin-right:16px;
+	}
+
+	.control-watch-slider .watch-slider-image {
+	  width: 40px;
+	  height: 40px;
+	  background: url('../img/ui_watch_controls/androidwear/watch_slider_circle.png');
+	  background-size: 100%;
+  	background-repeat : no-repeat;
 	}
 
 

@@ -1,8 +1,8 @@
-App.UiWatchSwitchView = Ember.View.extend({
+App.UiWatchSliderView = Ember.View.extend({
   tagName: 'div',
-  classNames: ['control-watch-switch', 'expanded'],
+  classNames: ['control-watch-slider', 'expanded'],
   classNameBindings: ['controller.controllers.editor.smartwatch.platform'],
-  templateName: 'views/ui_watch_control_view_switch',
+  templateName: 'views/ui_watch_control_view_slider',
 
   attributeBindings: ['style'],
 

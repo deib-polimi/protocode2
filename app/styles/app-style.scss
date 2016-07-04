@@ -307,6 +307,17 @@ html, body {
   margin : auto;
 }
 
+/*============ WATCH SLIDER ============*/
+
+.control-watch-slider .control-content {
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color : #fff;
+}
+
+
 /*============ WEB VIEW ============*/
 
 .control-web-view {

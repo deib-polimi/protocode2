@@ -19,6 +19,9 @@ App.Router.map(function() {
                 this.resource('controlWatchSwitch', {
                     path: '/watchSwitch/:watch_switch_id'
                 }, function() {});
+                this.resource('controlWatchSlider', {
+                    path: '/watchSlider/:watch_slider_id'
+                }, function() {});
             });
         });
         this.resource('viewControllers', function() {

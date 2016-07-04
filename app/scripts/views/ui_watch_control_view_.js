@@ -20,6 +20,10 @@ App.UiWatchControlView = Ember.View.extend(App.UiWatchMoveable, {
         return App.UiWatchLabelView;
         break;
 
+      case ('App.WatchSlider'):
+        return App.UiWatchSliderView;
+        break;
+
       case ('App.WatchSwitch'):
         return App.UiWatchSwitchView;
         break;
