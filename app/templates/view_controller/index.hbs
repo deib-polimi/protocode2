@@ -29,7 +29,7 @@
 								</li>
 						</ul>
 						<div class="tab-content">
-								<div class="tab-pane fade in active" id="home">
+								<div class="tab-pane fade in active form-horizontal" id="home">
 										<br>
 										<label {{bind-attr class=":btn :btn-default :btn-block launcher:active"}}>
 												{{input type="checkbox" checked=launcher class="hidden"}} <i class="fa fa-home"></i>
@@ -39,8 +39,10 @@
 										{{input-text label="Name" value=name action='acceptChanges'}}
 										{{input-color-picker label="Background Color" value=backgroundColor action='acceptChanges'}}
 										{{input-text label="Background Image" value=backgroundImage action='acceptChanges'}}
-										<label><i class="fa fa-sitemap"></i> UiPhoneControls</label>
-										<div class="tree">
+										<br>
+										<br>
+										<label class="col-sm-5" style="padding:8px 10px;text-align:right">UiPhoneControls</label>
+										<div class="tree col-sm-7">
 												<ul>
 														<li><span><i class="fa fa-mobile"></i> {{name}}</span></li>
 														<ul>

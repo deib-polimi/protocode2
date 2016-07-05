@@ -5,7 +5,7 @@ App.ControlGridViewIndexController = App.UiPhoneControlController.extend(App.Cli
     needs: ['viewControllers'],
 
     isCreating: false,
-    newNameGridViewCell: 'newMenuItem',
+    newNameGridViewCell: 'newGridCell',
 
     simpleGrid: function(key, value) {
         return this.gridType(key, value, 'simple');
@@ -53,7 +53,7 @@ App.ControlGridViewIndexController = App.UiPhoneControlController.extend(App.Cli
 
             gridViewCell.set('parentGridView', this.get('model'));
 
-            this.set('newNameGridViewCell', 'newMenuItem');
+            this.set('newNameGridViewCell', 'newGridCell');
             this.set('isCreating', false);
 
             gridViewCell.save();

@@ -3,34 +3,31 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="input-group">
-                    <span class="input-group-addon">App name :</span>
-                    {{input value=name class="form-control" placeholder="name" type="text" focus-out="acceptChanges" insert-newline="acceptChanges"}}
+                    <span class="input-group-addon input-sm">Application</span>
+                    {{input value=name class="form-control input-sm" placeholder="name" type="text" focus-out="acceptChanges" insert-newline="acceptChanges"}}
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
+                <div class="form-inline">
+                    <div class="input-group" style="width:100%">
+                        <span class="input-group-addon"><i class="fa fa-mobile-phone"></i></span>
+                        {{view Ember.Select content=smartphones optionLabelPath='content.label' optionValuePath="content" class="form-control input-sm" value=smartphone}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-inline">
+                    <div class="input-group" style="width:100%">
+                        <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                        {{view Ember.Select content=smartwatches optionLabelPath='content.label' optionValuePath="content" class="form-control input-sm" value=smartwatch}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
                 <div class="pull-right">
-                    <button class="btn btn-default" {{action 'generateAppModel'}}><i class="fa fa-download"></i> Model</button>
+                    <button class="btn btn-default btn-sm" {{action 'generateAppModel'}}><i class="fa fa-download"></i> Model</button>
                 </div>
             </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-6">
-              <div class="form-inline">
-                  <div class="input-group" style="width:100%">
-                      <span class="input-group-addon"><i class="fa fa-mobile-phone"></i></span>
-                      {{view Ember.Select content=smartphones optionLabelPath='content.label' optionValuePath="content" class="form-control" value=smartphone}}
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="form-inline">
-                  <div class="input-group" style="width:100%">
-                      <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
-                      {{view Ember.Select content=smartwatches optionLabelPath='content.label' optionValuePath="content" class="form-control" value=smartwatch}}
-                  </div>
-              </div>
-          </div>
         </div>
     </div>
 </div>

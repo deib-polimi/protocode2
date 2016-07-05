@@ -5,7 +5,7 @@ App.ControlListViewIndexController = App.UiPhoneControlController.extend(App.Cli
     needs: ['viewControllers'],
 
     isCreating: false,
-    newNameListViewCell: 'newMenuItem',
+    newNameListViewCell: 'newListItem',
 
     simpleList: function(key, value) {
         return this.listType(key, value, 'simple');
@@ -53,7 +53,7 @@ App.ControlListViewIndexController = App.UiPhoneControlController.extend(App.Cli
 
             listViewCell.set('parentListView', this.get('model'));
 
-            this.set('newNameListViewCell', 'newMenuItem');
+            this.set('newNameListViewCell', 'newListItem');
             this.set('isCreating', false);
 
             listViewCell.save();

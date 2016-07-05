@@ -11,23 +11,25 @@
                 <li><a href="#dimension" data-toggle="tab"><i class="fa fa-expand"></i></a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane fade in active" id="home">
+                <div class="tab-pane fade form-horizontal in active" id="home">
+                    <br>
                     {{input-text label="Name" value=name action='acceptChanges'}}
                     {{input-color-picker label="Background Color" value=backgroundColor action='acceptChanges'}}
                     <div class="form-group">
-                        <label>List style</label>
-                        <br>
-                        <div class="btn-group">
-                            <label {{bind-attr class=":btn :btn-default simpleList:active"}}>
-                                {{input type="checkbox" checked=simpleList class="hidden"}} Simple
+                        <label class="col-sm-5" style="padding:8px 10px;text-align:right">List style</label>
+                        <div class="col-sm-7">
+                        <div class="btn-group btn-group-justified">
+                            <label {{bind-attr class=":btn :btn-default :btn-sm simpleList:active"}}>
+                                {{input type="checkbox" checked=simpleList class="hidden"}} Sim
                             </label>
-                            <label {{bind-attr class=":btn :btn-default imageList:active"}}>
-                                {{input type="checkbox" checked=imageList class="hidden"}} Image
+                            <label {{bind-attr class=":btn :btn-default :btn-sm imageList:active"}}>
+                                {{input type="checkbox" checked=imageList class="hidden"}} Img
                             </label>
-                            <label {{bind-attr class=":btn :btn-default detailedList:active"}}>
-                                {{input type="checkbox" checked=detailedList class="hidden"}} Detailed
+                            <label {{bind-attr class=":btn :btn-default :btn-sm detailedList:active"}}>
+                                {{input type="checkbox" checked=detailedList class="hidden"}} Det
                             </label>
                         </div>
+                      </div>
                     </div>
                     {{input-select
                         label="Click listener"
@@ -36,7 +38,8 @@
                         optionValuePath="content"
                         selection=navigationTarget
                         prompt="Navigate to:"}}
-                    <label>List view cells</label>
+                    <br>
+                    <p align="center"><b>List view cells</b></p>
                     <ul class="list-group" id="collapse-views">
                         {{#each item in listViewCells}}
                         <li class="list-group-item">
@@ -46,12 +49,12 @@
                         {{#if isCreating}}
                         <li class="list-group-item">
                             <div class="input-group">
-                                {{focus-input value=newNameListViewCell class="form-control" insert-newline="createListViewCell"}}
+                                {{focus-input value=newNameListViewCell class="form-control input-sm" insert-newline="createListViewCell"}}
                                 <span class="input-group-btn">
-                                    <button type="button" class="btn btn-default" {{action "createListViewCell"}}>
+                                    <button type="button" class="btn btn-default btn-sm" {{action "createListViewCell"}}>
                                         <i class="fa fa-save"></i>
                                     </button>
-                                    <button type="button" class="btn btn-default" {{action "setCreating" false}}>
+                                    <button type="button" class="btn btn-default btn-sm" {{action "setCreating" false}}>
                                         <i class="fa fa-times"></i>
                                     </button>
                                 </span>
@@ -63,10 +66,12 @@
                         <i class="fa fa-plus"></i> Add list view cell
                     </button>
                 </div>
-                <div class="tab-pane fade" id="position">
+                <div class="tab-pane fade form-horizontal" id="position">
+                    <br>
                     {{partial "partials/ui_control_position"}}
                 </div>
-                <div class="tab-pane fade" id="dimension">
+                <div class="tab-pane fade form-horizontal" id="dimension">
+                    <br>
                     {{input-number label="Width [dp]" min="270" value=width action='acceptChanges' }}
                     {{input-number label="Height [dp]" min="60" value=height action='acceptChanges' }}
                     {{partial "partials/ui_control_dimension"}}

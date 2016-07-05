@@ -11,14 +11,17 @@
                 <li><a href="#dimension" data-toggle="tab"><i class="fa fa-expand"></i></a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane fade in active" id="home">
+                <div class="tab-pane fade form-horizontal in active" id="home">
+                    <br>
                     {{input-text label="Name" value=name action='acceptChanges'}}
                     {{input-text label="HTML file name" value=htmlFileName action='acceptChanges'}}
                 </div>
-                <div class="tab-pane fade" id="position">
+                <div class="tab-pane fade form-horizontal" id="position">
+                    <br>
                     {{partial "partials/ui_control_position"}}
                 </div>
-                <div class="tab-pane fade" id="dimension">
+                <div class="tab-pane fade form-horizontal" id="dimension">
+                    <br>
                     {{input-number label="Width [dp]" min="0" value=width action='acceptChanges' }}
                     {{input-number label="Height [dp]" min="0" value=height action='acceptChanges' }}
                     {{partial "partials/ui_control_dimension"}}

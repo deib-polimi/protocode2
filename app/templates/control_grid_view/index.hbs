@@ -11,22 +11,24 @@
                 <li><a href="#dimension" data-toggle="tab"><i class="fa fa-expand"></i></a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane fade in active" id="home">
+                <div class="tab-pane fade form-horizontal in active" id="home">
+                    <br>
                     {{input-text label="Name" value=name action='acceptChanges'}}
                     <div class="form-group">
-                        <label>Grid style</label>
-                        <br>
-                        <div class="btn-group">
-                            <label {{bind-attr class=":btn :btn-default simpleGrid:active"}}>
-                                {{input type="checkbox" checked=simpleGrid class="hidden"}} Simple
+                      <label class="col-sm-5" style="padding:8px 10px;text-align:right">Grid style</label>
+                      <div class="col-sm-7">
+                        <div class="btn-group btn-group-justified">
+                            <label {{bind-attr class=":btn :btn-default :btn-sm simpleGrid:active"}}>
+                                {{input type="checkbox" checked=simpleGrid class="hidden"}} Sim
                             </label>
-                            <label {{bind-attr class=":btn :btn-default imageGrid:active"}}>
-                                {{input type="checkbox" checked=imageGrid class="hidden"}} Image
+                            <label {{bind-attr class=":btn :btn-default :btn-sm imageGrid:active"}}>
+                                {{input type="checkbox" checked=imageGrid class="hidden"}} Img
                             </label>
-                            <label {{bind-attr class=":btn :btn-default detailedGrid:active"}}>
-                                {{input type="checkbox" checked=detailedGrid class="hidden"}} Detailed
+                            <label {{bind-attr class=":btn :btn-default :btn-sm detailedGrid:active"}}>
+                                {{input type="checkbox" checked=detailedGrid class="hidden"}} Det
                             </label>
                         </div>
+                      </div>
                     </div>
                     {{input-select
                         label="Click listener"
@@ -35,7 +37,8 @@
                         optionValuePath="content"
                         selection=navigationTarget
                         prompt="Navigate to:"}}
-                    <label>Grid view cells</label>
+                    <br>
+                    <p align="center"><b>Grid view cells</b></p>
                     <ul class="list-group" id="collapse-views">
                         {{#each item in gridViewCells}}
                         <li class="list-group-item">
@@ -45,12 +48,12 @@
                         {{#if isCreating}}
                         <li class="list-group-item">
                             <div class="input-group">
-                                {{focus-input value=newNameGridViewCell class="form-control" insert-newline="createGridViewCell"}}
+                                {{focus-input value=newNameGridViewCell class="form-control input-sm" insert-newline="createGridViewCell"}}
                                 <span class="input-group-btn">
-                                    <button type="button" class="btn btn-default" {{action "createGridViewCell"}}>
+                                    <button type="button" class="btn btn-default btn-sm" {{action "createGridViewCell"}}>
                                         <i class="fa fa-save"></i>
                                     </button>
-                                    <button type="button" class="btn btn-default" {{action "setCreating" false}}>
+                                    <button type="button" class="btn btn-default btn-sm" {{action "setCreating" false}}>
                                         <i class="fa fa-times"></i>
                                     </button>
                                 </span>
@@ -62,25 +65,28 @@
                         <i class="fa fa-plus"></i> Add grid view cell
                     </button>
                 </div>
-                <div class="tab-pane fade" id="position">
+                <div class="tab-pane fade form-horizontal" id="position">
+                    <br>
                     <div class="form-group">
-                        <label>Align with parent</label>
-                        <br>
-                        <div class="btn-group">
-                            <label {{bind-attr class=":btn :btn-default alignParentTop:active"}}>
+                      <label class="col-sm-5" style="padding:8px 10px;text-align:right">Align with parent</label>
+                      <div class="col-sm-7">
+                        <div class="btn-group btn-group-justified">
+                            <label {{bind-attr class=":btn :btn-default :btn-sm alignParentTop:active"}}>
                                 {{input type="checkbox" checked=alignParentTop class="hidden"}} <i class="fa fa-chevron-up"></i>
                             </label>
-                            <label {{bind-attr class=":btn :btn-default alignParentBottom:active"}}>
+                            <label {{bind-attr class=":btn :btn-default :btn-sm alignParentBottom:active"}}>
                                 {{input type="checkbox" checked=alignParentBottom class="hidden"}} <i class="fa fa-chevron-down"></i>
                             </label>
                         </div>
+                      </div>
                     </div>
                     {{input-select label="Align with top" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=alignTop prompt="Select sibling"}}
                     {{input-select label="Align with bottom" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=alignBottom prompt="Select sibling"}}
                     {{input-select label="Above to" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=above prompt="Select sibling"}} {{input-select label="Below to" content=siblings optionLabelPath="content.name" optionValuePath="content" selection=below prompt="Select sibling"}}
                     {{input-number label="Position Y [dp]" min="0" value=posY action='acceptChanges'}}
                 </div>
-                <div class="tab-pane fade" id="dimension">
+                <div class="tab-pane fade form-horizontal" id="dimension">
+                    <br>
                     {{input-number label="Height [dp]" min="205" value=height action='acceptChanges' }}
                 </div>
 
@@ -93,5 +99,5 @@
                 </button>
             </div>
         </div>
-    </div>  
+    </div>
 </div>

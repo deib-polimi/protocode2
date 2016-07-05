@@ -1,8 +1,29 @@
 
 /*============ APP STYLE ============*/
 
+body,
+.form-control {
+  font-family: "Roboto";
+  font-size: 12px;
+}
+
+.form-group {
+  margin-bottom:5px;
+}
+
 html, body {
     margin: 30px 0;
+}
+
+.nav-justified > li > a {
+    border-bottom : none;
+}
+
+#view-controllers-panel {
+  border-top-left-radius: 0px;
+}
+#watch-controllers-panel {
+  border-top-right-radius: 0px;
 }
 
 .spacer {
@@ -18,27 +39,6 @@ html, body {
   overflow: auto;
 }
 
-/*
-.colorpicker {
-  padding: 4px;
-  min-width: 130px;
-  margin: 1px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  z-index: 2500;
-}
-
-.control-container {
-  position: relative;
-  top: 0;
-  left: 0;
-  border: dashed 1px #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-*/
 
 /*============ CONTROL PICKER ============*/
 
