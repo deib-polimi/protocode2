@@ -22,7 +22,7 @@
                     <li class="list-group-item">
                         {{#link-to "watchController" item}}
                             {{#if item.launcher}}
-                                <i class="fa fa-home"></i>
+                                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                             {{/if}}
                             {{item.name}}
                         {{/link-to}}
@@ -31,13 +31,13 @@
                     {{#if isCreating}}
                     <li class="list-group-item">
                         <div class="input-group">
-                            {{focus-input value=newNameWatchController class="form-control" focus-out="createWatchController" insert-newline="createWatchController"}}
+                            {{focus-input value=newNameWatchController class="form-control input-sm" focus-out="createWatchController" insert-newline="createWatchController"}}
                             <span class="input-group-btn">
-                                <button type="button" class="btn btn-default" {{action "createWatchController"}}>
-                                    <i class="fa fa-save"></i>
+                                <button type="button" class="btn btn-default btn-sm" {{action "createWatchController"}}>
+                                    <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
                                 </button>
-                                <button type="button" class="btn btn-default" {{action "setCreating" false}}>
-                                    <i class="fa fa-times"></i>
+                                <button type="button" class="btn btn-default btn-sm" {{action "setCreating" false}}>
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                 </button>
                             </span>
                         </div>
@@ -46,8 +46,8 @@
                 </ul>
                 <div class="panel-footer">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default" {{action "setCreating" true}}>
-                            <i class="fa fa-plus"></i>
+                        <button type="button" class="btn btn-default btn-sm" {{action "setCreating" true}}>
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                         </button>
                     </div>
                 </div>

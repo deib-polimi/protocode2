@@ -10,7 +10,9 @@
             <div class="col-md-3">
                 <div class="form-inline">
                     <div class="input-group" style="width:100%">
-                        <span class="input-group-addon"><i class="fa fa-mobile-phone"></i></span>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                        </span>
                         {{view Ember.Select content=smartphones optionLabelPath='content.label' optionValuePath="content" class="form-control input-sm" value=smartphone}}
                     </div>
                 </div>
@@ -18,14 +20,18 @@
             <div class="col-md-3">
                 <div class="form-inline">
                     <div class="input-group" style="width:100%">
-                        <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                      <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                      </span>
                         {{view Ember.Select content=smartwatches optionLabelPath='content.label' optionValuePath="content" class="form-control input-sm" value=smartwatch}}
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="pull-right">
-                    <button class="btn btn-default btn-sm" {{action 'generateAppModel'}}><i class="fa fa-download"></i> Model</button>
+                    <button class="btn btn-default btn-sm" {{action 'generateAppModel'}}>
+                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Model
+                    </button>
                 </div>
             </div>
         </div>
