@@ -13,7 +13,13 @@
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
                         </span>
-                        {{view Ember.Select content=smartphones optionLabelPath='content.label' optionValuePath="content" class="form-control input-sm" value=smartphone}}
+                        {{view Ember.Select
+                          content=smartphones
+                          optionLabelPath='content.label'
+                          optionValuePath="content"
+                          class="form-control input-sm"
+                          value=smartphone
+                        }}
                     </div>
                 </div>
             </div>
