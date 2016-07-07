@@ -1,6 +1,7 @@
 App.ListViewCell = DS.Model.extend({
     name:           DS.attr('string', {defaultValue: 'ListView1'}),
     title:          DS.attr('string', {defaultValue: 'List View'}),
+    subtitle:          DS.attr('string', {defaultValue: 'Content'}),
 
     parentListView: DS.belongsTo('listView', {inverse: 'listViewCells'}),
 
@@ -24,6 +25,7 @@ App.ListViewCell = DS.Model.extend({
       var elem = xmlDoc.createElement('listViewCells');
 
       elem.setAttribute('title', this.get('title'));
+      elem.setAttribute('subtitle', this.get('subtitle'));
 
       return elem;
     }

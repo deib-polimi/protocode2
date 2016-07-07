@@ -246,6 +246,34 @@
     float:left;
   }
 
+  .control-list-view-cell .list-text-container {
+	  display : inline-block;
+	  margin-right: 16px;
+	  float:left;
+	}
+
+	.control-list-view-cell .list-text-container .list-text {
+	  font-size : 16px;
+    margin : 0;
+	}
+
+  .control-list-view-cell .list-text-container-detailed {
+    float : left;
+  }
+
+  .control-list-view-cell .list-text-container-detailed .list-text {
+    font-size : 16px;
+    line-height: 22px;
+    margin : 0;
+	}
+
+  .control-list-view-cell .list-text-container-detailed .list-subtext {
+    font-size : 14px;
+    line-height: 16px;
+    margin : 0;
+    color: #999;
+	}
+
   .control-list-view-cell .list-icon {
     width : 22px;
     height : 22px;
@@ -253,14 +281,6 @@
     background: url("../img/ui_phone_controls/ios/listicon.png");
     background-size : 100%;
     float:right;
-  }
-
-  .control-list-view-cell p.list-text {
-    margin : 0;
-    font-size : 16px;
-    display : inline-block;
-    margin-right: 16px;
-    float:left;
   }
 
   /*============ GRID VIEW ============*/

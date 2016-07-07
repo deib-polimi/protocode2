@@ -14,6 +14,10 @@ body,
   font: 13px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
 }
 
+.well {
+  background-color: #ffffff;
+}
+
 .form-group {
   margin-bottom:5px;
 }
@@ -170,7 +174,7 @@ body,
 }
 
 .smartphone-view .smartphone-screen-view.dragging-over {
-  box-shadow: 0 0 5px 5px #007aff;
+  box-shadow: 0 0 5px 5px #cc181e;
 }
 
 /*============ SMARTWATCH VIEW ============*/
@@ -205,7 +209,7 @@ body,
 }
 
 .smartwatch-view .smartwatch-screen-view.dragging-over {
-  box-shadow: 0 0 5px 5px #007aff;
+  box-shadow: 0 0 5px 5px #cc181e;
 }
 
 /*============ INNER CONTROL ============*/
@@ -293,18 +297,6 @@ body,
   overflow: hidden;
   align-items: center;
   justify-content: center;
-}
-
-.control-watch-voice-message:hover .voice-message-preview {
-  visibility: visible;
-}
-
-.voice-message-preview {
-  position:absolute;
-  top:0px;
-  left:0px;
-  z-index : 1;
-  visibility: hidden;
 }
 
 /*============ LABEL ============*/

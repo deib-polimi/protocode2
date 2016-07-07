@@ -17,7 +17,7 @@
                     {{input-text label="Title" value=title action='acceptChanges'}}
                     {{input-text label="Placeholder" value=placeholder action='acceptChanges'}}
                     {{input-color-picker label="Text Color" value=textColor action='acceptChanges'}}
-                    {{input-number min="8" max="24" label="Text Size [dp]" value=textSize action='acceptChanges'}}
+                    {{input-number min="8" max="24" label="Text Size" value=textSize action='acceptChanges'}}
                 </div>
                 <div class="tab-pane fade form-horizontal" id="position">
                     <br>
@@ -25,8 +25,8 @@
                 </div>
                 <div class="tab-pane fade form-horizontal" id="dimension">
                     <br>
-                    {{input-number label="Width [dp]" min="88" value=width action='acceptChanges' }}
-                    {{input-number label="Height [dp]" min="36" value=height action='acceptChanges' }}
+                    {{input-number label="Width" min="88" value=width action='acceptChanges' }}
+                    {{input-number label="Height" min="36" value=height action='acceptChanges' }}
                     {{partial "partials/ui_control_dimension"}}
                 </div>
             </div>
