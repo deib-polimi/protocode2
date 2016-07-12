@@ -1,5 +1,10 @@
 App.UiPhoneControl = App.UiControl.extend({
 
+  //Override
+  /*--------------------------------------------------------------*/
+  posY:             DS.attr('number', {defaultValue: 96}),
+  /*--------------------------------------------------------------*/
+
   viewController: DS.belongsTo('viewController'),
   parentContainer: DS.belongsTo('container', {inverse: 'uiPhoneControls'}),
 
@@ -46,7 +51,20 @@ App.UiPhoneControl = App.UiControl.extend({
         return 0;
       }
       else {
-        // Offset of top bar
+        // Check tab bar for menu in Android
+        var isAndroid = this.get('viewController.application.smartphone.platform') == 'android';
+        var currentViewControllerIsMenu = false;
+        var viewControllerName = this.get('viewController.name');
+        var menuItems = this.get('viewController.application.menu.menuItems');
+        menuItems.forEach(function(menuItem, index) {
+          if(viewControllerName == menuItem.get('name')) {
+            currentViewControllerIsMenu = true;
+          }
+        });
+        // Offset from tab bar for menu in Android
+        if (isAndroid && currentViewControllerIsMenu) {
+          return this.get('viewController.application.smartphone.viewTop') + 48;
+        }
         return this.get('viewController.application.smartphone.viewTop');
       }
 
@@ -74,7 +92,7 @@ App.UiPhoneControl = App.UiControl.extend({
       }
       else {
         // Offset of top bar
-        return parseFloat(this.get('posY')) + this.get('viewController.application.smartphone.viewTop');
+        return  parseFloat(this.get('posY')) + this.get('viewController.application.smartphone.viewTop');
       }
 
     }
@@ -87,6 +105,9 @@ App.UiPhoneControl = App.UiControl.extend({
     'alignParentBottom',
     'below.bottom',
     'viewController.application.smartphone.viewTop',
+    'viewController.application.smartphone.platform',
+    'viewController.application.menu.menuItems',
+    'viewController.name',
     'above',
     'bottom'),
 
@@ -101,11 +122,19 @@ App.UiPhoneControl = App.UiControl.extend({
       }
       else {
         // Check tab bar for menu in iOS
-        if (this.get('viewController.application.smartphone.platform') == 'ios' &&
-          this.get('viewController.application.menu.menuItems.length') > 0) {
+        var isIOS = this.get('viewController.application.smartphone.platform') == 'ios';
+        var currentViewControllerIsMenu = false;
+        var viewControllerName = this.get('viewController.name');
+        var menuItems = this.get('viewController.application.menu.menuItems');
+        menuItems.forEach(function(menuItem, index) {
+          if(viewControllerName == menuItem.get('name')) {
+            currentViewControllerIsMenu = true;
+          }
+        });
+        // Offset from tab bar for menu in iOS
+        if (isIOS && currentViewControllerIsMenu) {
           return this.get('viewController.application.smartphone.viewBottom') - 48;
         }
-
         return this.get('viewController.application.smartphone.viewBottom');
       }
 
@@ -123,8 +152,11 @@ App.UiPhoneControl = App.UiControl.extend({
     'outerHeight',
     'parentContainer.height',
     'above.top',
-    'viewController.application.smartphone.viewBottom',
-    'viewController.application.menu.menuItems.length'),
+    'viewController.name',
+    'viewController.application.smartphone.platform',
+    'viewController.application.menu.menuItems',
+    'viewController.application.smartphone.viewBottom'
+  ),
 
   start: function() {
     if (this.get('alignStart')) {

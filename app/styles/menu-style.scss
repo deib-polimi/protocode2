@@ -6,7 +6,6 @@
 .app-menu.ios {
   position: absolute;
   display: flex;
-  flex-flow: row no-wrap;
   justify-content: space-around;
   align-content: center;
   align-items: flex-end;
@@ -16,6 +15,32 @@
   height: 48px; // +1 border top
   border-top: solid 1px rgb(247,247,247);
   bottom: 0;
+}
+
+.Nexus6P .app-menu {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: flex-end;
+  background-color: #3F51B5;
+  width: 100%;
+  //(px = points iphone)
+  height: 48px; // +1 border top
+  top: 93px;
+}
+
+.Nexus5 .app-menu {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: flex-end;
+  background-color: #3F51B5;
+  width: 100%;
+  //(px = points iphone)
+  height: 48px; // +1 border top
+  top: 79px;
 }
 
 .app-menu-item.ios {
@@ -29,8 +54,31 @@
   cursor:pointer;
 }
 
-/*============ ANDROID ============*/
+.app-menu-item.android {
+  position: relative;
+  color: #ffffff;
+  text-transform : uppercase;
+  flex: 0 1 auto;
+  align-self: auto;
+  min-width: 0;
+  min-height: auto;
+  font-size: 14px;
+  //width: 100%;
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #3F51B5;
+  cursor:pointer;
+  //overflow: hidden;
+  //margin: 0px 4px;
+}
 
+.app-menu-item.android .control-content {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*============ ANDROID ============*/
+/*
 .app-menu.android:before {
   content: $fa-var-ellipsis-v;
   font-family: FontAwesome;
@@ -78,3 +126,4 @@
 .app-menu-item.android:hover {
   display: block;
 }
+*/

@@ -170,8 +170,8 @@
 	.control-edit-text .control-content {
 	  align-self: center;
 	  overflow: hidden;
-	  white-space: nowrap;
-	  text-overflow: ellipsis;
+		//white-space: nowrap;
+	  //text-overflow: ellipsis;
 	}
 
 	.control-edit-text .control-content .placeholder {
@@ -382,9 +382,10 @@
 
 	.control-datepicker .datepicker-image {
 	  width: 348px;
-	  height:338px;
+	  height:358px;
 	  background: url('../img/ui_phone_controls/android/datepicker_big.png');
 	  background-size: 100%;
+		background-repeat: round;
 	  margin : auto;
 	}
 
@@ -395,6 +396,7 @@
 	  height:346px;
 	  background: url('../img/ui_phone_controls/android/timepicker_big.png');
 	  background-size: 100%;
+		background-repeat : round;
 	  margin : auto;
 	}
 
@@ -434,6 +436,7 @@
 	  height : 50px;
 	  margin : 32px 0px 8px 0px;
 	  padding : 0px 4px;
+		font-size: 14px;
 	  text-transform: uppercase;
 	}
 

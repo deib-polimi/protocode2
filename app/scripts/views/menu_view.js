@@ -7,18 +7,26 @@ App.MenuView = Ember.View.extend({
   attributeBindings: ['style'],
 
   style: function() {
-    var isAndroid = this.get('controller.controllers.editor.smartphone.platform') == 'android';
-    var isLauncher = this.get('context.launcher') == true;
+    var currentViewControllerIsMenu = false;
+    var viewControllerName = this.get('context.name');
+    var menuItems = this.get('context.menu.menuItems');
+    menuItems.forEach(function(menuItem) {
+      var menuItemDestination = menuItem.get('navigation.destination.name');
+      if(viewControllerName == menuItemDestination) {
+        currentViewControllerIsMenu = true;
+      }
+    });
+
     style = "";
 
-    if(isAndroid && !isLauncher) {
+    if(!currentViewControllerIsMenu) {
         style += "display:none";
     }
 
     return style;
   }.property(
-    'controller.controllers.editor.smartphone.platform',
-    'context.launcher'
+    'context.name',
+    'context.menu.menuItems'
   )
 
 });
