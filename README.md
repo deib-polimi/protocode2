@@ -1,16 +1,16 @@
 # Protocode v2.0#
 
-Protocode is a web application that helps you to prototype iOS and Android mobile apps. Thanks to its model-driven approach, you create a prototype app once for different operating systems.
+Protocode is a web application that helps you to prototype iOS and Android mobile apps. Thanks to its model-driven approach, you can create a prototype app once for different operating systems.
 
 ## What's new in v2.0 ##
 
 * __New devices__: Nexus 6P for Android M and iPhone 6, 6 Plus for iOS 9.
 
-* __New widgets__: Switches, Sliders, MapView, DatePicker, TimePicker and CardView are now available.
+* __Smartwatches__: You can now add buttons, labels, switches, sliders and a "speech-to-text" button to your Wearable device! Simulated devices are Apple Watch 42mm, Moto 360 and Asus Zen Watch.
 
-* __Upgraded widgets__: Added new properties for the widgets like text color, background color and font style; ListViews and GridViews are now available in 3 different layouts : simple text, with an image or both.
+* __New mobile widgets__: Switches, sliders, mapView, datePicker, timePicker and cardView are now available.
 
-* __Smartwatch Connectivity__: Messaging communication with smartwatches is now available.
+* __Upgraded mobile widgets__: Added new properties for the widgets like text color, background color and font style; ListViews and GridViews are now available in 3 different layouts : simple text, with an image or both.
 
 ## Features from v1.0 ##
 Here's a list of the key points of this web application:
