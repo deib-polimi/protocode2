@@ -26,7 +26,8 @@ App.MenuView = Ember.View.extend({
     return style;
   }.property(
     'context.name',
-    'context.menu.menuItems'
+    'context.menu.menuItems',
+    'context.menu.menuItems.length'
   )
 
 });

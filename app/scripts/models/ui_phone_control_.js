@@ -57,7 +57,7 @@ App.UiPhoneControl = App.UiControl.extend({
         var viewControllerName = this.get('viewController.name');
         var menuItems = this.get('viewController.application.menu.menuItems');
         menuItems.forEach(function(menuItem, index) {
-          if(viewControllerName == menuItem.get('name')) {
+          if(viewControllerName == menuItem.get('navigation.destination.name')) {
             currentViewControllerIsMenu = true;
           }
         });
@@ -127,7 +127,7 @@ App.UiPhoneControl = App.UiControl.extend({
         var viewControllerName = this.get('viewController.name');
         var menuItems = this.get('viewController.application.menu.menuItems');
         menuItems.forEach(function(menuItem, index) {
-          if(viewControllerName == menuItem.get('name')) {
+          if(viewControllerName == menuItem.get('navigation.destination.name')) {
             currentViewControllerIsMenu = true;
           }
         });

@@ -2,7 +2,7 @@ App.Datepicker = App.UiPhoneControl.extend({
   name:       DS.attr('string', {defaultValue: 'Datepicker'}),
 
   width:      DS.attr('number', {defaultValue: 348}),
-  height:     DS.attr('number', {defaultValue: 358}),
+  height:     DS.attr('number', {defaultValue: 365}),
 
   xmlName:    'datepickers',
 

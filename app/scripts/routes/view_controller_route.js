@@ -1,6 +1,6 @@
 App.ViewControllerRoute = Ember.Route.extend({
   zIndex: 5,
-  
+
   actions: {
     increaseZoom: function() {
       this.set('controller.zoomLevel', Math.round((this.get('controller.zoomLevel') + 0.2) * 100) / 100);
@@ -16,13 +16,21 @@ App.ViewControllerRoute = Ember.Route.extend({
         Multiple VideoViews or AudioPlayers
         May not work for some devices
       */
+      var videoViewAlert = false;
+      var audioPlayerAlert = false;
       this.get('context').get('uiPhoneControls').forEach(function(item){
         if(item.toString().indexOf('VideoView') > -1 && controlType == 'videoView') {
-          alert('Multiple VideoViews in the same ViewControl, may not work within your real device!');
+          videoViewAlert = true;
         } else if(item.toString().indexOf('AudioPlayer') > -1 && controlType == 'audioPlayer') {
-          alert('Multiple AudioPlayers in the same ViewControl, may not work within your real device!');
+          audioPlayerAlert = true;
         }
       });
+
+      if(videoViewAlert) {
+          alert('Multiple VideoViews in the same ViewControl, may not work within your real device!');
+      } else if(audioPlayerAlert) {
+          alert('Multiple AudioPlayers in the same ViewControl, may not work within your real device!');
+      }
 
       var canInstantiate = true;
 
@@ -45,7 +53,7 @@ App.ViewControllerRoute = Ember.Route.extend({
           canInstantiate = false;
         }
       });
-      
+
       if(canInstantiate) {
         var uiPhoneControl = this.store.createRecord(controlType, {
           viewController: this.get('controller.model')
@@ -60,8 +68,8 @@ App.ViewControllerRoute = Ember.Route.extend({
 
         uiPhoneControl.save();
       }
-      
-      
+
+
     }
   }
 });
