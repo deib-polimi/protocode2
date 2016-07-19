@@ -8,7 +8,7 @@ Protocode is a web application that helps you to prototype iOS and Android mobil
 
 * __Smartwatches__: You can now add buttons, labels, switches, sliders and a "speech-to-text" button to your Wearable device! Simulated devices are Apple Watch 42mm, Moto 360 and Asus Zen Watch.
 
-* __New mobile widgets__: Switches, sliders, mapView, datePicker, timePicker and cardView are now available.
+* __New mobile widgets__: Switches, spinners, sliders, mapView, datePickers, timePickers and cardViews are now available.
 
 * __Upgraded mobile widgets__: Added new properties for the widgets like text color, background color and font style; ListViews and GridViews are now available in 3 different layouts : simple text, with an image or both.
 
