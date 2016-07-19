@@ -82,6 +82,9 @@ App.Router.map(function() {
                 this.resource('controlSlider', {
                     path: '/slider/:slider_id'
                 }, function() {});
+                this.resource('controlSpinner', {
+                    path: '/spinner/:spinner_id'
+                }, function() {});
                 this.resource('controlPhotocameraController', {
                     path: '/photocameraController/:photocameraController_id'
                 }, function() {});

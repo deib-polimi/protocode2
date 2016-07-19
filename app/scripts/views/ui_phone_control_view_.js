@@ -71,6 +71,10 @@ App.UiPhoneControlView = Ember.View.extend(App.UiMoveable, {
         return App.UiSliderView;
         break;
 
+      case ('App.Spinner'):
+        return App.UiSpinnerView;
+        break;
+
       case ('App.Timepicker'):
         return App.UiTimepickerView;
         break;

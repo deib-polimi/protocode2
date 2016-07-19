@@ -400,6 +400,24 @@
     width : 88px;
   }
 
+  /*============ SPINNER ============*/
+  .control-spinner .control-content {
+    height:100%;
+    display:flex;
+  }
+
+	.control-spinner .control-content p {
+    font: 24px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+    text-align:center;
+    margin:auto;
+    width:100%;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+	}
+
+  .control-spinner .control-content p .caret {
+    display : none;
+  }
 
 
 }

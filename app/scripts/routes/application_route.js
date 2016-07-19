@@ -194,6 +194,11 @@ App.ApplicationRoute = Ember.Route.extend({
         type: 'editText'
       }).save();
       this.store.createRecord('uiPhoneControlTemplate', {
+        label: 'Spinner',
+        nameImg: 'spinner.png',
+        type: 'spinner'
+      }).save();
+      this.store.createRecord('uiPhoneControlTemplate', {
         label: 'Switch',
         nameImg: 'switch.png',
         type: 'switch'

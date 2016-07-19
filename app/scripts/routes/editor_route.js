@@ -52,6 +52,7 @@ App.EditorRoute = Ember.Route.extend({
             timepickers: this.store.find('timepicker'),
             photocameraControllers: this.store.find('photocameraController'),
             sliders: this.store.find('slider'),
+            spinners: this.store.find('spinner'),
             switches: this.store.find('switch'),
             videoViews: this.store.find('videoView'),
             videocameraControllers: this.store.find('videocameraController'),

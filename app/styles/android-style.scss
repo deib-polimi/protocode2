@@ -449,4 +449,24 @@
 	  width : 88px;
 	}
 
+	/*============ SPINNER ============*/
+	.control-spinner .control-content {
+    height:100%;
+    display:flex;
+		border-bottom: 1px solid #fc226e;
+  }
+
+	.control-spinner .control-content p {
+    font: 16px "Roboto", ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
+    margin:auto;
+		padding : 0px 4px;
+    width:100%;
+	}
+
+	.control-spinner .control-content p .caret {
+    float : right;
+		top: 6px;
+		position: relative;
+  }
+
 }
