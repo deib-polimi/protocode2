@@ -6,33 +6,36 @@ App.ApplicationRoute = Ember.Route.extend({
   actions: {
 
     deleteApp: function () {
-      var self = this;
 
-      var models = [
-        'application',
-        'container',
-        'smartphone',
-        'smartwatch',
-        'menu',
-        'menuItem',
-        'uiPhoneControlTemplate',
-        'uiWatchControlTemplate'
-      ];
+        if (confirm('Are you sure to delete?')) {
+            var self = this;
 
-      models.map(function (model) {
-        Ember.run.once(self, function () {
-          self.store.findAll(model).then(function (array) {
-            array.forEach(function (data) {
+            var models = [
+              'application',
+              'container',
+              'smartphone',
+              'smartwatch',
+              'menu',
+              'menuItem',
+              'uiPhoneControlTemplate',
+              'uiWatchControlTemplate'
+            ];
+
+            models.map(function (model) {
               Ember.run.once(self, function () {
-                data.deleteRecord();
-                data.save();
+                self.store.findAll(model).then(function (array) {
+                  array.forEach(function (data) {
+                    Ember.run.once(self, function () {
+                      data.deleteRecord();
+                      data.save();
+                    });
+                  });
+                });
               });
             });
-          });
-        });
-      });
 
-      this.transitionTo('/');
+            this.transitionTo('/');
+        }
 
     },
 
